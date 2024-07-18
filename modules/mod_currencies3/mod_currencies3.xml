@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE install SYSTEM "http://dev.joomla.org/xml/1.5/module-install.dtd">
+<extension version="1.5" type="module" client="site" method="upgrade">
+	<name>mod_currencies3</name>
+	<creationDate>June 2013</creationDate>
+	<version>1.0.0</version>
+	<description>Currencies</description>
+	<languages>
+	</languages>
+	<files>
+		<filename module="mod_currencies3">mod_currencies3.php</filename>
+		<filename>mod_currencies3.xml</filename>
+		<folder>tmpl</folder>
+	</files>
+	
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="cache" type="hidden" default="0" label="Caching" description="Disable global caching." />
+				<field name="customCache" type="list" default="1" label="Caching" description="Select whether to cache the content of this module.">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+				<field name="moduleclass_sfx" type="text" default="" label="Module Class Suffix" description="PARAMMODULECLASSSUFFIX" />
+				
+				
+            <field name="update_date" type="text" default="" label="Update date" description="" />
+								
+		   <field type="spacer" default="Currencies in columns" label="Currencies in columns" />
+				<field name="currencycol1" type="text" default="" label="Currency 1" description="" />
+				<field name="currencycol2" type="text" default="" label="Currency 2" description="" />
+				<field name="currencycol3" type="text" default="" label="Currency 3" description="" />
+				<field name="currencycol4" type="text" default="" label="Currency 4" description="" />
+				<field name="currencycol5" type="text" default="" label="Currency 5" description="" />
+				<field name="currencycol6" type="text" default="" label="Currency 6" description="" />
+				<field name="currencycol7" type="text" default="" label="Currency 7" description="" />
+				<field name="currencycol8" type="text" default="" label="Currency 8" description="" />
+				<field name="currencycol9" type="text" default="" label="Currency 9" description="" />
+				<field name="currencycol10" type="text" default="" label="Currency 10" description="" />
+				<field name="currencycol11" type="text" default="" label="Currency 11" description="" />
+				<field name="currencycol12" type="text" default="" label="Currency 12" description="" />
+				<field name="currencycol13" type="text" default="" label="Currency 13" description="" />
+				<field name="currencycol14" type="text" default="" label="Currency 14" description="" />
+				<field name="currencycol15" type="text" default="" label="Currency 15" description="" />
+				
+			<field type="spacer" default="Currencies in rows" label="Currencies in rows" />
+            <field name="currencyrow1" type="text" default="" label="Currency 1" description="" />
+            <field name="currencyrow1link" type="text" default="" label="Currency 1 link" description="" />
+            <field name="currencyrow2" type="text" default="" label="Currency 2" description="" />
+            <field name="currencyrow2link" type="text" default="" label="Currency 2 link" description="" />
+            <field name="currencyrow3" type="text" default="" label="Currency 3" description="" />
+            <field name="currencyrow3link" type="text" default="" label="Currency 3 link" description="" />
+            <field name="currencyrow4" type="text" default="" label="Currency 4" description="" />
+            <field name="currencyrow4link" type="text" default="" label="Currency 4 link" description="" />
+            <field name="currencyrow5" type="text" default="" label="Currency 5" description="" />
+            <field name="currencyrow5link" type="text" default="" label="Currency 5 link" description="" />
+            <field name="currencyrow6" type="text" default="" label="Currency 6" description="" />
+            <field name="currencyrow6link" type="text" default="" label="Currency 6 link" description="" />
+            <field name="currencyrow7" type="text" default="" label="Currency 7" description="" />
+            <field name="currencyrow7link" type="text" default="" label="Currency 7 link" description="" />
+            <field name="currencyrow8" type="text" default="" label="Currency 8" description="" />
+            <field name="currencyrow8link" type="text" default="" label="Currency 8 link" description="" />
+            <field name="currencyrow9" type="text" default="" label="Currency 9" description="" />
+            <field name="currencyrow9link" type="text" default="" label="Currency 9 link" description="" />
+            <field name="currencyrow10" type="text" default="" label="Currency 10" description="" />
+            <field name="currencyrow10link" type="text" default="" label="Currency 10 link" description="" />
+            <field name="currencyrow11" type="text" default="" label="Currency 11" description="" />
+            <field name="currencyrow11link" type="text" default="" label="Currency 11 link" description="" />
+            <field name="currencyrow12" type="text" default="" label="Currency 12" description="" />
+            <field name="currencyrow12link" type="text" default="" label="Currency 12 link" description="" />
+            <field name="currencyrow13" type="text" default="" label="Currency 13" description="" />
+            <field name="currencyrow13link" type="text" default="" label="Currency 13 link" description="" />
+            <field name="currencyrow14" type="text" default="" label="Currency 14" description="" />
+            <field name="currencyrow14link" type="text" default="" label="Currency 14 link" description="" />
+            <field name="currencyrow15" type="text" default="" label="Currency 15" description="" />
+            <field name="currencyrow15link" type="text" default="" label="Currency 15 link" description="" />
+            <field name="currencyrow16" type="text" default="" label="Currency 16" description="" />
+            <field name="currencyrow16link" type="text" default="" label="Currency 16 link" description="" />
+            <field name="currencyrow17" type="text" default="" label="Currency 17" description="" />
+            <field name="currencyrow17link" type="text" default="" label="Currency 17 link" description="" />
+            <field name="currencyrow18" type="text" default="" label="Currency 18" description="" />
+            <field name="currencyrow18link" type="text" default="" label="Currency 18 link" description="" />
+            <field name="currencyrow19" type="text" default="" label="Currency 19" description="" />
+            <field name="currencyrow19link" type="text" default="" label="Currency 19 link" description="" />
+            <field name="currencyrow20" type="text" default="" label="Currency 20" description="" />
+            <field name="currencyrow20link" type="text" default="" label="Currency 20 link" description="" />
+            <field name="currencyrow21" type="text" default="" label="Currency 21" description="" />
+            <field name="currencyrow21link" type="text" default="" label="Currency 21 link" description="" />
+            <field name="currencyrow22" type="text" default="" label="Currency 22" description="" />
+            <field name="currencyrow22link" type="text" default="" label="Currency 22 link" description="" />
+            <field name="currencyrow23" type="text" default="" label="Currency 23" description="" />
+            <field name="currencyrow23link" type="text" default="" label="Currency 23 link" description="" />
+            <field name="currencyrow24" type="text" default="" label="Currency 24" description="" />
+            <field name="currencyrow24link" type="text" default="" label="Currency 24 link" description="" />
+            <field name="currencyrow25" type="text" default="" label="Currency 25" description="" />
+            <field name="currencyrow25link" type="text" default="" label="Currency 25 link" description="" />
+            <field name="currencyrow26" type="text" default="" label="Currency 26" description="" />
+            <field name="currencyrow26link" type="text" default="" label="Currency 26 link" description="" />
+            <field name="currencyrow27" type="text" default="" label="Currency 27" description="" />
+            <field name="currencyrow27link" type="text" default="" label="Currency 27 link" description="" />
+            <field name="currencyrow28" type="text" default="" label="Currency 28" description="" />
+            <field name="currencyrow28link" type="text" default="" label="Currency 28 link" description="" />
+            <field name="currencyrow29" type="text" default="" label="Currency 29" description="" />
+            <field name="currencyrow29link" type="text" default="" label="Currency 29 link" description="" />
+            <field name="currencyrow30" type="text" default="" label="Currency 30" description="" />
+            <field name="currencyrow30link" type="text" default="" label="Currency 30 link" description="" />
+            <field name="currencyrow31" type="text" default="" label="Currency 31" description="" />
+            <field name="currencyrow31link" type="text" default="" label="Currency 31 link" description="" />
+            <field name="currencyrow32" type="text" default="" label="Currency 32" description="" />
+            <field name="currencyrow32link" type="text" default="" label="Currency 32 link" description="" />
+            <field name="currencyrow33" type="text" default="" label="Currency 33" description="" />
+            <field name="currencyrow33link" type="text" default="" label="Currency 33 link" description="" />
+            <field name="currencyrow34" type="text" default="" label="Currency 34" description="" />
+            <field name="currencyrow34link" type="text" default="" label="Currency 34 link" description="" />
+            <field name="currencyrow35" type="text" default="" label="Currency 35" description="" />
+            <field name="currencyrow35link" type="text" default="" label="Currency 35 link" description="" />
+            <field name="currencyrow36" type="text" default="" label="Currency 36" description="" />
+            <field name="currencyrow36link" type="text" default="" label="Currency 36 link" description="" />
+            <field name="currencyrow37" type="text" default="" label="Currency 37" description="" />
+            <field name="currencyrow37link" type="text" default="" label="Currency 37 link" description="" />
+            <field name="currencyrow38" type="text" default="" label="Currency 38" description="" />
+            <field name="currencyrow38link" type="text" default="" label="Currency 38 link" description="" />
+            <field name="currencyrow39" type="text" default="" label="Currency 39" description="" />
+            <field name="currencyrow39link" type="text" default="" label="Currency 39 link" description="" />
+            <field name="currencyrow40" type="text" default="" label="Currency 40" description="" />
+            <field name="currencyrow40link" type="text" default="" label="Currency 40 link" description="" />
+					
+			</fieldset>
+		</fields>
+	</config>
+</extension>

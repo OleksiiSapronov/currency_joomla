@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension
+	type="module"
+	version="3.1"
+	client="site">
+	<name>Currency pairs</name>
+	<author>Tom Mwenda</author>
+	<creationDate>March 2015</creationDate>
+	<copyright>Copyright (C) 2005 - 2013 Open Source Matters. All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+	<authorEmail>tommwenda@gmail.com</authorEmail>
+	<version>3.0.0</version>
+	<description>Displays a listing of links of currency pairs.  </description>
+	<files>
+		<filename module="mod_currencypairs">mod_currencypairs.php</filename>
+		<filename>index.html</filename>
+		<folder>tmpl</folder>
+	</files>
+	<languages>
+		<language tag="en-GB">en-GB.mod_currencypairs.ini</language>
+		<language tag="en-GB">en-GB.mod_currencypairs.sys.ini</language>
+	</languages>
+    <config>
+    <fields name="params">
+    <fieldset name="basic">
+    <field name="specific" type="list" default="0" label="Display specific currencies" description="Do you want to display specific currencies entered in below 'Currencies' field above Popular Currency List">
+        <option value="1">Yes</option>
+        <option value="0">No</option>
+    </field>
+
+        <field name="specific_currencies" type="text" default="" label="Currencies" description="If Display specific is set to yes, then list a comma separated values of currency codes to display above Popular Currency List" />
+    <field name="limit" type="text" default="" label="Limit" description="Number of items to fetch. This has no effect for Display specific currencies" />
+    <field name="itemid" type="menuitem" default="" label="Itemid" description="Menu itemid " />
+
+
+        </fieldset>
+        </fields>
+</config>
+
+</extension>

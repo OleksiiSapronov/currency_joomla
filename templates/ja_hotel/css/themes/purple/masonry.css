@@ -1,0 +1,271 @@
+.ja-masonry-wrap {
+  margin-left: -20px;
+  margin-right: -20px;
+  text-align: center;
+  
+  
+  
+  
+  
+}
+.ja-masonry-wrap .page-header {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.ja-masonry-wrap .item {
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 40px;
+  float: left;
+  text-align: left;
+}
+.ja-masonry-wrap .item .item-media {
+  position: relative;
+  margin-right: -22px !important;
+  margin-left: -22px !important;
+  margin-top: -22px !important;
+  margin-bottom: 22px !important;
+}
+.ja-masonry-wrap .item .item-media .mask {
+  background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.4) 100%);
+  background-image: -o-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.4) 100%);
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.4) 100%);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#66000000', GradientType=0);
+  display: block;
+  height: 60%;
+  left: 0;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  z-index: 5;
+  -webkit-transition: background 0.35s;
+  -o-transition: background 0.35s;
+  transition: background 0.35s;
+}
+.ja-masonry-wrap .item .item-image {
+  float: none !important;
+  width: 100%;
+}
+.ja-masonry-wrap .item article {
+  background: #ffffff;
+  border-radius: 3px;
+  margin-bottom: 22px;
+  overflow: hidden;
+  padding: 22px;
+  height: 100%;
+  margin-bottom: 0;
+  -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+}
+.ja-masonry-wrap .item .category-name {
+  position: absolute;
+  left: 22px;
+  bottom: 11px;
+  z-index: 10;
+}
+.ja-masonry-wrap .item .category-name a {
+  color: #ffffff;
+}
+.ja-masonry-wrap .item .category-name a:hover,
+.ja-masonry-wrap .item .category-name a:focus,
+.ja-masonry-wrap .item .category-name a:active {
+  text-decoration: none;
+}
+.ja-masonry-wrap .item .article-aside {
+  margin-bottom: 11px;
+}
+.ja-masonry-wrap .item .article-aside .article-info {
+  font-size: 12px;
+}
+.ja-masonry-wrap .item .readmore {
+  float: right;
+}
+.ja-masonry-wrap .item .readmore .btn {
+  padding: 0;
+  border: 0;
+  background: none;
+  color: #8e24aa;
+}
+.ja-masonry-wrap .item .readmore .btn:hover,
+.ja-masonry-wrap .item .readmore .btn:focus,
+.ja-masonry-wrap .item .readmore .btn:active {
+  background: none;
+}
+.ja-masonry-wrap .item:hover .item-media .mask {
+  background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
+  background-image: -o-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#80000000', GradientType=0);
+}
+.ja-masonry-wrap .grid-xs-1 .item {
+  width: 100%;
+}
+.ja-masonry-wrap .grid-xs-2 .item {
+  width: 50%;
+}
+.ja-masonry-wrap .grid-xs-3 .item {
+  width: 33.3%;
+}
+.ja-masonry-wrap .grid-xs-4 .item {
+  width: 25%;
+}
+.ja-masonry-wrap .grid-xs-5 .item {
+  width: 20%;
+}
+.ja-masonry-wrap .grid-xs-6 .item {
+  width: 16.6%;
+}
+.ja-masonry-wrap .grid-xs-7 .item {
+  width: 14.28%;
+}
+.ja-masonry-wrap .grid-xs-8 .item {
+  width: 12.5%;
+}
+.ja-masonry-wrap .grid-xs-9 .item {
+  width: 11.1%;
+}
+.ja-masonry-wrap .grid-xs-10 .item {
+  width: 10%;
+}
+@media (min-width: 600px) {
+  .ja-masonry-wrap .grid-smx-1 .item {
+    width: 100%;
+  }
+  .ja-masonry-wrap .grid-smx-2 .item {
+    width: 50%;
+  }
+  .ja-masonry-wrap .grid-smx-3 .item {
+    width: 33.3%;
+  }
+  .ja-masonry-wrap .grid-smx-4 .item {
+    width: 25%;
+  }
+  .ja-masonry-wrap .grid-smx-5 .item {
+    width: 20%;
+  }
+  .ja-masonry-wrap .grid-smx-6 .item {
+    width: 16.6%;
+  }
+  .ja-masonry-wrap .grid-smx-7 .item {
+    width: 14.28%;
+  }
+  .ja-masonry-wrap .grid-smx-8 .item {
+    width: 12.5%;
+  }
+  .ja-masonry-wrap .grid-smx-9 .item {
+    width: 11.1%;
+  }
+  .ja-masonry-wrap .grid-smx-10 .item {
+    width: 10%;
+  }
+}
+@media (min-width: 768px) {
+  .ja-masonry-wrap .grid-sm-1 .item {
+    width: 100%;
+  }
+  .ja-masonry-wrap .grid-sm-2 .item {
+    width: 50%;
+  }
+  .ja-masonry-wrap .grid-sm-3 .item {
+    width: 33.3%;
+  }
+  .ja-masonry-wrap .grid-sm-4 .item {
+    width: 25%;
+  }
+  .ja-masonry-wrap .grid-sm-5 .item {
+    width: 20%;
+  }
+  .ja-masonry-wrap .grid-sm-6 .item {
+    width: 16.6%;
+  }
+  .ja-masonry-wrap .grid-sm-7 .item {
+    width: 14.28%;
+  }
+  .ja-masonry-wrap .grid-sm-8 .item {
+    width: 12.5%;
+  }
+  .ja-masonry-wrap .grid-sm-9 .item {
+    width: 11.1%;
+  }
+  .ja-masonry-wrap .grid-sm-10 .item {
+    width: 10%;
+  }
+}
+@media (min-width: 992px) {
+  .ja-masonry-wrap .grid-md-1 .item {
+    width: 100%;
+  }
+  .ja-masonry-wrap .grid-md-2 .item {
+    width: 50%;
+  }
+  .ja-masonry-wrap .grid-md-3 .item {
+    width: 33.3%;
+  }
+  .ja-masonry-wrap .grid-md-4 .item {
+    width: 25%;
+  }
+  .ja-masonry-wrap .grid-md-5 .item {
+    width: 20%;
+  }
+  .ja-masonry-wrap .grid-md-6 .item {
+    width: 16.6%;
+  }
+  .ja-masonry-wrap .grid-md-7 .item {
+    width: 14.28%;
+  }
+  .ja-masonry-wrap .grid-md-8 .item {
+    width: 12.5%;
+  }
+  .ja-masonry-wrap .grid-md-9 .item {
+    width: 11.1%;
+  }
+  .ja-masonry-wrap .grid-md-10 .item {
+    width: 10%;
+  }
+}
+@media (min-width: 1200px) {
+  .ja-masonry-wrap .grid-lg-1 .item {
+    width: 100%;
+  }
+  .ja-masonry-wrap .grid-lg-2 .item {
+    width: 50%;
+  }
+  .ja-masonry-wrap .grid-lg-3 .item {
+    width: 33.3%;
+  }
+  .ja-masonry-wrap .grid-lg-4 .item {
+    width: 25%;
+  }
+  .ja-masonry-wrap .grid-lg-5 .item {
+    width: 20%;
+  }
+  .ja-masonry-wrap .grid-lg-6 .item {
+    width: 16.6%;
+  }
+  .ja-masonry-wrap .grid-lg-7 .item {
+    width: 14.28%;
+  }
+  .ja-masonry-wrap .grid-lg-8 .item {
+    width: 12.5%;
+  }
+  .ja-masonry-wrap .grid-lg-9 .item {
+    width: 11.1%;
+  }
+  .ja-masonry-wrap .grid-lg-10 .item {
+    width: 10%;
+  }
+}
+.ja-masonry-wrap #infinity-next {
+  display: inline-block !important;
+  margin-top: 22px;
+}
+.ja-masonry-wrap #infinity-next.loading span {
+  display: inline-block !important;
+  margin-left: 5.5px;
+}
+
+html.ie8 .ja-masonry-wrap .item {
+  margin-left: -0.5px;
+}

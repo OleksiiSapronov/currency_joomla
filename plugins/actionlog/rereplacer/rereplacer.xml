@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extension version="3" type="plugin" group="actionlog" method="upgrade">
+  <name>PLG_ACTIONLOG_REREPLACER</name>
+  <description>PLG_ACTIONLOG_REREPLACER_DESC</description>
+  <version>13.2.0PRO</version>
+  <creationDate>September 2023</creationDate>
+  <author>Regular Labs (Peter van Westen)</author>
+  <authorEmail>info@regularlabs.com</authorEmail>
+  <authorUrl>https://regularlabs.com</authorUrl>
+  <copyright>Copyright © 2023 Regular Labs - All Rights Reserved</copyright>
+  <license>GNU General Public License version 2 or later</license>
+  <files>
+    <file plugin="rereplacer">rereplacer.php</file>
+    <folder>language</folder>
+  </files>
+  <config>
+    <fields name="params" addfieldpath="/libraries/regularlabs/fields">
+      <fieldset name="basic">
+        <field name="@load_language_regularlabs" type="rl_loadlanguage" extension="plg_system_regularlabs"/>
+        <field name="@load_language" type="rl_loadlanguage" extension="plg_actionlog_rereplacer"/>
+        <field name="@license" type="rl_license" extension="REREPLACER"/>
+        <field name="@version" type="rl_version" extension="REREPLACER"/>
+        <field name="@dependency" type="rl_dependency" label="RR_THE_COMPONENT" file="/administrator/components/com_rereplacer/rereplacer.xml"/>
+        <field name="@dependency2" type="rl_dependency" label="RR_THE_SYSTEM_PLUGIN" file="/plugins/system/rereplacer/rereplacer.xml"/>
+        <field name="@header" type="rl_header" label="REREPLACER" description="REREPLACER_DESC" url="https://regularlabs.com/rereplacer"/>
+        <field name="@note__settings" type="note" class="alert alert-info" description="RR_SETTINGS,&lt;a href=&quot;index.php?option=com_rereplacer&quot; target=&quot;_blank&quot;&gt;,&lt;/a&gt;"/>
+      </fieldset>
+    </fields>
+  </config>
+</extension>

@@ -1,0 +1,866 @@
+.no-margin-top {
+  margin-top: 0 !important;
+}
+.no-margin-bottom {
+  margin-bottom: 0 !important;
+}
+a:hover,
+a:focus {
+  outline: 0;
+}
+.carousel-fade .carousel-inner .item {
+  transition-property: opacity;
+  opacity: 0;
+  filter: alpha(opacity=0);
+}
+.carousel-fade .carousel-inner .item img {
+  width: 100%;
+  height: auto;
+}
+@media screen and (max-width: 767px) {
+  .carousel-fade .carousel-inner .item img {
+    width: 100%;
+    height: auto;
+  }
+}
+.carousel-fade .carousel-inner .active {
+  opacity: 1;
+  filter: alpha(opacity=100);
+}
+.carousel-fade .carousel-inner .active.left,
+.carousel-fade .carousel-inner .active.right {
+  left: 0;
+  z-index: 1;
+  opacity: 0;
+  filter: alpha(opacity=0);
+}
+.carousel-fade .carousel-inner .next.left,
+.carousel-fade .carousel-inner .prev.right {
+  opacity: 1;
+  filter: alpha(opacity=100);
+}
+.carousel-fade .carousel-control {
+  z-index: 2;
+}
+.com_solidres .label {
+  margin-right: 5px;
+  padding: 3px 5px;
+  font-size: 12px;
+  font-weight: normal;
+}
+.com_solidres .custom-field-block {
+  background: #ffffff;
+  padding: 22px;
+  -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 3px;
+}
+.com_solidres .custom-field-block .row-info-heading {
+  text-align: right;
+  color: #4b4b4b;
+  font-weight: bold;
+}
+@media screen and (max-width: 991px) {
+  .com_solidres .custom-field-block .row-info-heading {
+    text-align: left;
+  }
+}
+.com_solidres .custom-field-block .custom-field-row {
+  padding: 11px 0;
+  border-color: #2d2d2d;
+}
+.com_solidres .custom-field-block .custom-field-row:last-child {
+  border-bottom: 0;
+}
+.com_solidres .search-navbar {
+  background: #ffffff;
+  padding: 11px;
+}
+.com_solidres .search-navbar .brand {
+  float: left;
+  padding: 10px;
+}
+@media screen and (min-width: 992px) {
+  .com_solidres .search-navbar .collapse {
+    display: block;
+  }
+}
+.com_solidres .search-navbar .nav {
+  float: left;
+}
+@media screen and (min-width: 992px) {
+  .com_solidres .search-navbar .nav li {
+    display: inline-block;
+  }
+}
+.com_solidres .search-navbar .nav li ul > li {
+  display: block;
+}
+.com_solidres select,
+.com_solidres select.form-control,
+.com_solidres select.inputbox,
+.com_solidres select.input {
+  width: auto;
+  max-width: 100%;
+}
+.com_solidres .sr-reservation-form .carousel .item img {
+  width: 100%;
+  height: auto;
+}
+.com_solidres .sr-reservation-form .carousel .carousel-control {
+  -webkit-transition: all 0.2s linear;
+  -o-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+  opacity: 0;
+  filter: alpha(opacity=0);
+}
+.com_solidres .sr-reservation-form .carousel:hover .carousel-control {
+  opacity: 0.6;
+  filter: alpha(opacity=60);
+}
+.com_solidres .room-item {
+  -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 2px;
+  background: #ffffff;
+  padding: 22px;
+  margin-bottom: 22px;
+}
+.com_solidres .room-item .alert {
+  margin-top: 22px;
+  margin-bottom: 0;
+}
+.com_solidres #solidres .container {
+  padding-left: 11px;
+  padding-right: 11px;
+  width: auto;
+}
+.com_solidres .table .inputbox,
+.com_solidres .table input[type=text],
+.com_solidres .table input[type=email],
+.com_solidres .table input[type=date],
+.com_solidres .table select,
+.com_solidres .table textarea {
+  background: #ffffff;
+}
+.com_solidres .tab-content .tab-pane {
+  padding: 22px;
+}
+@media screen and (max-width: 767px) {
+  .com_solidres .tab-content .tab-pane {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+.com_solidres .icon-publish:before {
+  font-family: "FontAwesome";
+  content: "\f00c";
+}
+.com_solidres .icon-unpublish:before {
+  font-family: "FontAwesome";
+  content: "\f00d";
+}
+.com_solidres .icon-checkedout:before {
+  font-family: "FontAwesome";
+  content: "\f058";
+}
+.com_solidres .navbar {
+  min-height: 0;
+  margin: 0;
+}
+.com_solidres .navbar .btn-navbar {
+  padding: 8px 14px;
+}
+.com_solidres .navbar .btn-navbar .icon-bar {
+  width: 14px;
+  height: 2px;
+  display: block;
+  background: #888;
+  margin-bottom: 3px;
+}
+.com_solidres .btn-toolbar {
+  padding-top: 11px;
+  padding-bottom: 11px;
+}
+.com_solidres .statistics-table-area .statistics-box.dark h1,
+.com_solidres .statistics-table-area .statistics-box.dark h2,
+.com_solidres .statistics-table-area .statistics-box.dark h3,
+.com_solidres .statistics-table-area .statistics-box.dark h4,
+.com_solidres .statistics-table-area .statistics-box.dark h5,
+.com_solidres .statistics-table-area .statistics-box.dark h6 {
+  color: #ffffff;
+}
+.com_solidres .statistics-table-area .navbar-inner .btn-navbar {
+  position: absolute;
+  top: -40px;
+  right: 0;
+}
+.com_solidres .asset-title {
+  margin: 0 0 22px 0;
+}
+.com_solidres .row-fluid:before,
+.com_solidres .inner:before,
+.com_solidres .row-fluid:after,
+.com_solidres .inner:after {
+  content: " ";
+  display: table;
+}
+.com_solidres .row-fluid:after,
+.com_solidres .inner:after {
+  clear: both;
+}
+.com_solidres .button-row,
+.com_solidres .form-box {
+  background: #ffffff;
+  border: 0;
+  border-radius: 2px;
+  padding: 11px 22px;
+  margin: 22px 0;
+  -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+}
+.com_solidres #solidres .asset-ct-top {
+  background: #ffffff;
+  border-radius: 4px 4px 0 0;
+  padding: 22px;
+}
+.com_solidres #solidres .asset-title {
+  margin: 0 0 22px;
+}
+.com_solidres #solidres .asset-title i {
+  font-size: 18px;
+}
+.com_solidres #solidres .asset-title i:first-child {
+  margin-left: 11px;
+}
+.com_solidres #solidres .asset-subinfo-group span {
+  font-style: normal;
+  font-size: 14px;
+  line-height: 1.8;
+}
+.com_solidres #solidres .asset-subinfo-group span.phone:before,
+.com_solidres #solidres .asset-subinfo-group span.fax:before {
+  color: #5a5a5a;
+  content: "\f098";
+  display: inline-block;
+  font-family: FontAwesome;
+  font-size: 14px;
+  height: 16px;
+  margin-right: 2px;
+  width: 16px;
+}
+.com_solidres #solidres .asset-subinfo-group span.fax:before {
+  content: "\f1ac";
+}
+.com_solidres #solidres .social_network {
+  font-style: normal;
+  margin: 22px 0;
+}
+.com_solidres #solidres .social_network .fa {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 30px;
+  background: #f7f7f7;
+  color: #5a5a5a;
+}
+.com_solidres #solidres .social_network .fa.fa-twitter {
+  background: #81D4FA;
+  color: #fff;
+}
+.com_solidres #solidres .social_network .fa.fa-facebook {
+  color: #fff;
+  background: #03A9F4;
+}
+.com_solidres #solidres .social_network .fa.fa-linkedin {
+  background: #1565C0;
+  color: #fff;
+}
+.com_solidres #solidres .asset-gallery {
+  margin-bottom: 33px;
+}
+.com_solidres #solidres .asset-gallery .other-photos img {
+  margin-bottom: 8px;
+}
+.com_solidres #solidres div.even,
+.com_solidres #solidres div.odd {
+  border-bottom: 1px solid #2d2d2d;
+}
+.com_solidres #solidres .sr-reservation-form .carousel .item img {
+  padding: 0;
+}
+.com_solidres #solidres .roomtype_desc {
+  margin-bottom: 22px;
+}
+.com_solidres #solidres .roomtype_desc .btn-action {
+  margin-top: 22px;
+}
+.com_solidres #solidres .roomtype_desc .btn-action .btn {
+  margin-right: 5px;
+}
+.com_solidres #solidres .roomtype_desc .btn-action .btn.btn-xs {
+  font-size: 12px;
+  padding: 7.33333333px;
+  margin: 0;
+}
+.com_solidres #solidres .roomtype_desc .btn-action .btn i {
+  margin-right: 5px;
+}
+.com_solidres #solidres .tariff-box {
+  background: #ffffff;
+  border: 0;
+  border-top: 2px solid #2d2d2d;
+  margin: 22px 0 0;
+  padding: 22px 0 0;
+}
+.com_solidres #solidres .tariff-box .min_tariff,
+.com_solidres #solidres .tariff-box .normal_tariff {
+  color: #ffffff;
+  font-size: 24px;
+}
+.com_solidres #solidres .tariff-box .tariff_title {
+  color: #2d2d2d;
+  display: block;
+  padding-top: 10px;
+  margin-top: 0;
+}
+.com_solidres #solidres .tariff-box .normal_tariff select {
+  float: left;
+}
+.com_solidres #solidres .tariff-box .media-body {
+  text-align: left !important;
+}
+.com_solidres #solidres .tariff-box .starting_from,
+.com_solidres #solidres .tariff-box .min_tariff,
+.com_solidres #solidres .tariff-box .tariff_suffix {
+  line-height: 1;
+  text-align: left !important;
+}
+.com_solidres #solidres .tariff-box .starting_from {
+  display: block;
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+.com_solidres #solidres .tariff-box .min_tariff {
+  display: inline-block;
+  line-height: 1;
+  margin-right: 5px;
+}
+.com_solidres #solidres .tariff-box .tariff_suffix {
+  display: inline-block;
+  font-weight: 400;
+  color: #4b4b4b;
+}
+.com_solidres #solidres .tariff-box .checkinoutform {
+  margin-top: 22px;
+}
+.com_solidres .coupon {
+  background: #fff;
+  border: 0;
+  border-bottom: 1px solid #2d2d2d;
+  border-radius: 0;
+  margin: 0;
+  padding: 0 22px 22px;
+  position: relative;
+}
+.com_solidres .coupon #coupon_code {
+  width: 220px;
+}
+.com_solidres .coupon .help-inline {
+  font-size: 12px;
+  padding: 7.33333333px;
+  position: absolute;
+  bottom: 100%;
+  line-height: 1;
+  left: 22px;
+  background: #f7f7f7;
+}
+.com_solidres .coupon .help-inline:before {
+  border-right: 6px solid transparent;
+  border-top: 6px solid #f7f7f7;
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 10px;
+}
+.com_solidres .coupon .help-inline.rejected {
+  background: #cc0000;
+  color: #ffffff;
+}
+.com_solidres .coupon .help-inline.rejected:before {
+  border-top-color: #cc0000;
+}
+.com_solidres .wizard {
+  background: transparent;
+  border: 0;
+  border-top: 1px solid #878787;
+  border-radius: 0;
+  margin: 0;
+}
+.com_solidres .wizard ul.steps:before,
+.com_solidres .wizard ul.steps:after {
+  content: " ";
+  display: table;
+}
+.com_solidres .wizard ul.steps:after {
+  clear: both;
+}
+.com_solidres .wizard ul.steps li {
+  background: #ffffff;
+  border-radius: 0 !important;
+  height: auto;
+  font-size: 14px;
+  padding: 10px;
+  position: relative;
+  text-align: center;
+  width: 33.33%;
+}
+@media screen and (max-width: 480px) {
+  .com_solidres .wizard ul.steps li {
+    width: 100%;
+    text-align: left;
+  }
+}
+@media (min-width: 480px) and (max-width: 992px) {
+  .com_solidres .wizard ul.steps li {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+}
+.com_solidres .wizard ul.steps li .chevron {
+  display: none;
+}
+.com_solidres .wizard ul.steps li .badge {
+  border: 0;
+  border-radius: 50%;
+  height: 40px;
+  font-size: 18px;
+  padding: 0;
+  line-height: 38px;
+  text-align: center;
+  width: 40px;
+}
+.com_solidres .wizard ul.steps li.complete {
+  background: #ffffff;
+  color: #ffffff;
+}
+.com_solidres .wizard ul.steps li.complete:before {
+  background: #ffffff;
+}
+.com_solidres .wizard ul.steps li.complete .badge {
+  background: #ffffff;
+  color: #ffffff;
+}
+.com_solidres .wizard ul.steps li.active {
+  background: #ffffff;
+  color: #ffffff;
+}
+.com_solidres .wizard ul.steps li.active:before {
+  background: #ffffff;
+}
+.com_solidres .wizard ul.steps li.active .badge {
+  color: #ffffff;
+  background: #ffffff;
+}
+.com_solidres .wizard ul.steps li:first-child:before {
+  width: 50%;
+}
+.com_solidres .wizard ul.steps li:first-child.complete:before {
+  width: 100%;
+}
+.com_solidres .wizard ul.steps li:last-child:before {
+  width: 50%;
+  left: auto;
+  right: 0;
+}
+.com_solidres .wizard ul.steps li:last-child.active:before {
+  width: 100%;
+}
+.com_solidres #availability-search {
+  background: #ffffff;
+  border-top: 1px solid #878787;
+  margin-bottom: 22px;
+  border-radius: 2px;
+  -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+}
+.com_solidres #availability-search .availability-search-info {
+  color: #669900;
+  padding: 11px 22px;
+  line-height: 44px;
+}
+.com_solidres #sr-reservation-form-room .button-row-top p,
+.com_solidres #sr-reservation-form-room .button-row-bottom p {
+  margin-bottom: 0;
+  padding-top: 10px;
+}
+.com_solidres .room .carousel-control {
+  font-size: 12px;
+  border-width: 2px;
+  left: 15px;
+}
+.com_solidres .room .carousel-control.right {
+  left: auto;
+  right: 15px;
+}
+.com_solidres .room-form .room_index_row .room_index_form_ct {
+  padding-top: 11px;
+  padding-bottom: 11px;
+}
+.com_solidres .room-form .room_index_row .room_index_form_ct .form-group {
+  margin-bottom: 10px;
+}
+.com_solidres h4.roomtype_name {
+  position: relative;
+  margin-bottom: 22px;
+  margin-top: 0;
+}
+.com_solidres h4.roomtype_name .label {
+  display: inline-block;
+  margin-right: 5px;
+}
+.com_solidres div.availability-calendar table {
+  margin-bottom: 10px;
+}
+@media screen and (max-width: 767px) {
+  .com_solidres div.availability-calendar table {
+    width: 100%;
+  }
+}
+.com_solidres div.availability-calendar table th,
+.com_solidres div.availability-calendar table td {
+  font-size: 12px;
+}
+@media screen and (max-width: 767px) {
+  .com_solidres div.availability-calendar table {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+@media screen and (max-width: 767px) {
+  .com_solidres div.availability-calendar .span4 {
+    width: 100%;
+  }
+}
+.com_solidres .reservation_asset_item .main-photo img {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+@media screen and (max-width: 767px) {
+  .com_solidres .reservation_asset_item .main-photo {
+    margin-bottom: 22px;
+  }
+}
+.com_solidres .other-photos {
+  margin-left: -11px;
+  margin-right: -11px;
+}
+.com_solidres .other-photos .sr-photo {
+  width: 25%;
+  float: left;
+  padding: 0 11px 11px 11px;
+}
+.com_solidres .other-photos .sr-photo .photo {
+  width: 100%;
+  height: auto;
+}
+.com_solidres .ui-datepicker {
+  margin: 0 5px;
+  width: auto;
+  border-radius: 0;
+  font-family: "Roboto", Helvetica, Arial, sans-serif;
+}
+.com_solidres .ui-datepicker .ui-datepicker-header {
+  border-radius: 0;
+  background: #f7f7f7;
+}
+.com_solidres .ui-datepicker .ui-state-highlight,
+.com_solidres .ui-datepicker .ui-widget-content .ui-state-highlight,
+.com_solidres .ui-datepicker .ui-widget-header .ui-state-highlight {
+  background: #669900;
+  color: #ffffff;
+}
+.com_solidres .ui-datepicker .ui-datepicker-buttonpane button.ui-datepicker-current {
+  background: #ffffff;
+  font-family: "Roboto", Helvetica, Arial, sans-serif;
+  border-radius: 2px;
+  color: #ffffff;
+}
+.com_solidres .availability-calendar {
+  padding: 22px;
+  z-index: 2;
+  position: absolute;
+  background: #fff;
+  text-align: left;
+  color: #4b4b4b;
+  border: 1px solid #2d2d2d;
+}
+.com_solidres .availability-calendar table tr.row-week-day {
+  background: #f7f7f7;
+}
+.com_solidres #sr-advancedsearch-form .datepicker_inline {
+  position: absolute;
+  z-index: 1001;
+}
+.com_solidres #sr-advancedsearch-form .datepicker_inline .ui-datepicker-inline {
+  width: auto !important;
+}
+.com_solidres #sr-advancedsearch-form .datepicker_inline .ui-datepicker-inline .ui-datepicker-group {
+  width: auto;
+  float: none;
+}
+.com_solidres .t3-section-1 #sr-advancedsearch-form {
+  padding: 44px 0;
+}
+.com_solidres .t3-section-1 #sr-advancedsearch-form fieldset > .row {
+  float: left;
+  width: 25%;
+}
+.com_solidres .datefield {
+  background: none;
+  border: 2px solid #cfd8dc;
+  border-radius: 0;
+  box-shadow: none;
+  height: 40px;
+  padding: 10px;
+  position: relative;
+  padding-right: 40px;
+  max-width: 200px;
+}
+.com_solidres .datefield:after {
+  content: "\f073";
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: normal;
+  text-decoration: inherit;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: #5a5a5a;
+}
+.com_solidres .datefield .datepicker_inline {
+  position: absolute;
+  z-index: 1001;
+  left: 0;
+  top: 100%;
+}
+.com_solidres .datefield .datepicker_inline .ui-datepicker {
+  border-color: #2d2d2d;
+  margin: 0;
+  padding: 0;
+}
+.com_solidres .datefield .datepicker_inline .ui-datepicker .ui-datepicker-header {
+  border: 0;
+  margin: 1px;
+}
+.com_solidres .module-ct .datefield {
+  max-width: none;
+}
+.com_solidres .searchbtn {
+  margin-top: 18px;
+}
+.com_solidres .form-group {
+  position: relative;
+}
+.com_solidres .form-group label.error {
+  position: absolute;
+  top: -20px;
+  left: 0;
+  background: red;
+  color: #fff;
+  font-weight: 300;
+  font-size: 12px;
+  padding: 5px;
+  line-height: 1;
+}
+.com_solidres .form-group label.error:before {
+  border-right: 5px solid transparent;
+  border-top: 10px solid red;
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 10px;
+}
+.com_solidres .form-guest-title {
+  margin: 22px 0;
+}
+@media screen and (max-width: 767px) {
+  .com_solidres #solidres .asset-item {
+    margin-bottom: 22px;
+  }
+}
+.com_solidres #solidres .asset-item .asset-title {
+  margin: 11px 0 0 0;
+}
+.com_solidres #solidres .asset-item .asset-title:before,
+.com_solidres #solidres .asset-item .asset-title:after {
+  content: " ";
+  display: table;
+}
+.com_solidres #solidres .asset-item .asset-title:after {
+  clear: both;
+}
+.com_solidres #solidres .asset-item .asset-title .asset-rate {
+  float: right;
+  color: #f7ba0c;
+}
+@media screen and (max-width: 1199px) {
+  .com_solidres #solidres .asset-item .asset-title .asset-rate {
+    float: none;
+  }
+}
+.com_solidres #solidres .asset-item .asset-title .asset-rate i {
+  width: 13px;
+  font-size: 13px;
+}
+@media screen and (max-width: 1199px) {
+  .com_solidres #solidres .asset-item .asset-title .asset-rate i:first-child {
+    margin-left: 0;
+  }
+}
+.com_solidres #solidres .asset-item .carousel .carousel-control {
+  opacity: 0;
+  filter: alpha(opacity=0);
+  -webkit-transition: all 0.2s linear;
+  -o-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+@media screen and (max-width: 767px) {
+  .com_solidres #solidres .asset-item .carousel .room_type_details {
+    margin-bottom: 22px;
+    display: block;
+  }
+}
+.com_solidres #solidres .asset-item:hover .carousel .carousel-control {
+  opacity: 1;
+  filter: alpha(opacity=100);
+}
+.com_solidres #solidres .asset-item .asset-subinfo {
+  padding: 11px 0;
+}
+.com_solidres #solidres .asset-item .asset-subinfo a,
+.com_solidres #solidres .asset-item .asset-subinfo .show_location_map {
+  display: inline-block;
+}
+.com_solidres #solidres .asset-row-list .asset-item .asset-title {
+  margin-top: 0;
+  margin-bottom: 11px;
+}
+.com_solidres #solidres .asset-row-list .asset-item .asset-title .asstet-rate {
+  float: right;
+  color: #f7ba0c;
+}
+.com_solidres #solidres .asset-row-list .asset-item .asset-title .asstet-rate i {
+  width: 13px;
+  font-size: 13px;
+}
+.com_solidres #solidres .asset-row-grid .asset-item .carousel {
+  margin: -22px;
+  margin-bottom: 22px;
+}
+.com_solidres #solidres .asset-row-grid .asset-item .room-type-list .room-type-row p {
+  margin-bottom: 0;
+}
+#sr-checkavailability-form .action .btn {
+  margin-right: 10px;
+}
+.com_solidres .dashboard-block,
+.com_solidres .sr_list_view,
+.com_solidres .sr_form_view {
+  background: #ffffff;
+  border-radius: 4px;
+  padding: 22px;
+  -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+  margin-bottom: 22px;
+}
+.com_solidres .dashboard-nav {
+  -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+  background: #ffffff;
+  margin-bottom: 22px;
+}
+.com_solidres .dashboard-nav:before,
+.com_solidres .dashboard-nav:after {
+  content: " ";
+  display: table;
+}
+.com_solidres .dashboard-nav:after {
+  clear: both;
+}
+.com_solidres .dashboard-nav .nav > li,
+.com_solidres .dashboard-nav .nav-collapse .nav > li {
+  display: inline-block;
+}
+.com_solidres .dashboard-nav .nav > li a,
+.com_solidres .dashboard-nav .nav-collapse .nav > li a {
+  color: #4b4b4b;
+  font-size: 14px;
+}
+.com_solidres .dashboard-nav .nav > li a:hover,
+.com_solidres .dashboard-nav .nav-collapse .nav > li a:hover,
+.com_solidres .dashboard-nav .nav > li a:focus,
+.com_solidres .dashboard-nav .nav-collapse .nav > li a:focus {
+  color: #ffffff;
+}
+@media screen and (max-width: 767px) {
+  .com_solidres .dashboard-nav .nav > li a,
+  .com_solidres .dashboard-nav .nav-collapse .nav > li a {
+    font-size: 12px;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+}
+.com_solidres .dashboard-nav .nav > li .dropdown-menu li,
+.com_solidres .dashboard-nav .nav-collapse .nav > li .dropdown-menu li {
+  display: block;
+}
+.com_solidres .dashboard-nav .btn-navbar {
+  display: none;
+}
+.com_solidres .tab-pane .dashboard-nav {
+  margin: -22px;
+  margin-bottom: 22px;
+  padding-left: 0;
+  padding-right: 0;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+@media screen and (min-width: 992px) {
+  .com_solidres .tab-pane .dashboard-nav .nav {
+    float: left;
+  }
+}
+@media screen and (max-width: 767px) {
+  .com_solidres .dashboard-block .span4 {
+    width: 100%;
+    float: none;
+  }
+}
+@media screen and (max-width: 767px) {
+  .com_solidres .dashboard-block .scope-selection #statistics_scope {
+    margin: 22px 0;
+    float: none !important;
+    width: 100%;
+  }
+}
+@media screen and (max-width: 767px) {
+  .com_solidres .statistics-chart-area .nav-tabs li a {
+    padding: 7.33333333px;
+    font-size: 12px;
+    border: 0;
+    margin-bottom: 1px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .com_solidres .statistics-chart-area .nav-tabs li.active a {
+    background: #ffffff;
+    color: #ffffff;
+  }
+}
+.ie8.com_solidres .form-group {
+  min-width: 150px;
+}

@@ -1,0 +1,16 @@
+@media (max-width: 767px) {
+  .magazine-featured.solidres .magazine-item {
+    margin-bottom: 18px;
+  }
+}
+.magazine-featured.solidres .magazine-item-media {
+  max-height: 220px;
+  overflow: hidden;
+}
+.magazine-featured.solidres .rating {
+  color: #f7ba0c;
+  font-size: 13px;
+  width: 13px;
+  float: left;
+  margin-top: 8px;
+}

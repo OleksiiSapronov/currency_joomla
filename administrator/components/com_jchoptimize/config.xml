@@ -1,0 +1,1449 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<config>
+    <!-- ##### BASIC -->
+    <fieldset name="basic" addfieldpath="/administrator/components/com_jchoptimize/fields"
+              label="COM_JCHOPTIMIZE_GENERAL_FIELDSET_LABEL"
+    >
+       <field name="ajax"
+               type="ajax">
+        </field>
+        <!--
+        Miscellaneous
+        -->
+        <field name="group_basic_misc_start"
+               type="jchgroup"
+               section="start"
+               label="COM_JCHOPTIMIZE_GROUP_MISC_LABEL"
+               description="COM_JCHOPTIMIZE_GROUP_MISC_DESC">
+        </field>
+        <field name="pro_downloadid"
+               type="proonlytext"
+               default=""
+               label="COM_JCHOPTIMIZE_DOWNLOADID_LABEL"
+               description="COM_JCHOPTIMIZE_DOWNLOADID_DESCRIPTION"
+               size="50">
+        </field>
+        <!--<procode>-->
+        <field name="hidden_api_secret"
+               type="hidden"
+               default="0aad0284"
+        >
+        </field>
+        <!--</procode>-->
+        <field name="cache_random_key"
+               type="hidden"
+               default=""
+               >
+        </field>
+        <field name="debug"
+               type="radio"
+               class="btn-group"
+               default="0"
+               label="COM_JCHOPTIMIZE_DEBUG_LABEL"
+               description="COM_JCHOPTIMIZE_DEBUG_DESCRIPTION">
+            <option value="0">JNO</option>
+            <option value="1">JYES</option>
+        </field>
+        <field name="disable_logged_in_users"
+               type="radio"
+               class="btn-group"
+               default="1"
+               label="COM_JCHOPTIMIZE_DISABLELOGGEDINUSERS_LABEL"
+               description="COM_JCHOPTIMIZE_DISABLELOGGEDINUSERS_DESC">
+            <option value="0">JNO</option>
+            <option value="1">JYES</option>
+        </field>
+        <field name="group_basic_misc_end"
+               type="jchgroup"
+               section="end">
+        </field>
+
+        <!--
+        Exclude Menu items
+        -->
+        <field name="group_advanced_menuselect_start"
+               type="jchgroup"
+               section="start"
+               label="COM_JCHOPTIMIZE_GROUP_MENUSELECT_LABEL"
+               description="COM_JCHOPTIMIZE_GROUP_MENUSELECT_DESC">
+        </field>
+        <field name="menuexcludedurl"
+               type="excludeurlwithquery"
+               rows="3"
+               default=""
+               cols="20"
+               label="COM_JCHOPTIMIZE_MENUEXCLUDEDURL_LABEL"
+               description="COM_JCHOPTIMIZE_MENUEXCLUDEDURL_DESC"
+        >
+        </field>
+        <field name="menuexcluded"
+               type="menuitem"
+               label="COM_JCHOPTIMIZE_MENUSELECTION_LABEL"
+               description="COM_JCHOPTIMIZE_MENUSELECTION_DESC"
+               multiple="multiple"
+               filter="int_array"
+        >
+        </field>
+        <field name="group_advanced_menuselect_end"
+               type="jchgroup"
+               section="end">
+        </field>
+        <field name="group_cache_storage_start"
+               type="jchgroup"
+               section="start"
+               label="COM_JCHOPTIMIZE_GROUP_CACHE_STORAGE_LABEL"
+               description="COM_JCHOPTIMIZE_GROUP_CACHE_STORAGE_DESC"
+               >
+        </field>
+        <!--
+        Cache Storage
+        -->
+        <field name="pro_cache_storage_adapter"
+               type="proonlyjchcachehandler"
+               default="filesystem"
+               label="COM_JCHOPTIMIZE_CACHE_STORAGE_LABEL"
+               description="COM_JCHOPTIMIZE_CACHE_STORAGE_DESC"
+        >
+        </field>
+        <field name="memcached_server_host"
+               type="proonlytext"
+               default="127.0.0.1"
+               label="COM_JCHOPTIMIZE_MEMCACHED_SERVER_HOST_LABEL"
+               description="COM_JCHOPTIMIZE_MEMCACHED_SERVER_HOST_DESC"
+               showon="pro_cache_storage_adapter:memcached">
+        </field>
+        <field name="memcached_server_port"
+               type="proonlytext"
+               default="11211"
+               label="COM_JCHOPTIMIZE_MEMCACHED_SERVER_PORT_LABEL"
+               description="COM_JCHOPTIMIZE_MEMCACHED_SERVER_PORT_DESC"
+               showon="pro_cache_storage_adapter:memcached">
+        </field>
+        <field name="redis_server_host"
+               type="proonlytext"
+               default="127.0.0.1"
+               label="COM_JCHOPTIMIZE_REDIS_SERVER_HOST_LABEL"
+               description="COM_JCHOPTIMIZE_REDIS_SERVER_HOST_DESC"
+               showon="pro_cache_storage_adapter:redis">
+        </field>
+        <field name="redis_server_port"
+               type="proonlytext"
+               default="6379"
+               label="COM_JCHOPTIMIZE_REDIS_SERVER_PORT_LABEL"
+               description="COM_JCHOPTIMIZE_REDIS_SERVER_PORT_DESC"
+               showon="pro_cache_storage_adapter:redis">
+        </field>
+        <field name="redis_server_password"
+               type="proonlytext"
+               label="COM_JCHOPTIMIZE_REDIS_SERVER_PASSWORD_LABEL"
+               description="COM_JCHOPTIMIZE_REDIS_SERVER_PASSWORD_DESC"
+               showon="pro_cache_storage_adapter:redis">
+        </field>
+        <field name="redis_server_database"
+               type="proonlytext"
+               default="0"
+               label="COM_JCHOPTIMIZE_REDIS_DATABASE_LABEL"
+               description="COM_JCHOPTIMIZE_REDIS_DATABASE_DESC"
+               showon="pro_cache_storage_adapter:redis">
+        </field>
+        <field name="cache_lifetime"
+               type="list"
+               default="900"
+               label="COM_JCHOPTIMIZE_CACHE_LIFETIME_LABEL"
+               description="COM_JCHOPTIMIZE_CACHE_LIFETIME_DESCRIPTION">
+            <option value="900">COM_JCHOPTIMIZE_15_MIN</option>
+            <option value="1800">COM_JCHOPTIMIZE_30_MIN</option>
+            <option value="3600">COM_JCHOPTIMIZE_1_HOUR</option>
+            <option value="10800">COM_JCHOPTIMIZE_3_HOURS</option>
+            <option value="21600">COM_JCHOPTIMIZE_6_HOURS</option>
+            <option value="43200">COM_JCHOPTIMIZE_12_HOURS</option>
+            <option value="86400">COM_JCHOPTIMIZE_1_DAY</option>
+            <option value="172800">COM_JCHOPTIMIZE_2_DAYS</option>
+            <option value="604800">COM_JCHOPTIMIZE_7_DAYS</option>
+            <option value="1209600">COM_JCHOPTIMIZE_2_WEEKS</option>
+        </field>
+        <field name="delete_expiry"
+               type="radio"
+               class="btn-group"
+               label="COM_JCHOPTIMIZE_DELETE_EXPIRY_LABEL"
+               description="COM_JCHOPTIMIZE_DELETE_EXPIRY_DESCRIPTION"
+               default="1"
+        >
+            <option value="0">JNO</option>
+            <option value="1">JYES</option>
+        </field>
+        <field name="delete_expiry_mode"
+               type="list"
+               label="COM_JCHOPTIMIZE_DELETE_EXPIRY_MODE_LABEL"
+               description="COM_JCHOPTIMIZE_DELETE_EXPIRY_MODE_DESCRIPTION"
+               default="0">
+            <option value="0">COM_JCHOPTIMIZE_DELETE_EXPIRY_MODE_CONSERVATIVE</option>
+            <option value="1">COM_JCHOPTIMIZE_DELETE_EXPIRY_MODE_AGGRESSIVE</option>
+        </field>
+        <field name="group_cache_storage_end"
+               type="jchgroup"
+               section="end">
+        </field>
+        <!--
+        ReCache settings
+        -->
+        <field name="group_recache_settings_start"
+               type="jchgroup"
+               section="start"
+               label="COM_JCHOPTIMIZE_GROUP_RECACHE_SETTINGS_LABEL"
+               description="COM_JCHOPTIMIZE_GROUP_RECACHE_SETTINGS_DESC"
+               >
+        </field>
+        <field name="recache_crawl_limit"
+               type="proonlytext"
+               label="COM_JCHOPTIMIZE_RECACHE_CRAWL_LIMIT_LABEL"
+               description="COM_JCHOPTIMIZE_RECACHE_CRAWL_LIMIT_DESC"
+               default="100">
+        </field>
+        <field name="recache_concurrency"
+               type="proonlytext"
+               label="COM_JCHOPTIMIZE_RECACHE_CONCURRENCY_LABEL"
+               description="COM_JCHOPTIMIZE_RECACHE_CONCURRENCY_DESC"
+               default="10" >
+        </field>
+        <field name="recache_max_depth"
+               type="proonlytext"
+               label="COM_JCHOPTIMIZE_RECACHE_MAX_DEPTH_LABEL"
+               description="COM_JCHOPTIMIZE_RECACHE_MAX_DEPTH_DESC"
+               default="3">
+        </field>
+        <field name="group_recache_settings_end"
+               type="jchgroup"
+               section="end">
+        </field>
+    </fieldset>
+    <!-- ##### Combine Files -->
+    <fieldset name="combine_files" label="COM_JCHOPTIMIZE_COMBINE_FILES_FIELDSET_LABEL">
+        <!--
+Combine files
+-->
+        <field name="group_combine_files_start"
+               type="jchgroup"
+               section="start"
+               label="COM_JCHOPTIMIZE_GROUP_COMBINE_LABEL"
+               description="COM_JCHOPTIMIZE_GROUP_COMBINE_DESC">
+        </field>
+
+        <field name="combine_files_enable"
+               type="radio"
+               class="btn-group"
+               label="COM_JCHOPTIMIZE_ENABLE"
+               default="1">
+            <option value="0">JNO</option>
+            <option value="1">JYES</option>
+        </field>
+        <field name="pro_smart_combine"
+               type="smartcombine"
+               class="btn-group jch-smart-combine-radios-wrapper"
+               label="COM_JCHOPTIMIZE_PRO_SMART_COMBINE_LABEL"
+               description="COM_JCHOPTIMIZE_PRO_SMART_COMBINE_DESCRIPTION"
+               default="0">
+            <option value="0">JNO</option>
+            <option value="1">JYES</option>
+        </field>
+        <field name="pro_smart_combine_values"
+               type="hidden"
+               class="jch-smart-combine-values"
+               default=""
+        >
+        </field>
+        <field name="html_minify_level"
+               type="list"
+               default="0"
+               label="COM_JCHOPTIMIZE_MINIFY_LEVEL_LABEL"
+               description="COM_JCHOPTIMIZE_MINIFY_LEVEL_DESCRIPTION">
+            <option value="0">COM_JCHOPTIMIZE_MINIFY_LEVEL_BASIC</option>
+            <option value="1">COM_JCHOPTIMIZE_MINIFY_LEVEL_ADVANCED</option>
+            <option value="2">COM_JCHOPTIMIZE_MINIFY_LEVEL_ULTRA</option>
+        </field>
+        <field name="htaccess"
+               type="list"
+               class="btn-group"
+               default="2"
+               label="COM_JCHOPTIMIZE_HTACCESS_LABEL"
+               description="COM_JCHOPTIMIZE_HTACCESS_DESCRIPTION">
+            <option value="2">COM_JCHOPTIMIZE_STATIC_FILES</option>
+            <option value="0">COM_JCHOPTIMIZE_PHP_NO_HTACCESS</option>
+            <option value="1">COM_JCHOPTIMIZE_PHP_HTACCESS</option>
+            <option value="3">COM_JCHOPTIMIZE_PHP_WITHOUT_OPTIONSSYMLINK</option>
+        </field>
+        <field name="try_catch"
+               type="radio"
+               class="btn-group"
+               label="COM_JCHOPTIMIZE_TRY_CATCH_LABEL"
+               description="COM_JCHOPTIMIZE_TRY_CATCH_DESCRIPTION"
+               default="1"
+        >
+            <option value="0">JNO</option>
+            <option value="1">JYES</option>
+        </field>
+
+        <field name="group_combine_files_end"
+               type="jchgroup"
+               section="end"
+        >
+        </field>
+        <!--
+        Automatic Combine settings
+        -->
+        <field name="group_auto_combine_start"
+               type="jchgroup"
+               section="start"
+               class="collapsible"
+               label="COM_JCHOPTIMIZE_GROUP_AUTO_COMBINE_LABEL"
+               description="COM_JCHOPTIMIZE_GROUP_AUTO_COMBINE_DESC"
+        >
+        </field>
+        <field name="gzip"
+               type="radio"
+               class="btn-group s1-off s2-on s3-on s4-on s5-on s6-on"
+               default="0"
+               label="COM_JCHOPTIMIZE_GZIP_LABEL"
+               description="COM_JCHOPTIMIZE_GZIP_DESCRIPTION">
+            <option value="0">JNO</option>
+            <option value="1">JYES</option>
+        </field>
+        <field name="html_minify"
+               type="radio"
+               class="btn-group s1-off s2-on s3-on s4-on s5-on s6-on"
+               default="0"
+               label="COM_JCHOPTIMIZE_COMPRESS_HTML"
+               description="COM_JCHOPTIMIZE_COMPRESS_HTML_DESCRIPTION">
+            <option value="0">JNO</option>
+            <option value="1">JYES</option>
+        </field>
+        <field name="includeAllExtensions"
+               type="radio"
+               class="btn-group s1-off s2-off s3-on s4-on s5-on s6-on"
+               default="0"
+               label="COM_JCHOPTIMIZE_EXCLUDE_ALL_EXTENSIONS_LABEL"
+               description="COM_JCHOPTIMIZE_EXCLUDE_ALL_EXTENSIONS_DESCRIPTION">
+            <option value="0">JNO</option>
+            <option value="1">JYES</option>
+        </field>
+        <field name="phpAndExternal"
+               type="radio"
+               class="btn-group s1-off s2-off s3-off s4-on s5-on s6-on"
+               label="COM_JCHOPTIMIZE_PRO_PHPANDEXTERNAL_LABEL"
+               description="COM_JCHOPTIMIZE_PRO_PHPANDEXTERNAL_DESC"
+               default="0">
+            <option value="0">JNO</option>
+            <option value="1">JYES</option>
+        </field>
+        <field name="group_automatic_combine_end"
+               type="jchgroup"
+               section="end"
+        >
+        </field>
+    </fieldset>
+    <!-- ##### CSS -->
+    <fieldset name="css" label="COM_JCHOPTIMIZE_CSS_FIELDSET_LABEL">
+        <!--
+        CSS automatic settings
+        -->
+        <field name="group_css_auto_start"
+               type="jchgroup"
+               section="start"
+               class="collapsible"
+               label="COM_JCHOPTIMIZE_GROUP_CSS_AUTO_LABEL"
+               description="COM_JCHOPTIMIZE_GROUP_CSS_AUTO_DESC">
+        </field>
+        <field name="css"
+               type="radio"
+               class="btn-group s1-on s2-on s3-on s4-on s5-on s6-on"
+               default="1"
+               label="COM_JCHOPTIMIZE_CSS_LABEL"
+               description="COM_JCHOPTIMIZE_CSS_DESCRIPTION">
+            <option value="0">JNO</option>
+            <option value="1">JYES</option>
+        </field>
+        <field name="css_minify"
+               type="radio"
+               class="btn-group s1-off s2-on s3-on s4-on s5-on s6-on"
+               default="0"
+               label="COM_JCHOPTIMIZE_COMPRESS_CSS"
+               description="COM_JCHOPTIMIZE_COMPRESS_CSS_DESCRIPTION">
+            <option value="0">JNO</option>
+            <option value="1">JYES</option>
+        </field>
+        <field name="replaceImports"
+               type="radio"
+               class="btn-group s1-off s2-off s3-off s4-on s5-on s6-on"
+               label="COM_JCHOPTIMIZE_PRO_REPLACEIMPORTS_LABEL"
+               description="COM_JCHOPTIMIZE_PRO_REPLACEIMPORTS_DESC"
+               default="0">
+            <option value="0">JNO</option>
+            <option value="1">JYES</option>
+        </field>
+        <field name="inlineStyle"
+               type="radio"
+               class="btn-group s1-off s2-off s3-off s4-on s5-on s6-on"
+               label="COM_JCHOPTIMIZE_PRO_INLINESTYLE_LABEL"
+               description="COM_JCHOPTIMIZE_PRO_INLINESTYLE_DESC"
+               default="0">
+            <option value="0">JNO</option>
+            <option value="1">JYES</option>
+        </field>
+
+        <field name="group_css_auto_end"
+               type="jchgroup"
+               section="end">
+        </field>
+        <!--
+        CSS Exclude
+        -->
+        <field name="group_exclude_css_start"
+               type="jchgroup"
+               section="start"
+               label="COM_JCHOPTIMIZE_EXCLUDE_CSS_LABEL"
+               description="COM_JCHOPTIMIZE_EXCLUDE_CSS_DESC">
+        </field>
+        <field name="excludeCss"
+               type="excludecss"
+               rows="3"
+               default=""
+               cols="20"
+               label="COM_JCHOPTIMIZE_EXCLUDE_CSS_LABEL"
+               description="COM_JCHOPTIMIZE_EXCLUDE_CSS_DESCRIPTION">
+        </field>
+        <field name="excludeCssComponents"
+               type="excludecssextns"
+               rows="3"
+               default=""
+               cols="20"
+               label="COM_JCHOPTIMIZE_EXCLUDE_CSS_COMPONENTS_LABEL"
+               description="COM_JCHOPTIMIZE_EXCLUDE_CSS_COMPONENTS_DESCRIPTION">
+        </field>
+        <field name="excludeStyles"
+               type="excludestyles"
+               rows="3"
+               default=""
+               cols="20"
+               label="COM_JCHOPTIMIZE_PRO_EXCLUDE_STYLES_LABEL"
+               description="COM_JCHOPTIMIZE_PRO_EXCLUDE_STYLES_DESC">
+        </field>
+        <field name="excludeAllStyles"
+               type="radio"
+               class="btn-group"
+               label="COM_JCHOPTIMIZE_PRO_EXCLUDEALLSTYLES_LABEL"
+               description="COM_JCHOPTIMIZE_PRO_EXCLUDEALLSTYLES_DESC"
+               default="0">
+            <option value="0">JNO</option>
+            <option value="1">JYES</option>
+        </field>
+
+        <field name="group_exclude_css_end"
+               type="jchgroup"
+               section="end"
+        >
+        </field>
+        <!--
+        Remove CSS
+        -->
+        <field name="group_remove_css_start"
+               type="jchgroup"
+               section="start"
+               label="COM_JCHOPTIMIZE_REMOVE_CSS_GROUP_LABEL"
+               description="COM_JCHOPTIMIZE_REMOVE_CSS_GROUP_DESC"
+        >
+        </field>
+        <field name="remove_css"
+               type="excludecss"
+               rows="3"
+               default=""
+               cols="20"
+               label="COM_JCHOPTIMIZE_REMOVE_CSS_LABEL"
+               description="COM_JCHOPTIMIZE_REMOVE_CSS_DESC"
+        >
+        </field>
+        <field name="group_remove_css_end"
+               type="jchgroup"
+               section="end"
+               >
+        </field>
+       <!--
+        Optimize Css Delivery
+        -->
+        <field name="group_pro_optimizecssdelivery_start"
+               type="jchgroup"
+               section="start"
+               label="COM_JCHOPTIMIZE_PRO_OPTIMIZECSSDELIVERY_LABEL"
+               description="COM_JCHOPTIMIZE_PRO_OPTIMIZECSSDELIVERY_DESC">
+        </field>
+        <field name="optimizeCssDelivery_enable"
+               type="radio"
+               class="btn-group"
+               label="COM_JCHOPTIMIZE_ENABLE"
+               default="0">
+            <option value="0">JNO</option>
+            <option value="1">JYES</option>
+        </field>
+        <field name="optimizeCssDelivery"
+               type="list"
+               label="COM_JCHOPTIMIZE_PRO_NUMBERELEMENTS_LABEL"
+               default="600">
+            <option value="400">600</option>
+            <option value="600">800</option>
+            <option value="800">1000</option>
+        </field>
+        <field name="pro_reduce_unused_css"
+               type="proonlyradio"
+               class="btn-group"
+               label="COM_JCHOPTIMIZE_PRO_REDUCE_UNUSED_CSS_LABEL"
+               description="COM_JCHOPTIMIZE_PRO_REDUCE_UNUSED_CSS_DESC"
+               default="0"
+        >
+            <option value="0">JNO</option>
+            <option value="1">JYES</option>
+        </field>
+        <field name="pro_dynamic_selectors"
+               type="dynamicselectors"
+               rows="3"
+               default=""
+               cols="20"
+               label="COM_JCHOPTIMIZE_PRO_DYNAMIC_SELECTORS_LABEL"
+               description="COM_JCHOPTIMIZE_PRO_DYNAMIC_SELECTORS_DESC"
+               size="50"
+        >
+        </field>
+        <field name="group_pro_optimizecssdelivery_end"
+               type="jchgroup"
+               section="end">
+        </field>
+
+
+    </fieldset>
+    <!-- ##### JavaScript -->
+    <fieldset name="javascript" label="COM_JCHOPTIMIZE_JAVASCRIPT_FIELDSET_LABEL">
+        <!--
+        JavaScript automatic settings
+        -->
+        <field name="group_javascript_auto_start"
+               type="jchgroup"
+               section="start"
+               class="collapsible"
+               label="COM_JCHOPTIMIZE_GROUP_JAVASCRIPT_AUTO_LABEL"
+               description="COM_JCHOPTIMIZE_GROUP_JAVASCRIPT_AUTO_DESC">
+        </field>
+        <field name="javascript"
+               type="radio"
+               class="btn-group s1-on s2-on s3-on s4-on s5-on s6-on"
+               default="1"
+               label="COM_JCHOPTIMIZE_JAVASCRIPT_LABEL"
+               description="COM_JCHOPTIMIZE_JAVASCRIPT_DESCRIPTION">
+            <option value="0">JNO</option>
+            <option value="1">JYES</option>
+        </field>
+        <field name="js_minify"
+               type="radio"
+               class="btn-group s1-off s2-on s3-on s4-on s5-on s6-on"
+               default="0"
+               label="COM_JCHOPTIMIZE_COMPRESS_JAVASCRIPT"
+               description="COM_JCHOPTIMIZE_COMPRESS_JAVASCRIPT_DESCRIPTION">
+            <option value="0">JNO</option>
+            <option value="1">JYES</option>
+        </field>
+        <field name="inlineScripts"
+               type="radio"
+               class="btn-group s1-off s2-off s3-off s4-on s5-on s6-on"
+               label="COM_JCHOPTIMIZE_PRO_INLINESCRIPTS_LABEL"
+               description="COM_JCHOPTIMIZE_PRO_INLINESCRIPTS_DESC"
+               default="0">
+            <option value="0">JNO</option>
+            <option value="1">JYES</option>
+        </field>
+        <field name="bottom_js"
+               type="radio"
+               class="btn-group s1-off s2-off s3-off s4-off s5-on s6-on"
+               default="0"
+               label="COM_JCHOPTIMIZE_POSITION_JS_LABEL"
+               description="COM_JCHOPTIMIZE_POSITION_JS_DESCRIPTION">
+            <option value="0">JNO</option>
+            <option value="1">JYES</option>
+        </field>
+        <field name="loadAsynchronous"
+               type="radio"
+               class="btn-group s1-off s2-off s3-off s4-off s5-off s6-on"
+               label="COM_JCHOPTIMIZE_PRO_LOADASYNCHRONOUS_LABEL"
+               description="COM_JCHOPTIMIZE_PRO_LOADASYNCHRONOUS_DESC"
+               default="0">
+            <option value="0">JNO</option>
+            <option value="1">JYES</option>
+        </field>
+        <field name="group_javascript_auto_end"
+               type="jchgroup"
+               section="end">
+        </field>
+        <!--
+        JavaScript preserving execution order
+        -->
+        <field name="group_exclude_js_peo_start"
+               type="jchgroup"
+               section="start"
+               label="COM_JCHOPTIMIZE_GROUP_EXCLUDE_JS_GLOBAL_LABEL"
+               description="COM_JCHOPTIMIZE_GROUP_EXCLUDE_JS_GLOBAL_DESC">
+        </field>
+        <field name="excludeJs_peo"
+               type="excludejspei"
+               rows="3"
+               default=""
+               cols="20"
+               label="COM_JCHOPTIMIZE_EXCLUDE_JS_LABEL"
+               description="COM_JCHOPTIMIZE_EXCLUDE_JS_DESCRIPTION">
+        </field>
+        <field name="excludeJsComponents_peo"
+               type="excludejsextnspei"
+               rows="3"
+               default=""
+               cols="20"
+               label="COM_JCHOPTIMIZE_EXCLUDE_JS_COMPONENTS_LABEL"
+               description="COM_JCHOPTIMIZE_EXCLUDE_JS_COMPONENTS_DESCRIPTION">
+        </field>
+        <field name="excludeScripts_peo"
+               type="excludescriptspei"
+               rows="3"
+               default=""
+               cols="20"
+               label="COM_JCHOPTIMIZE_PRO_EXCLUDE_SCRIPT_LABEL"
+               description="COM_JCHOPTIMIZE_PRO_EXCLUDE_SCRIPT_DESC">
+        </field>
+        <field name="excludeAllScripts"
+               type="radio"
+               class="btn-group"
+               label="COM_JCHOPTIMIZE_PRO_EXCLUDEALLSCRIPTS_LABEL"
+               description="COM_JCHOPTIMIZE_PRO_EXCLUDEALLSCRIPTS_DESC"
+               default="0">
+            <option value="0">JNO</option>
+            <option value="1">JYES</option>
+        </field>
+        <field name="group_exclude_js_peo_end"
+               type="jchgroup"
+               section="end">
+        </field>
+        <!--
+        Remove JavaScript section
+        -->
+        <field name="group_remove_js_start"
+               type="jchgroup"
+               section="start"
+               label="COM_JCHOPTIMIZE_REMOVE_JS_GROUP_LABEL"
+               description="COM_JCHOPTIMIZE_REMOVE_JS_GROUP_DESC"
+               >
+        </field>
+        <field name="remove_js"
+               type="excludejs"
+               rows="3"
+               default=""
+               cols="20"
+               label="COM_JCHOPTIMIZE_REMOVE_JS_LABEL"
+               description="COM_JCHOPTIMIZE_REMOVE_JS_DESC"
+               >
+        </field>
+        <field name="group_remove_js_end"
+               type="jchgroup"
+               section="end"
+               >
+        </field>
+        <!--
+        Reduce unused JavaScript
+        -->
+        <field name="group_reduce_unused_js_start"
+               type="jchgroup"
+               section="start"
+               label="COM_JCHOPTIMIZE_GROUP_REDUCE_UNUSED_JS_LABEL"
+               description="COM_JCHOPTIMIZE_GROUP_REDUCE_UNUSED_JS_DESC"
+        >
+        </field>
+        <field name="pro_reduce_unused_js_enable"
+               type="proonlyradio"
+               class="btn-group"
+               label="COM_JCHOPTIMIZE_ENABLE"
+               default="0"
+        >
+            <option value="0">JNO</option>
+            <option value="1">JYES</option>
+        </field>
+        <field name="pro_criticalJs"
+               type="procriticaljs"
+               rows="3"
+               default=""
+               cols="20"
+               label="COM_JCHOPTIMIZE_CRITICAL_JS_LABEL"
+               description="COM_JCHOPTIMIZE_CRITICAL_JS_DESC">
+        </field>
+        <field name="pro_criticalScripts"
+               type="proexcludescripts"
+               rows="3"
+               default=""
+               cols="20"
+               label="COM_JCHOPTIMIZE_CRITICAL_SCRIPTS_LABEL"
+               description="COM_JCHOPTIMIZE_CRITICAL_SCRIPTS_DESC">
+        </field>
+        <field name="pro_criticalModules"
+               type="promodules"
+               rows="3"
+               default=""
+               cols="20"
+               label="COM_JCHOPTIMIZE_CRITICAL_MODULES_LABEL"
+               description="COM_JCHOPTIMIZE_CRITICAL_MODULES_DESC">
+        </field>
+        <field name="pro_criticalModulesScripts"
+               type="proexcludescripts"
+               rows="3"
+               default=""
+               cols="20"
+               label="COM_JCHOPTIMIZE_CRITICAL_MODULESSCRIPTS_LABEL"
+               description="COM_JCHOPTIMIZE_CRITICAL_MODULESSCRIPTS_DESC" >
+        </field>
+        <field name="pro_defer_criticalJs"
+               type="proonlyradio"
+               class="btn-group"
+               label="COM_JCHOPTIMIZE_DEFER_CRITICAL_JS_LABEL"
+               description="COM_JCHOPTIMIZE_DEFER_CRITICAL_JS_DESC"
+               default="1"
+               >
+            <option value="0">JNO</option>
+            <option value="1">JYES</option>
+        </field>
+        <field name="group_reduce_unused_js_end"
+               type="jchgroup"
+               section="end"
+        >
+        </field>
+    </fieldset>
+    <!-- ##### Page Cache -->
+    <fieldset name="page_cache" label="COM_JCHOPTIMIZE_PAGE_CACHE_FIELDSET_LABEL">
+
+        <!--
+        JCH Optimize Page Cache
+        -->
+        <field name="group_page_cache_start"
+               type="jchgroup"
+               section="start"
+               label="COM_JCHOPTIMIZE_PAGE_CACHE_LABEL"
+               description="COM_JCHOPTIMIZE_PAGE_CACHE_DESC"
+        >
+        </field>
+        <field name="page_cache_lifetime"
+               type="list"
+               default="900"
+               label="COM_JCHOPTIMIZE_PAGECACHE_LIFETIME_LABEL"
+               description="COM_JCHOPTIMIZE_PAGECACHE_LIFETIME_DESC">
+            <option value="900">COM_JCHOPTIMIZE_15_MIN</option>
+            <option value="1800">COM_JCHOPTIMIZE_30_MIN</option>
+            <option value="3600">COM_JCHOPTIMIZE_1_HOUR</option>
+            <option value="10800">COM_JCHOPTIMIZE_3_HOURS</option>
+            <option value="21600">COM_JCHOPTIMIZE_6_HOURS</option>
+            <option value="43200">COM_JCHOPTIMIZE_12_HOURS</option>
+            <option value="86400">COM_JCHOPTIMIZE_1_DAY</option>
+            <option value="172800">COM_JCHOPTIMIZE_2_DAYS</option>
+            <option value="604800">COM_JCHOPTIMIZE_7_DAYS</option>
+            <option value="1209600">COM_JCHOPTIMIZE_2_WEEKS</option>
+        </field>
+        <field name="pro_cache_platform"
+               type="proonlyradio"
+               class="btn-group"
+               default="0"
+               label="COM_JCHOPTIMIZE_PAGECACHE_PLATFORM_LABEL"
+               description="COM_JCHOPTIMIZE_PAGECACHE_PLATFORM_DESC"
+        >
+            <option value="0">JNO</option>
+            <option value="1">JYES</option>
+        </field>
+        <field name="page_cache_exclude_form_users"
+               type="radio"
+               class="btn-group"
+               default="1"
+               label="COM_JCHOPTIMIZE_PAGECACHE_EXCLUDEFORMUSERS_LABEL"
+               description="COM_JCHOPTIMIZE_PAGECACHE_EXCLUDEFORMUSERS_DESC"
+               >
+            <option value="0">JNO</option>
+            <option value="1">JYES</option>
+        </field>
+        <field name="cache_exclude"
+               type="excludeurlwithquery"
+               rows="3"
+               default=""
+               cols="20"
+               label="COM_JCHOPTIMIZE_CACHEEXCLUDEDURL_LABEL"
+               description="COM_JCHOPTIMIZE_CACHEEXCLUDEDURL_DESC"
+        >
+        </field>
+        <field name="cache_exclude_menu"
+               type="menuitem"
+               multiple="multiple"
+               filter="int_array"
+               label="COM_JCHOPTIMIZE_CACHEEXCLUDEDMENU_LABEL"
+               description="COM_JCHOPTIMIZE_CACHEEXCLUDEDMENU_DESC"
+        >
+        </field>
+        <field name="cache_exclude_component"
+               type="excludecomponent"
+               default="com_ajax"
+               label="COM_JCHOPTIMIZE_CACHEEXCLUDECOMPONENT_LABEL"
+               description="COM_JCHOPTIMIZE_CACHEEXCLUDECOMPONENT_DESC"
+               >
+        </field>
+        <field name="page_cache_ignore_query_values"
+               type="excludeurlwithquery"
+               rows="3"
+               default=""
+               label="COM_JCHOPTIMIZE_PAGECACHE_EXCLUDEQUERYVALUES_LABEL"
+               description="COM_JCHOPTIMIZE_PAGECACHE_EXCLUDEQUERYVALUES_DESC"
+        >
+        </field>
+        <field name="pro_capture_cache_enable"
+               type="proonlyradio"
+               class="btn-group"
+               default="0"
+               label="COM_JCHOPTIMIZE_PAGECACHE_CAPTURE_LABEL"
+               description="COM_JCHOPTIMIZE_PAGECACHE_CAPTURE_DESC"
+               >
+            <option value="0">JNO</option>
+            <option value="1">JYES</option>
+        </field>
+        <field name="group_page_cache_end"
+               type="jchgroup"
+               section="end"
+        >
+        </field>
+        <field name="group_mode_switcher_integration_start"
+               type="jchgroup"
+               section="start"
+               label="COM_JCHOPTIMIZE_MODE_SWITCHER_INTEGRATION_LABEL"
+               description="COM_JCHOPTIMIZE_MODE_SWITCHER_INTEGRATION_DESC"
+               >
+        </field>
+
+        <field name="pro_page_cache_integration"
+               type="proonlyjchpagecache"
+               default="jchoptimizepagecache"
+               label="COM_JCHOPTIMIZE_PAGECACHE_INTEGRATION_LABEL"
+               description="COM_JCHOPTIMIZE_PAGECACHE_INTEGRATION_DESC"
+        >
+        </field>
+        <field name="pro_page_cache_integration_enable"
+               type="proonlyradio"
+               class="btn-group"
+               default="1"
+               label="COM_JCHOPTIMIZE_MODE_SWITCHER_INTEGRATION_ENABLE_LABEL"
+               description="COM_JCHOPTIMIZE_MODE_SWITCHER_INTEGRATION_ENABLE_DESC"
+        >
+            <option value="0">JNO</option>
+            <option value="1">JYES</option>
+        </field>
+        <field name="group_mode_switcher_integration_end"
+               type="jchgroup"
+               section="end"
+               >
+        </field>
+    </fieldset>
+    <!-- ##### MEDIA -->
+    <fieldset name="media" label="COM_JCHOPTIMIZE_MEDIA_FIELDSET_LABEL">
+        <!--
+        Add image attributes
+        -->
+        <field name="group_img_attributes_start"
+               type="jchgroup"
+               section="start"
+               label="COM_JCHOPTIMIZE_IMAGE_ATTRIBUTES_LABEL"
+               description="COM_JCHOPTIMIZE_IMAGES_ATTRIBUTES_DESCRIPTION"
+        >
+        </field>
+        <field name="img_attributes_enable"
+               type="radio"
+               class="btn-group"
+               default="0"
+               label="COM_JCHOPTIMIZE_ENABLE">
+            <option value="0">JNO</option>
+            <option value="1">JYES</option>
+        </field>
+        <field name="group_img_attributes_end"
+               type="jchgroup"
+               section="end">
+        </field>
+        <!--
+        Sprite Generator
+        -->
+        <field name="group_csg_spritegenerator_start"
+               type="jchgroup"
+               section="start"
+               label="COM_JCHOPTIMIZE_SPRITE_GENERATOR_LABEL"
+               description="COM_JCHOPTIMIZE_SPRITE_GENERATOR_DESCRIPTION"
+        >
+        </field>
+        <field name="csg_enable"
+               type="radio"
+               class="btn-group"
+               default="0"
+               label="COM_JCHOPTIMIZE_ENABLE">
+            <option value="0">JNO</option>
+            <option value="1">JYES</option>
+        </field>
+        <field name="csg_direction"
+               type="list"
+               default="vertical"
+               label="COM_JCHOPTIMIZE_SPRITE_DIRECTION_LABEL"
+               description="COM_JCHOPTIMIZE_SPRITE_DIRECTION_DESCRIPTION">
+            <option value="vertical">COM_JCHOPTIMIZE_VERTICAL</option>
+            <option value="horizontal">COM_JCHOPTIMIZE_HORIZONTAL</option>
+        </field>
+        <field name="csg_wrap_images"
+               type="radio"
+               class="btn-group"
+               default="0"
+               label="COM_JCHOPTIMIZE_WRAP_IMAGES_LABEL"
+               description="COM_JCHOPTIMIZE_WRAP_IMAGES_DESCRIPTION">
+            <option value="0">JNO</option>
+            <option value="1">JYES</option>
+        </field>
+        <field name="csg_exclude_images"
+               type="excludeimages"
+               rows="3"
+               default=""
+               cols="20"
+               label="COM_JCHOPTIMIZE_EXCLUDE_IMAGES_LABEL"
+               description="COM_JCHOPTIMIZE_EXCLUDE_IMAGES_DESCRIPTION">
+        </field>
+        <field name="csg_include_images"
+               type="includeimages"
+               rows="3"
+               default=""
+               cols="20"
+               label="COM_JCHOPTIMIZE_INCLUDE_IMAGES_LABEL"
+               description="COM_JCHOPTIMIZE_INCLUDE_IMAGES_DESCRIPTION">
+        </field>
+        <field name="group_csg_spritegenerator_end"
+               type="jchgroup"
+               section="end">
+        </field>
+        <!--
+        Lazyload
+        -->
+        <field name="group_pro_lazyload_start"
+               type="jchgroup"
+               section="start"
+               label="COM_JCHOPTIMIZE_PRO_LAZYLOAD_LABEL"
+               description="COM_JCHOPTIMIZE_PRO_LAZYLOAD_DESC">
+        </field>
+        <field name="lazyload_enable"
+               type="radio"
+               class="btn-group"
+               label="COM_JCHOPTIMIZE_ENABLE"
+               description="COM_JCHOPTIMIZE_PRO_LAZYLOAD_DESC"
+               default="0">
+            <option value="0">JNO</option>
+            <option value="1">JYES</option>
+        </field>
+        <field name="lazyload_autosize"
+               type="radio"
+               class="btn-group"
+               label="COM_JCHOPTIMIZE_PRO_LAZYLOAD_AUTOSIZE_LABEL"
+               description="COM_JCHOPTIMIZE_PRO_LAZYLOAD_AUTOSIZE_DESC"
+               default="1">
+            <option value="0">JNO</option>
+            <option value="1">JYES</option>
+        </field>
+        <field name="pro_lazyload_iframe"
+               type="proonlyradio"
+               class="btn-group"
+               label="COM_JCHOPTIMIZE_PRO_LAZYLOAD_IFRAME_LABEL"
+               description="COM_JCHOPTIMIZE_PRO_LAZYLOAD_IFRAME_DESC"
+               default="0">
+            <option value="0">JNO</option>
+            <option value="1">JYES</option>
+        </field>
+        <field name="pro_lazyload_audiovideo"
+               type="proonlyradio"
+               class="btn-group"
+               label="COM_JCHOPTIMIZE_PRO_LAZYLOAD_AUDIOVIDEO_LABEL"
+               description="COM_JCHOPTIMIZE_PRO_LAZYLOAD_AUDIOVIDEO_DESC"
+               default="0"
+        >
+            <option value="0">JNO</option>
+            <option value="1">JYES</option>
+        </field>
+        <field name="pro_lazyload_bgimages"
+              type="proonlyradio"
+              class="btn-group"
+              label="COM_JCHOPTIMIZE_PRO_LAZYLOAD_BGIMAGES_LABEL"
+              description="COM_JCHOPTIMIZE_PRO_LAZYLOAD_BGIMAGES_DESC"
+              default="0">
+            <option value="0">JNO</option>
+            <option value="1">JYES</option>
+        </field>
+        <field name="excludeLazyLoad"
+               type="excludelazyload"
+               rows="3"
+               default=""
+               cols="20"
+               label="COM_JCHOPTIMIZE_PRO_EXCLUDE_LAZYLOAD_LABEL"
+               description="COM_JCHOPTIMIZE_PRO_EXCLUDE_LAZYLOAD_DESC">
+        </field>
+        <field name="pro_excludeLazyLoadFolders"
+               type="excludelazyloadfolders"
+               rows="3"
+               default=""
+               cols="20"
+               label="COM_JCHOPTIMIZE_PRO_EXCLUDE_LAZYLOADFOLDER_LABEL"
+               description="COM_JCHOPTIMIZE_PRO_EXCLUDE_LAZYLOADFOLDER_DESC">
+        </field>
+        <field name="pro_excludeLazyLoadClass"
+               type="excludelazyloadclass"
+               rows="3"
+               default=""
+               cols="20"
+               label="COM_JCHOPTIMIZE_PRO_EXCLUDE_LAZYLOADCLASS_LABEL"
+               description="COM_JCHOPTIMIZE_PRO_EXCLUDE_LAZYLOADCLASS_DESC">
+        </field>
+        <field name="pro_lazyload_effects"
+               type="proonlyradio"
+               class="btn-group"
+               label="COM_JCHOPTIMIZE_PRO_LAZYLOAD_EFFECTS_LABEL"
+               description="COM_JCHOPTIMIZE_PRO_LAZYLOAD_EFFECTS_DESC"
+               default="0">
+            <option value="0">JNO</option>
+            <option value="1">JYES</option>
+        </field>
+
+        <field name="group_pro_lazyload_end"
+               type="jchgroup"
+               section="end">
+        </field>
+
+    </fieldset>
+    <!-- ##### PRELOADS -->
+    <fieldset name="preloads" label="COM_JCHOPTIMIZE_PRELOADS_FIELDSET_LABEL">
+        <!--
+        Http2Preload
+        -->
+        <field name="group_http2_push_start"
+               type="jchgroup"
+               section="start"
+               label="COM_JCHOPTIMIZE_PRO_HTTP2_PUSH_LABEL"
+               description="COM_JCHOPTIMIZE_PRO_HTTP2_PUSH_DESC">
+        </field>
+        <field name="http2_push_enable"
+               type="radio"
+               class="btn-group"
+               label="COM_JCHOPTIMIZE_ENABLE"
+               default="0">
+            <option value="0">JNO</option>
+            <option value="1">JYES</option>
+        </field>
+        <field name="pro_http2_exclude_deferred"
+               type="proonlyradio"
+               class="btn-group"
+               label="COM_JCHOPTIMIZE_PRO_HTTP2_EXCLUDE_DEFERRED_LABEL"
+               description="COM_JCHOPTIMIZE_PRO_HTTP2_EXCLUDE_DEFERRED_DESC"
+               default="1">
+            <option value="0">JNO</option>
+            <option value="1">JYES</option>
+        </field>
+        <field name="pro_http2_preload_modules"
+               type="proonlyradio"
+               class="btn-group"
+               label="COM_JCHOPTIMIZE_PRO_HTTP2_PRELOAD_MODULES_LABEL"
+               description="COM_JCHOPTIMIZE_PRO_HTTP2_PRELOAD_MODULES_DESC"
+               default="1">
+            <option value="0">JNO</option>
+            <option value="1">JYES</option>
+        </field>
+        <field name="pro_http2_push_cdn"
+               type="proonlyradio"
+               class="btn-group"
+               label="COM_JCHOPTIMIZE_PRO_HTTP2_PUSH_CDN_LABEL"
+               description="COM_JCHOPTIMIZE_PRO_HTTP2_PUSH_CDN_DESC"
+               default="0"
+        >
+            <option value="0">JNO</option>
+            <option value="1">JYES</option>
+        </field>
+        <field name="pro_http2_file_types"
+               type="proonlycheckboxes"
+               label="COM_JCHOPTIMIZE_PRO_HTTP2_FILE_TYPES_LABEL"
+               description="COM_JCHOPTIMIZE_PRO_HTTP2_FILE_TYPES_DESC"
+               class="jch-checkboxes-grid-wrapper columns-4"
+               checked="style,script,font,image">
+            <option value="style">style</option>
+            <option value="script">script</option>
+            <option value="font">font</option>
+            <option value="image">image</option>
+        </field>
+        <field name="pro_http2_include"
+               type="includehttp2"
+               rows="3"
+               default=""
+               cols="20"
+               label="COM_JCHOPTIMIZE_PRO_HTTP2_INCLUDE_LABEL"
+               description="COM_JCHOPTIMIZE_PRO_HTTP2_INCLUDE_DESC">
+        </field>
+        <field name="pro_http2_exclude"
+               type="excludehttp2"
+               rows="3"
+               default=""
+               cols="20"
+               label="COM_JCHOPTIMIZE_PRO_HTTP2_EXCLUDE_LABEL"
+               description="COM_JCHOPTIMIZE_PRO_HTTP2_EXCLUDE_DESC">
+        </field>
+        <field name="group_http2_push_end"
+               type="jchgroup"
+               section="end">
+        </field>
+        <!--
+        Optimize fonts
+        -->
+        <field name="group_optimizeFonts_start"
+               type="jchgroup"
+               section="start"
+               label="COM_JCHOPTIMIZE_OPTIMIZEFONT_LABEL"
+               description="COM_JCHOPTIMIZE_OPTIMIZEFONT_DESCRIPTION"
+               >
+        </field>
+        <field name="pro_optimizeFonts_enable"
+               type="proonlyradio"
+               class="btn-group"
+               label="COM_JCHOPTIMIZE_ENABLE"
+               default="0"
+               >
+            <option value="0">JNO</option>
+            <option value="1">JYES</option>
+        </field>
+        <field name="pro_force_swap_policy"
+               type="proonlyradio"
+               class="btn-group"
+               label="COM_JCHOPTIMIZE_FORCE_SWAP_POLICY_LABEL"
+               description="COM_JCHOPTIMIZE_FORCE_SWAP_POLICY_DESCRIPTION"
+               default="1"
+               >
+            <option value="0">JNO</option>
+            <option value="1">JYES</option>
+        </field>
+        <field name="pro_optimize_font_files"
+               type="proexcludecss"
+               rows="3"
+               default=""
+               cols="20"
+               label="COM_JCHOPTIMIZE_OPTIMIZE_FONT_FILES_LABEL"
+               description="COM_JCHOPTIMIZE_OPTIMIZE_FONT_FILES_DESCRIPTION">
+        </field>
+        <field name="pro_preconnect_domains"
+               type="customextension"
+               rows="3"
+               default=""
+               cols="20"
+               label="COM_JCHOPTIMIZE_PRECONNECT_DOMAINS_LABEL"
+               description="COM_JCHOPTIMIZE_PRECONNECT_DOMAINS_DESCRIPTION"
+               >
+        </field>
+        <field name="group_optimizeFonts_end"
+               type="jchgroup"
+               section="end">
+        </field>
+    </fieldset>
+    <!-- ##### CDN2 PUSH -->
+    <fieldset name="cdn" label="COM_JCHOPTIMIZE_CDN_FIELDSET_LABEL">
+        <!--
+        CDN
+        -->
+        <field name="group_pro_cdn_start"
+               type="jchgroup"
+               section="start"
+               label="COM_JCHOPTIMIZE_PRO_COOKIELESSDOMAIN_LABEL"
+               description="COM_JCHOPTIMIZE_PRO_COOKIELESSDOMAIN_DESC">
+        </field>
+        <field name="cookielessdomain_enable"
+               type="radio"
+               class="btn-group"
+               label="COM_JCHOPTIMIZE_ENABLE"
+               default="0">
+            <option value="0">JNO</option>
+            <option value="1">JYES</option>
+        </field>
+        <field name="pro_cdn_preconnect"
+               type="proonlyradio"
+               class="btn-group"
+               label="COM_JCHOPTIMIZE_PRO_CDN_PRECONNECT_LABEL"
+               description="COM_JCHOPTIMIZE_PRO_CDN_PRECONNECT_DESC"
+               default="1">
+            <option value="0">JNO</option>
+            <option value="1">JYES</option>
+        </field>
+        <field name="cdn_scheme"
+               type="list"
+               default="0"
+               size="5"
+               label="COM_JCHOPTIMIZE_PRO_CDN_SCHEME_LABEL"
+               description="COM_JCHOPTIMIZE_PRO_CDN_SCHEME_DESC">
+            <option value="0">COM_JCHOPTIMIZE_SCHEME_RELATIVE</option>
+            <option value="1">COM_JCHOPTIMIZE_HTTP</option>
+            <option value="2">COM_JCHOPTIMIZE_HTTPS</option>
+        </field>
+        <field name="pro_cdn_load_fonts"
+               type="proonlyradio"
+               class="btn-group"
+               label="COM_JCHOPTIMIZE_PRO_CDN_LOAD_FONTS_LABEL"
+               description="COM_JCHOPTIMIZE_PRO_CDN_LOAD_FONTS_DESC"
+               default="0">
+            <option value="0">JNO</option>
+            <option value="1">JYES</option>
+        </field>
+        <field name="cookielessdomain"
+               type="text"
+               default=""
+               label="COM_JCHOPTIMIZE_PRO_COOKIELESSDOMAINONE"
+               description="COM_JCHOPTIMIZE_PRO_COOKIELESSDOMAINONE_DESC"
+               size="50">
+        </field>
+        <field name="staticfiles"
+               type="checkboxes"
+               label="COM_JCHOPTIMIZE_PRO_STATICFILES_LABEL"
+               description="COM_JCHOPTIMIZE_PRO_STATICFILES_DESC"
+               class="jch-checkboxes-grid-wrapper columns-5"
+               checked="css,js,jpe?g,gif,png,ico,bmp,pdf,webp,svg">
+            <option value="css">css</option>
+            <option value="png">png</option>
+            <option value="gif">gif</option>
+            <option value="ico">ico</option>
+            <option value="pdf">pdf</option>
+            <option value="js">js</option>
+            <option value="jpe?g">jp(e)g</option>
+            <option value="bmp">bmp</option>
+            <option value="webp">webp</option>
+            <option value="svg">svg</option>
+        </field>
+        <field name="pro_customcdnextensions"
+               type="customextension"
+               rows="3"
+               default=""
+               cols="20"
+               label="COM_JCHOPTIMIZE_PRO_CUSTOMEXTENSION_LABEL"
+               description="COM_JCHOPTIMIZE_PRO_CUSTOMEXTENSION_DESC"
+        >
+        </field>
+        <field name="pro_cookielessdomain_2"
+               type="proonlytext"
+               default=""
+               label="COM_JCHOPTIMIZE_PRO_COOKIELESSDOMAINTWO"
+               description="COM_JCHOPTIMIZE_PRO_COOKIELESSDOMAINTWO_DESC"
+               size="50">
+        </field>
+        <field name="pro_staticfiles_2"
+               type="proonlycheckboxes"
+               label="COM_JCHOPTIMIZE_PRO_STATICFILES2_LABEL"
+               description="COM_JCHOPTIMIZE_PRO_STATICFILES2_DESC"
+               class="jch-checkboxes-grid-wrapper columns-5"
+               checked="css,js,jpe?g,gif,png,ico,bmp,pdf,webp,svg">
+            <option value="css">css</option>
+            <option value="png">png</option>
+            <option value="gif">gif</option>
+            <option value="ico">ico</option>
+            <option value="pdf">pdf</option>
+            <option value="js">js</option>
+            <option value="jpe?g">jp(e)g</option>
+            <option value="bmp">bmp</option>
+            <option value="webp">webp</option>
+            <option value="svg">svg</option>
+        </field>
+        <field name="pro_cookielessdomain_3"
+               type="proonlytext"
+               default=""
+               label="COM_JCHOPTIMIZE_PRO_COOKIELESSDOMAINTHREE"
+               description="COM_JCHOPTIMIZE_PRO_COOKIELESSDOMAINTHREE_DESC"
+               size="50">
+        </field>
+        <field name="pro_staticfiles_3"
+               type="proonlycheckboxes"
+               label="COM_JCHOPTIMIZE_PRO_STATICFILES3_LABEL"
+               description="COM_JCHOPTIMIZE_PRO_STATICFILES3_DESC"
+               class="jch-checkboxes-grid-wrapper columns-5"
+               checked="css,js,jpe?g,gif,png,ico,bmp,pdf,webp,svg">
+            <option value="css">css</option>
+            <option value="png">png</option>
+            <option value="gif">gif</option>
+            <option value="ico">ico</option>
+            <option value="pdf">pdf</option>
+            <option value="js">js</option>
+            <option value="jpe?g">jp(e)g</option>
+            <option value="bmp">bmp</option>
+            <option value="webp">webp</option>
+            <option value="svg">svg</option>
+        </field>
+        <field name="group_pro_cdn_end"
+               type="jchgroup"
+               section="end">
+        </field>
+    </fieldset>
+    <!-- ##### Optimize Image -->
+    <fieldset name="optimize_image" label="COM_JCHOPTIMIZE_OPTIMIZE_IMAGES_FIELDSET_LABEL">
+
+    <!--
+        Global Options
+        -->
+        <field name="group_api2_global_start"
+               type="jchgroup"
+               section="start"
+               label="COM_JCHOPTIMIZE_GROUP_OPTIMIZE_IMAGES_LABEL"
+               description="COM_JCHOPTIMIZE_GROUP_OPTIMIZE_IMAGES_DESCRIPTION"
+        >
+        </field>
+
+        <field name="ignore_optimized"
+               type="proonlyradio"
+               class="btn-group"
+               label="COM_JCHOPTIMIZE_IGNORE_OPTIMIZED_LABEL"
+               description="COM_JCHOPTIMIZE_IGNORE_OPTIMIZED_DESC"
+               default="1">
+            <option value="0">JNO</option>
+            <option value="1">JYES</option>
+        </field>
+        <field name="pro_next_gen_images"
+               type="proonlyradio"
+               class="btn-group"
+               label="COM_JCHOPTIMIZE_NEXT_GEN_IMAGES_LABEL"
+               description="COM_JCHOPTIMIZE_NEXT_GEN_IMAGES_DESC"
+               default="1">
+            <option value="0">JNO</option>
+            <option value="1">JYES</option>
+        </field>
+        <field name="pro_load_webp_images"
+               type="proonlyradio"
+               class="btn-group"
+               label="COM_JCHOPTIMIZE_LOAD_WEBP_IMAGES_LABEL"
+               description="COM_JCHOPTIMIZE_LOAD_WEBP_IMAGES_DESC"
+               default="0">
+            <option value="0">JNO</option>
+            <option value="1">JYES</option>
+        </field>
+     <!--   <field name="pro_webp_old_browsers"
+               type="proonlyradio"
+               class="btn-group"
+               label="COM_JCHOPTIMIZE_WEBP_OLD_BROWSERS_LABEL"
+               description="COM_JCHOPTIMIZE_WEBP_OLD_BROWSERS_DESC"
+               default="0">
+            <option value="0">JNO</option>
+            <option value="1">JYES</option>
+        </field> -->
+        <field name="lossy"
+               type="radio"
+               class="btn-group"
+               label="COM_JCHOPTIMIZE_LOSSY_LABEL"
+               description="COM_JCHOPTIMIZE_LOSSY_DESC"
+               default="1">
+            <option value="0">COM_JCHOPTIMIZE_LOSSLESS</option>
+            <option value="1">COM_JCHOPTIMIZE_LOSSY</option>
+        </field>
+        <field name="save_metadata"
+               type="radio"
+               class="btn-group"
+               label="COM_JCHOPTIMIZE_SAVE_METADATA_LABEL"
+               description="COM_JCHOPTIMIZE_SAVE_METADATA_DESC"
+               default="0">
+            <option value="0">JNO</option>
+            <option value="1">JYES</option>
+        </field>
+        <field name="group_api2_global_end"
+               type="jchgroup"
+               section="end">
+        </field>
+        <!--
+        Optimize By URLs
+        -->
+        <field name="group_optimize_images_by_urls_start"
+               type="jchgroup"
+               section="start"
+               label="COM_JCHOPTIMIZE_GROUP_OPTIMIZE_IMAGES_BY_URLS_LABEL"
+               description="COM_JCHOPTIMIZE_GROUP_OPTIMIZE_IMAGES_BY_URLS_DESC" >
+        </field>
+        <field name="pro_api_base_url"
+               type="proonlytext"
+               label="COM_JCHOPTIMIZE_PRO_API_BASE_URL_LABEL"
+               description="COM_JCHOPTIMIZE_PRO_API_BASE_URL_DESC"
+        >
+        </field>
+        <field name="pro_api_crawl_limit"
+               type="proonlytext"
+               label="COM_JCHOPTIMIZE_PRO_API_CRAWL_LIMIT_LABEL"
+               description="COM_JCHOPTIMIZE_PRO_API_CRAWL_LIMIT_DESC"
+               default="15">
+        </field>
+        <field name="pro_api_resize_mode"
+               type="proonlyradio"
+               class="btn-group"
+               label="COM_JCHOPTIMIZE_PRO_API_RESIZE_MODE_LABEL"
+               description="COM_JCHOPTIMIZE_PRO_API_RESIZE_MODE_DESC"
+               default="1">
+            <option value="0">JNO</option>
+            <option value="1">JYES</option>
+        </field>
+        <field name="group_optimize_images_by_urls_end"
+               type="jchgroup"
+               section="end">
+        </field>
+        <!--
+        Optimize By Folders
+        -->
+        <field name="group_optimize_images_by_folder_start"
+               type="jchgroup"
+               section="start"
+               label="COM_JCHOPTIMIZE_GROUP_OPTIMIZE_IMAGES_BY_FOLDER_LABEL"
+               description="COM_JCHOPTIMIZE_GROUP_OPTIMIZE_IMAGES_BY_FOLDER_DESC"
+        >
+        </field>
+        <field name="recursive"
+               type="proonlyradio"
+               class="btn-group"
+               label="COM_JCHOPTIMIZE_RECURSIVE_LABEL"
+               description="COM_JCHOPTIMIZE_RECURSIVE_DESC"
+               default="1"
+        >
+            <option value="0">JNO</option>
+            <option value="1">JYES</option>
+        </field>
+
+        <field name="group_optimize_images_by_folder_end"
+               type="jchgroup"
+               section="end">
+        </field>
+    </fieldset>
+    <!-- ##### Miscellaneous -->
+    <fieldset name="miscellaneous" label="COM_JCHOPTIMIZE_MISCELLANEOUS_FIELDSET_LABEL">
+        <field name="group_reduce_dom_start"
+               type="jchgroup"
+               section="start"
+               label="COM_JCHOPTIMIZE_REDUCE_DOM_LABEL"
+               description="COM_JCHOPTIMIZE_REDUCE_DOM_DESCRIPTION"
+        >
+        </field>
+        <field name="pro_reduce_dom"
+               type="proonlyradio"
+               class="btn-group"
+               default="0"
+               label="COM_JCHOPTIMIZE_ENABLE"
+        >
+            <option value="0">JNO</option>
+            <option value="1">JYES</option>
+        </field>
+        <field name="group_reduce_dom_end"
+               type="jchgroup"
+               section="end">
+        </field>
+    </fieldset>
+    <!-- ##### Permissions -->
+    <fieldset name="permissions" label="JCONFIG_PERMISSIONS_LABEL" description="JCONFIG_PERMISSIONS_DESC">
+        <field
+                name="rules"
+                type="rules"
+                label="JCONFIG_PERMISSIONS_LABEL"
+                class="inputbox"
+                filter="rules"
+                component="com_jchoptimize"
+                section="component"/>
+    </fieldset>
+</config>

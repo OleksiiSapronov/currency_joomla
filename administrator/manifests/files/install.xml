@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="1.6" type="file" method="upgrade">
+	<name>Com Translations for pl_PL</name>
+	<author>http://stackideas.com</author>
+	<authorEmail>support@stackideas.com</authorEmail>
+	<authorUrl>http://stackideas.com</authorUrl>
+	<creationDate>2014-10-21 22:44:40</creationDate>
+	<copyright>Copyright 2009 - 2011 StackIdeas. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<version>3.0</version>
+	<description>This translation is for pl_PL</description>
+	<fileset>
+		<files folder="admin" target="administrator/language/pl-PL">
+			<filename>pl-PL.com_easydiscuss.ini</filename>
+			<filename>pl-PL.com_easydiscuss.sys.ini</filename>
+		</files>
+		<files folder="site" target="language/pl-PL">
+			<filename>pl-PL.com_easydiscuss.ini</filename>
+		</files>
+	</fileset>
+</extension>

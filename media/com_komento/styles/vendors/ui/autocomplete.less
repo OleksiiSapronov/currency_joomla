@@ -1,0 +1,44 @@
+/*!
+ * jQuery UI Autocomplete 1.10.4pre
+ * http://jqueryui.com
+ *
+ * Copyright 2013 jQuery Foundation and other contributors
+ * Released under the MIT license.
+ * http://jquery.org/license
+ *
+ * http://docs.jquery.com/UI/Autocomplete#theming
+ */
+.ui-autocomplete { // <ul>
+	position: absolute;
+	top: 0;
+	left: 0;
+	cursor: default;
+
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	border: 1px solid @fd-ui-border-color;
+	background-color: @fd-ui-bg;
+
+}
+
+.ui-menu-item { // <li>
+	> a {
+		display: block;
+		padding: @fd-base-spacing--sm @fd-base-spacing;
+		text-decoration: none;
+		cursor: pointer;
+		color: @fd-ui-text-color;
+		&:hover {
+			text-decoration: none;
+			background-color: @fd-ui-bg--hover;
+			color: @fd-ui-text-color;
+		}
+		
+	}
+	+ .ui-menu-item {
+		a {
+			border-top: 1px solid @fd-ui-border-color;
+		}
+	}
+}

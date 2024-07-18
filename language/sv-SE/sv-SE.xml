@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metafile version="3.10" client="site">
+	<tag>sv-SE</tag>
+	<name>Swedish (Sweden)</name>
+	<version>3.10.12</version>
+	<creationDate>Juli 2023</creationDate>
+	<author>Swedish Translation Team - SvenskJoomla</author>
+	<authorEmail>info@svenskjoomla.se</authorEmail>
+	<authorUrl>http://www.svenskjoomla.se</authorUrl>
+	<copyright>Copyright (C) 2005 - 2023 Open Source Matters. All rights reserved.</copyright>
+	<license>GNU General Public Licens version 2 eller senare; Se LICENSE.txt</license>
+	<description>sv-SE Webbplatsspråk</description>
+	<metadata>
+		<name>Swedish (Sweden)</name>
+		<nativeName>Svenska (Sverige)</nativeName>
+		<tag>sv-SE</tag>
+		<rtl>0</rtl>
+		<locale>sv_SE.UTF-8, sv_SE.utf8, sv_FI.UTF-8@euro, sv_FI.utf8@euro, sv_FI.utf8, sv_FI.UTF-8, sv_SE, sv_SE.ISO8859-1, sv_SE.ISO8859-15, sv_SE.iso88591, sv_SE.iso885915, swedish, sv_FI, sv_FI@euro, sv_FI.iso88591, sv_FI.iso885915@euro, svenska, swedish</locale>
+		<firstDay>1</firstDay>
+		<weekEnd>0,6</weekEnd>
+		<calendar>gregorian</calendar>
+	</metadata>
+	<params />
+</metafile>

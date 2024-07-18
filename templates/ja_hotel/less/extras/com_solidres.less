@@ -1,0 +1,1361 @@
+// VARIABLES & MIXINS
+// ------------------
+@import "../vars.less";
+
+
+// COMMON STYLE
+// -------------------------------------
+.com_solidres {
+	body {
+		background-color: @body-bg;
+		color: @text-color;
+		font-family: @font-family-base;
+		font-size: @font-size-base;
+		line-height: @line-height-base;
+	}
+}
+
+.no-margin-top {
+	margin-top: 0 !important;
+}
+
+.no-margin-bottom {
+	margin-bottom: 0 !important;
+}
+
+a {
+	&:hover,
+	&:focus {
+		outline: 0;
+	}
+}
+
+// Fade Effect Carousel
+.carousel-fade {
+  .carousel-inner {
+    .item {
+      transition-property: opacity;
+      .opacity(0);
+
+      img {
+      	width: 100%;
+      	height: auto;
+      	@media screen and (max-width: @screen-xs-max) {
+      		width: 100%;
+      		height: auto;
+      	}
+      }
+    }
+
+    .active {
+      .opacity(1);
+    }
+
+    .active.left,
+    .active.right {
+      left: 0;
+      z-index: 1;
+      .opacity(0);
+    }
+
+    .next.left,
+    .prev.right {
+      .opacity(1);
+    }
+  }
+
+  .carousel-control {
+    z-index: 2;
+  }
+}
+
+
+// RESERVATION VIEW
+// -------------------------------------
+.com_solidres {
+
+	.label {
+		margin-right: 5px;
+		padding: 3px 5px;
+		font-size: 12px;
+		font-weight: normal;
+	}
+
+	.custom-field-block {
+		background: @white;
+		padding: @t3-global-padding;
+		.box-shadow(0 2px 4px rgba(0, 0, 0, 0.15));
+		border-radius: 3px;
+
+		.row-info-heading {
+			text-align: right;
+			color: @gray;
+			font-weight: bold;
+
+			@media screen and (max-width: @screen-sm-max) {
+				text-align: left;
+			}
+		}
+
+		.custom-field-row {
+			padding: @t3-global-padding/2 0;
+			border-color: @t3-border-color;
+
+			&:last-child {
+				border-bottom: 0;
+			}
+		}
+	}
+
+	// Search
+	.search-navbar {
+		background: @white;
+		padding: @t3-global-padding/2;
+
+		.brand {
+			float: left;
+			padding: 10px;
+		}
+
+		.collapse {
+			@media screen and (min-width: @screen-md) {
+				display: block;
+			}
+		}
+
+		.nav {
+			li {
+				@media screen and (min-width: @screen-md) {
+					display: inline-block;
+				}
+
+				ul > li {
+					display: block;
+				}
+			}
+
+			float: left;
+		}
+	}
+
+	select,
+	select.form-control,
+	select.inputbox,
+	select.input {
+		width: auto;
+		max-width: 100%;
+	}
+
+	// Slideshow row
+	.sr-reservation-form {
+		.carousel {
+			@media screen and (max-width: @screen-sm-max) {
+				margin-bottom: @t3-global-margin;
+			}
+			.item {
+				img {
+					width: 100%;
+					height: auto;
+				}
+			}
+
+			.carousel-control {
+				.transition(all .2s linear);
+				.opacity(0);
+			}
+
+			&:hover {
+				.carousel-control {
+					.opacity(.6);
+				}
+			}
+		}
+	}
+
+	.room-item {
+		.box-shadow(0 2px 4px rgba(0, 0, 0, 0.15));
+		border-radius: 2px;
+		background: @white;
+		padding: @t3-global-padding;
+		margin-bottom: @t3-global-margin;
+
+		.alert {
+			margin-top: @t3-global-margin;
+			margin-bottom: 0;
+		}
+	}
+
+	#solidres {
+		.container {
+			padding-left: @t3-global-padding/2;
+			padding-right: @t3-global-padding/2;
+			width: auto;
+		}
+	}
+
+	.table {
+		.inputbox,
+		input[type=text],
+		input[type=email],
+		input[type=date],
+		select,
+		textarea {
+			background: @white;
+		}
+	}
+
+	.tab-content {
+		.tab-pane {
+			padding: @t3-global-padding;
+
+			@media screen and (max-width: @screen-xs-max) {
+				padding-left: 0;
+				padding-right: 0;
+			}
+		}
+	}
+
+	// Icons
+	.icon-publish {
+		&:before {
+			font-family: "FontAwesome";
+			content: "\f00c";
+		}
+	}
+
+	.icon-unpublish:before {
+		font-family: "FontAwesome";
+		content: "\f00d";
+	}
+
+
+	.icon-checkedout:before {
+		font-family: "FontAwesome";
+		content: "\f058";
+	}
+
+	// Navbar
+	.navbar {
+		min-height: 0;
+		margin: 0;
+
+		.btn-navbar {
+			padding: 8px 14px;
+			.icon-bar {
+				width: 14px;
+				height: 2px;
+				display: block;
+				background: #888;
+				margin-bottom: 3px;
+			}
+		}
+
+	}
+
+	// Toolbar
+	.btn-toolbar {
+		padding-top: @t3-global-padding/2;
+		padding-bottom: @t3-global-padding/2;
+	}
+
+	// Statistics Area
+	.statistics-table-area {
+		.statistics-box {
+			&.dark {
+				h1, h2, h3, h4, h5, h6 {
+					color: @white;
+				}
+			}
+		}
+
+		.navbar-inner {
+			.btn-navbar {
+				position: absolute;
+				top: -40px;
+				right: 0;
+			}
+		}
+	}
+
+	.asset-title {
+		margin: 0 0 @t3-global-margin 0;
+	}
+
+
+	.row-fluid,
+	.inner {
+		.clearfix();
+	}
+
+	.button-row,
+	.form-box  {
+		background: @white;
+		border: 0;
+		border-radius: 2px;
+		padding: @t3-global-padding/2 @t3-global-padding;
+		margin: @t3-global-margin 0;
+		.box-shadow(0 2px 4px rgba(0, 0, 0, 0.15));
+	}
+
+	// Hotel view
+	// ----------
+	#solidres {
+		.asset-ct-top {
+			background: @white;
+			border-radius: @border-radius-base @border-radius-base 0 0;
+			padding: @t3-global-padding;
+		}
+
+		//Asset title
+		.asset-title {
+			margin: 0 0 @t3-global-margin;
+			i {
+				font-size: 18px;
+
+				&:first-child {
+					margin-left: @t3-global-margin / 2;
+				}
+			}
+		}
+
+		// Asset subinfo
+		.asset-subinfo-group {
+			span {
+				font-style: normal;
+				font-size: @font-size-base;
+				line-height: 1.8;
+
+				&.phone:before,
+				&.fax:before {
+					color: @gray-light;
+					content: "\f098";
+					display: inline-block;
+					font-family: FontAwesome;
+					font-size: 14px;
+					height: 16px;
+					margin-right: 2px;
+					width: 16px;
+				}
+
+				&.fax:before {
+					content: "\f1ac";
+				}
+			}
+		}
+
+		// Social
+		.social_network {
+			font-style: normal;
+			margin: @t3-global-margin 0;
+
+			.fa {
+				width: 30px;
+				height: 30px;
+				border-radius: 50%;
+				text-align: center;
+				line-height: 30px;
+				background: @gray-lightest;
+				color: @gray-light;
+
+				&.fa-twitter {
+					background: #81D4FA;
+					color: #fff;
+				}
+
+				&.fa-facebook {
+					color: #fff;
+					background: #03A9F4;
+				}
+
+				&.fa-linkedin {
+					background: #1565C0;
+					color: #fff;
+				}
+			}
+		}
+
+		// Gallery
+		.asset-gallery {
+			margin-bottom: @t3-global-margin * 1.5;
+
+			.other-photos img {
+				margin-bottom: 8px;
+			}
+		}
+
+		div.even,
+		div.odd {
+			border-bottom: 1px solid @t3-border-color;
+		}
+
+		// Seservation Room
+		// ----------------
+		.sr-reservation-form {
+			.carousel .item img {
+				padding: 0;
+			}
+		}
+
+		// Room description
+		.roomtype_desc {
+			margin-bottom: @t3-global-margin;
+
+			.btn-action {
+				margin-top: @t3-global-margin;
+
+				.btn {
+					margin-right: 5px;
+					margin-top: 5px;
+
+					&.btn-xs {
+						font-size: @font-size-small;
+						padding: @t3-global-padding/3;
+						margin-right: 0;
+					}
+
+					i {
+						margin-right: 5px;
+					}
+				}
+			}
+		}
+
+		// Tariff box
+		.tariff-box {
+			background: @white;
+			border: 0;
+			border-top: 2px solid @t3-border-color;
+			margin: @t3-global-margin 0 0;
+			padding: @t3-global-padding 0 0;
+
+			.min_tariff, .normal_tariff {
+				color: @link-color;
+				font-size: @font-size-h3;
+			}
+
+			.tariff_title {
+				color: @gray-dark;
+				display: block;
+				padding-top: 10px;
+				margin-top: 0;
+			}
+
+			.normal_tariff {
+				select {
+					float: left;
+				}
+			}
+
+			.media-body {
+				text-align: left !important;
+			}
+
+			.starting_from,
+			.min_tariff,
+			.tariff_suffix {
+				line-height: 1;
+				text-align: left !important;
+			}
+
+			.starting_from {
+				display: block;
+				font-size: 14px;
+				margin-bottom: 5px;
+			}
+
+			.min_tariff {
+				display: inline-block;
+				line-height: 1;
+				margin-right: 5px;
+			}
+
+			.tariff_suffix {
+				display: inline-block;
+				font-weight: 400;
+				color: @gray;
+			}
+
+			.checkinoutform {
+				margin-top: @t3-global-margin;
+			}
+		}
+	}
+
+
+	// Book block
+	// ----------
+
+	// Coupon block
+	.coupon {
+		background: #fff;
+		border: 0;
+		border-bottom: 1px solid @t3-border-color;
+		border-radius: 0;
+		margin: 0;
+		padding: 0 @t3-global-padding @t3-global-padding;
+		position: relative;
+
+		#coupon_code {
+			margin-right: @t3-global-margin;
+			width: 220px;
+		}
+
+		.help-inline {
+			font-size: @font-size-small;
+			padding: @t3-global-padding/3;
+			position: absolute;
+			bottom: 100%;
+			line-height: 1;
+			left: @t3-global-margin;
+			background: @gray-lightest;
+
+			&:before {
+				border-right: 6px solid transparent;
+				border-top: 6px solid @gray-lightest;
+				content: "";
+				position: absolute;
+				top: 100%;
+				left: 10px;
+			}
+
+			&.rejected {
+				background: @red;
+				color: @white;
+
+				&:before {
+					border-top-color: @red;
+				}
+			}
+		}
+	}
+
+	.reservation_asset_item {
+		.coupon + .help-inline {
+			padding: @t3-global-padding/2 @t3-global-padding;
+			display: block;
+			color: @state-warning-text;
+			background: @state-warning-bg;
+			border: 1px solid @state-warning-border;
+		}
+	}
+
+	// Winzard
+	.wizard {
+		background: transparent;
+		border: 0;
+		border-top: 1px solid @gray-lighter;
+		border-radius: 0;
+		margin: 0;
+
+		ul.steps {
+			.clearfix();
+
+			li {
+				background: @white;
+				border-radius: 0 !important;
+				height: auto;
+				font-size: @font-size-base;
+				padding: 10px;
+				position: relative;
+				text-align: center;
+				width: 33.33%;
+				float: left;
+
+				@media screen and (max-width: @screen-xs) {
+					width: 100%;
+					text-align: left;
+				}
+
+				@media (min-width: @screen-xs) and (max-width: @screen-md) {
+					overflow: hidden;
+					text-overflow: ellipsis;
+					white-space: nowrap;
+				}
+
+
+				.chevron {
+					display: none;
+				}
+
+				.badge {
+					border: 0;
+					border-radius: 50%;
+					height: 40px;
+					font-size: @font-size-h4;
+					padding: 0;
+					line-height: 38px;
+					text-align: center;
+					width: 40px;
+				}
+
+				&.complete {
+					background: lighten(@link-color, 20%);
+					color: @white;
+
+					&:before {
+						background: lighten(@link-color, 20%);
+					}
+
+					.badge {
+						background: @white;
+						color: lighten(@link-color, 20%);
+					}
+				}
+
+				&.active {
+					background: @link-color;
+					color: @white;
+
+					&:before {
+						background: @link-color;
+					}
+
+					.badge {
+						color: @link-color;
+						background: @white;
+					}
+				}
+
+				&:first-child {
+					&:before {
+						width: 50%;
+					}
+
+					&.complete {
+						&:before {
+							width: 100%;
+						}
+					}
+				}
+
+				&:last-child {
+					&:before {
+						width: 50%;
+						left: auto;
+						right: 0;
+					}
+
+					&.active {
+						&:before {
+							width: 100%;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	// Availability search
+	#availability-search {
+		background: @white;
+		border-top: 1px solid @gray-lighter;
+		margin-bottom: @t3-global-margin;
+		border-radius: 2px;
+		.box-shadow(0 2px 4px rgba(0, 0, 0, 0.15));
+
+		.availability-search-info {
+			color: @green;
+			padding: @t3-global-padding/2 @t3-global-padding;
+			line-height: 44px;
+		}
+	}
+
+	// Reservation form
+	#sr-reservation-form-room {
+		.button-row-top,
+		.button-row-bottom {
+			p {
+				margin-bottom: 0;
+				padding-top: 10px;
+			}
+		}
+	}
+
+
+
+	.room {
+		.carousel-control {
+			font-size: 12px;
+			border-width: 2px;
+			left: 15px;
+
+			&.right {
+				left: auto;
+				right: 15px;
+			}
+		}
+	}
+
+	.room-form {
+		.room_index_row {
+			.room_index_form_heading {}
+			.room_index_form_ct {
+				padding-top: @t3-global-padding/2;
+				padding-bottom: @t3-global-padding/2;
+
+				.form-group {
+					margin-bottom: 10px;
+					display: block;
+
+					// Control screen mobile
+					@media screen and (max-width: @screen-xs-max) {
+						overflow: hidden;
+						line-height: 37px;
+					}
+
+					&:nth-child(1),
+					&:nth-child(2),
+					&:nth-child(3),
+					&:nth-child(4) {
+						display: inline-block;
+					}
+
+					input {
+						display: inline-block;
+
+						// Control screen mobile
+						@media screen and (max-width: @screen-xs-max) {
+							float: left;
+							margin-top: 12px;
+						}
+					}
+
+					select {
+						// Control screen mobile
+						@media screen and (max-width: @screen-xs-max) {
+							margin: 0 @t3-global-margin / 4;
+							float: left;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	h4.roomtype_name {
+		position: relative;
+		margin-bottom:@t3-global-margin;
+		margin-top: 0;
+
+		.label {
+			display: inline-block;
+			margin-right: 5px;
+		}
+	}
+
+	// Calendar
+	div.availability-calendar {
+		table {
+			@media screen and (max-width: @screen-xs-max) {
+				width: 100%;
+			}
+
+			margin-bottom: 10px;
+			th,
+			td {
+				font-size: 12px;
+				@media screen and (max-width: @screen-sm-max) and (min-width:@screen-sm) {
+					font-size: 11px;
+					padding: 3px;
+				}
+			}
+
+			@media screen and (max-width: @screen-xs-max) {
+				margin-left: 0;
+				margin-right: 0;
+			}
+		}
+
+		.span4 {
+			@media screen and (max-width: @screen-xs-max) {
+				width: 100%;
+			}
+
+			@media (min-width: @screen-sm) and (max-width: @screen-sm-max) {
+
+			}
+		}
+	}
+
+	// Photo
+	.reservation_asset_item {
+		.main-photo {
+			img {
+				margin: 0;
+				padding: 0;
+				width: 100%;
+			}
+
+			@media screen and (max-width: @screen-xs-max) {
+				margin-bottom: @t3-global-margin;
+			}
+		}
+	}
+
+	.main-photo {}
+	.other-photos {
+		margin-left: -@t3-global-margin/2;
+		margin-right: -@t3-global-margin/2;
+
+		.sr-photo {
+			width: 25%;
+			float: left;
+			padding: 0 @t3-global-padding/2 @t3-global-padding/2 @t3-global-padding/2;
+
+
+			.photo {
+				width: 100%;
+				height: auto;
+			}
+		}
+	}
+
+	// UI Datepicker
+	.ui-datepicker {
+		margin: 0 5px;
+		width: auto;
+		border-radius: 0;
+		font-family: @font-family-base;
+
+		.ui-datepicker-header {
+			border-radius: 0;
+			background: @gray-lightest;
+		}
+
+		.ui-state-highlight,
+		.ui-widget-content .ui-state-highlight,
+		.ui-widget-header .ui-state-highlight {
+			background: @green;
+			color: @white;
+		}
+
+		.ui-datepicker-buttonpane button.ui-datepicker-current {
+			background: @link-color;
+			font-family: @font-family-base;
+			border-radius: 2px;
+			color: @white;
+		}
+	}
+
+	.availability-calendar {
+		padding: @t3-global-padding;
+		z-index: 2;
+		position: absolute;
+		background: #fff;
+		text-align: left;
+		color: @gray;
+		border: 1px solid @t3-border-color;
+		left: @grid-gutter-width/2;
+		right: @grid-gutter-width/2;
+		width: auto;
+
+		.legend-busy {
+		}
+
+		table tr.row-week-day {
+			background: @gray-lightest;
+		}
+	}
+
+	// Modules
+	#sr-advancedsearch-form {
+
+		.datepicker_inline {
+			position: absolute;
+			z-index: 1001;
+
+			.ui-datepicker-inline {
+				width: auto !important;
+
+				.ui-datepicker-group {
+					width: auto;
+					float: none;
+				}
+			}
+		}
+	}
+
+	// Form in home page
+	.t3-section-1 #sr-advancedsearch-form {
+		padding: @t3-global-padding*2 0;
+
+		fieldset > .row {
+			float: left;
+			width: 25%;
+		}
+	}
+
+	.datefield {
+		background: none;
+		border: 2px solid #cfd8dc;
+		border-radius: 0;
+		box-shadow: none;
+		height: 40px;
+		padding: 10px;
+		position: relative;
+		padding-right: 40px;
+		max-width: 200px;
+
+		&:after {
+			content: "\f073";
+		    font-family: FontAwesome;
+		    font-style: normal;
+		    font-weight: normal;
+		    text-decoration: inherit;
+		    position: absolute;
+		    top: 10px;
+		    right: 10px;
+		    color: @gray-light;
+		}
+
+		.datepicker_inline {
+			position: absolute;
+			z-index: 1001;
+			left: 0;
+			top: 100%;
+
+			.ui-datepicker {
+				border-color: @t3-border-color;
+				margin: 0;
+				padding: 0;
+
+				.ui-datepicker-header {
+					border: 0;
+					margin: 1px;
+				}
+			}
+
+		}
+	}
+
+	.module-ct {
+		.datefield {
+			max-width: none;
+		}
+	}
+
+	.searchbtn {
+		margin-top: 18px;
+	}
+
+
+	.form-group {
+		position: relative;
+		label.error {
+			position: absolute;
+			top: -20px;
+			left: 0;
+			background: red;
+			color: #fff;
+			font-weight: 300;
+			font-size: 12px;
+			padding: 5px;
+			line-height: 1;
+
+			&:before {
+				border-right: 5px solid transparent;
+				border-top: 10px solid red;
+				content: "";
+				position: absolute;
+				top: 100%;
+				left: 10px;
+			}
+		}
+	}
+
+	.form-guest-title {
+		margin: @t3-global-margin 0;
+	}
+}
+
+
+// Search Asset Item
+.com_solidres #solidres {
+	.asset-item {
+		@media screen and (max-width: @screen-xs-max) {
+			margin-bottom: @t3-global-margin;
+		}
+
+		.asset-title {
+			margin: @t3-global-margin/2 0 0 0;
+			.clearfix();
+
+			.asset-rate {
+				float: right;
+				color: #f7ba0c;
+
+				@media screen and (max-width: @screen-md-max) {
+					float: none;
+				}
+
+		    i {
+		    	width: 13px;
+		    	font-size: 13px;
+
+		    	&:first-child {
+		    		@media screen and (max-width: @screen-md-max) {
+		    			margin-left: 0;
+		    		}
+		    	}
+		    }
+			}
+		}
+
+		.carousel {
+
+			.carousel-control{
+				.opacity(0);
+				.transition(all .2s linear);
+			}
+
+			.room_type_details {
+				@media screen and (max-width: @screen-xs-max) {
+					margin-bottom: @t3-global-margin;
+					display: block;
+				}
+			}
+		}
+
+		&:hover {
+			.carousel {
+				.carousel-control {
+					.opacity(1);
+				}
+			}
+		}
+
+		.asset-subinfo {
+			padding: @t3-global-padding/2 0;
+
+			a,
+			.show_location_map {
+				display: inline-block;
+			}
+		}
+	}
+
+	// List view
+	.asset-row-list {
+		.asset-item {
+			.asset-title {
+				margin-top: 0;
+				margin-bottom: @t3-global-margin/2;
+
+				.asstet-rate {
+					float: right;
+					color: #f7ba0c;
+
+			    i {
+			    	width: 13px;
+			    	font-size: 13px;
+			    }
+				}
+			}
+		}
+	}
+
+	// Grid view
+	.asset-row-grid {
+
+		.asset-item {
+
+			.carousel {
+				margin: -@t3-global-margin;
+				margin-bottom: @t3-global-margin;
+			}
+
+			.room-type-list {
+				.room-type-row {
+					p {
+						margin-bottom: 0;
+					}
+				}
+			}
+
+		}
+
+	}
+
+	#sr-reservation-form-guest {
+		@media (max-width: @screen-sm-max) {
+			.button-row .text-right {
+				text-align: left;
+			}
+
+			fieldset {
+				display: table-cell;
+				width: 100%;
+			}
+		}
+	}
+}
+
+// SOLIDRES MODULES
+#sr-checkavailability-form {
+	.action {
+		.btn {
+			margin-right: 10px;
+		}
+	}
+}
+
+// SOLIDRES DASHBOARD
+.com_solidres {
+	.limit_booking_input {
+		textarea {
+			max-width: 100%;
+		}
+		margin-bottom: @t3-global-margin;
+	}
+
+	.limit_booking_form_rows {
+		margin-bottom: @t3-global-margin;
+	}
+
+	.dashboard-block,
+	.sr_list_view,
+	.sr_form_view {
+		background: @white;
+		border-radius: 4px;
+		padding: @t3-global-padding;
+		.box-shadow(0 2px 4px rgba(0, 0, 0, 0.15));
+		margin-bottom: @t3-global-margin;
+
+	}
+
+	.dashboard-nav {
+		.box-shadow(0 2px 4px rgba(0, 0, 0, 0.15));
+		background: @white;
+		margin-bottom: @t3-global-margin;
+		.clearfix();
+		.nav,
+		.nav-collapse .nav {
+			> li {
+				display: inline-block;
+
+				a {
+					color: @gray;
+					font-size: @font-size-base;
+
+					&:hover,
+					&:focus {
+						color: @link-color;
+					}
+
+					@media screen and (max-width: @screen-xs-max) {
+						font-size: @font-size-small;
+						padding-left: 5px;
+						padding-right: 5px;
+					}
+				}
+
+				&.active {
+					a {
+						color: @brand-primary;
+					}
+				}
+
+				.dropdown-menu {
+					li {
+						display: block;
+					}
+				}
+			}
+		}
+
+		.btn-navbar {
+			display: none;
+		}
+	}
+
+	.tab-pane {
+		.dashboard-nav {
+			margin: -@t3-global-margin;
+			margin-bottom: @t3-global-margin;
+			padding-left: 0;
+			padding-right: 0;
+			.box-shadow(none);
+
+			.nav {
+				@media screen and (min-width: @screen-md) {
+					float: left;
+				}
+			}
+		}
+	}
+
+	.dashboard-block {
+		.span4 {
+			@media screen and (max-width: @screen-xs-max) {
+				width: 100%;
+				float: none;
+			}
+		}
+
+		.scope-selection {
+			#statistics_scope {
+				@media screen and (max-width: @screen-xs-max) {
+					margin: @t3-global-margin 0;
+					float: none !important;
+					width: 100%;
+				}
+			}
+		}
+	}
+
+	.statistics-chart-area {
+		.nav-tabs {
+			li {
+				a {
+					@media screen and (max-width: @screen-xs-max) {
+						padding: @t3-global-padding/3;
+						font-size: @font-size-small;
+						border: 0;
+						margin-bottom: 1px;
+					}
+
+				}
+
+				&.active {
+					a {
+						@media screen and (max-width: @screen-xs-max) {
+							background: @link-color;
+							color: @white;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.default-tariff {
+		input {
+			width: 100%;
+		}
+	}
+
+	#extra-selection-holder {
+		input[type="checkbox"] {
+			margin-left: 0;
+			position: static;
+		}
+	}
+
+	#jform_occupancy_max,
+	#jform_occupancy_adult,
+	#jform_occupancy_child {
+		display: inline-block;
+		margin-bottom: @t3-global-margin/2;
+	}
+
+}
+
+
+// SLIDRES DASHBOARD CUSTOMER
+.com_solidres #solidres {
+	.reservation-list {
+		margin-top: @t3-global-margin;
+		padding-left: @grid-gutter-width/2;
+		padding-right: @grid-gutter-width/2;
+	}
+
+	.reservation-row {
+		.asset-item {
+			.clearfix();
+			img {
+				max-width: 100%;
+			}
+		}
+
+		.inner-skip-right {
+			margin: 0 0 0 -@grid-gutter-width/2;
+		}
+
+		.inner-skip-left {
+			margin-top: 0;
+
+			h3 {
+				margin-top: 0;
+			}
+
+			.actions {
+				margin-top: @t3-global-margin;
+			}
+		}
+
+		.reservationasset-desc {
+			@media (max-width: @screen-xs-max) {
+				margin-top: @t3-global-margin;
+			}
+		}
+
+		.checkinout {
+			@media (max-width: @screen-xs-max) {
+				text-align: left;
+			}
+		}
+	}
+}
+
+// SOLIDRES MY RESERVATION
+.com_solidres.view-myreservation {
+	#solidres {
+		padding-left: @grid-gutter-width/2;
+		padding-right: @grid-gutter-width/2;
+	}
+
+	.dashboard-nav {
+		margin-left: -@grid-gutter-width/2;
+		margin-right: -@grid-gutter-width/2;
+	}
+
+	.reservation-detail-box h3 {
+		border: 0;
+		background: none;
+		text-indent: 0;
+	}
+
+	.reservation-details {
+		padding-left: 0;
+
+		li {
+			border-bottom: 1px solid @t3-border-color;
+
+			label {
+				margin-bottom: 0;
+				background: none;
+				padding-left: 0;
+				text-indent: 0;
+			}
+		}
+	}
+}
+
+
+// COLOR BOX
+.com_solidres {
+	#cboxLoadedContent {
+		@media (max-width: @screen-sm-max) {
+			img {
+				max-width: 700px;
+			}
+		}
+
+		@media (max-width: @screen-xs-max) {
+			img {
+				max-width: 300px;
+			}
+		}
+	}
+}
+
+
+//  IE 8
+
+.ie8 {
+	&.com_solidres {
+		.form-group {
+			min-width: 150px;
+		}
+	}
+}

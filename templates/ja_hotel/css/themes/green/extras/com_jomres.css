@@ -1,0 +1,587 @@
+.com_jomres .nav-tabs li.active a {
+  background-color: #ffffff;
+  border-bottom: none;
+}
+.com_jomres #jomres-mainmenu-collapse .nav .open > a,
+.com_jomres #jomres-mainmenu-collapse .nav .open > a:hover,
+.com_jomres #jomres-mainmenu-collapse .nav .open > a:focus {
+  background: none;
+  color: #2c6a2f !important;
+}
+.com_jomres .dropdown-menu > a,
+.com_jomres .dropdown-menu > a:hover,
+.com_jomres .dropdown-menu > a:focus {
+  background: none;
+  color: #2c6a2f !important;
+}
+.com_jomres .dropdown-menu > .active > a,
+.com_jomres .dropdown-menu > .active > a:hover,
+.com_jomres .dropdown-menu > .active > a:focus {
+  background: none;
+  color: #2c6a2f !important;
+}
+.com_jomres #jomres-mainmenu-collapse .navbar-default .navbar-nav > li > a:hover,
+.com_jomres #jomres-mainmenu-collapse .navbar-default .navbar-nav > li > a:focus {
+  color: #2c6a2f !important;
+}
+.com_jomres .navbar-default .navbar-nav > .dropdown > a:hover .caret,
+.com_jomres .navbar-default .navbar-nav > .dropdown > a:focus .caret,
+.com_jomres .navbar-default .navbar-nav > .dropdown.open > a .caret {
+  border-top-color: #2c6a2f;
+  border-bottom-color: #2c6a2f;
+}
+.com_jomres #jomres-mainmenu-collapse .navbar-default .navbar-nav > .open > a,
+.com_jomres #jomres-mainmenu-collapse .navbar-default .navbar-nav > .open > a:hover,
+.com_jomres #jomres-mainmenu-collapse .navbar-default .navbar-nav > .open > a:focus {
+  color: #2c6a2f !important;
+}
+.com_jomres #jomres-mainmenu-collapse .navbar-default .navbar-nav > li > a,
+.com_jomres #jomres-mainmenu-collapse .navbar-default .navbar-nav > li > a:hover,
+.com_jomres #jomres-mainmenu-collapse .navbar-default .navbar-nav > li > a:focus {
+  color: #2c6a2f !important;
+}
+.com_jomres #jomres-mainmenu-collapse .navbar-default .navbar-nav > .dropdown.open > a .caret {
+  border-top-color: #8591d5;
+  border-bottom-color: #8591d5;
+}
+.com_jomres .jomres-propertylist-toolbar {
+  background: #ffffff;
+  box-shadow: none;
+  border-radius: 0;
+}
+.com_jomres .jomres-propertylist-toolbar .col-xs-7,
+.com_jomres .jomres-propertylist-toolbar .col-sm-3,
+.com_jomres .jomres-propertylist-toolbar .col-md-3,
+.com_jomres .jomres-propertylist-toolbar .col-lg-3 {
+  width: auto;
+}
+.com_jomres .jomres-propertylist-toolbar .col-xs-7 .input-medium,
+.com_jomres .jomres-propertylist-toolbar .col-sm-3 .input-medium,
+.com_jomres .jomres-propertylist-toolbar .col-md-3 .input-medium,
+.com_jomres .jomres-propertylist-toolbar .col-lg-3 .input-medium {
+  width: 160px;
+}
+.com_jomres .jomres-propertylist-toolbar .col-xs-5,
+.com_jomres .jomres-propertylist-toolbar .col-sm-2,
+.com_jomres .jomres-propertylist-toolbar .col-md-2,
+.com_jomres .jomres-propertylist-toolbar .col-lg-2 {
+  width: auto;
+  margin-bottom: 15px;
+}
+.com_jomres td.alert-info table {
+  border: none;
+}
+.com_jomres td.alert-info table tbody tr td {
+  display: inline-block;
+  border-top: none;
+  margin-right: 10px;
+}
+.com_jomres .availability_calendar_calendars table {
+  margin: 10px;
+}
+.com_jomres .availability_calendar_calendars table tbody tr td table.rescal tr th {
+  padding: 10px;
+}
+.com_jomres table.ui-datepicker-calendar thead tr th {
+  padding: 0;
+}
+.com_jomres table {
+  border: 1px solid #dddddd;
+}
+.com_jomres table thead tr th {
+  padding: 15px 15px;
+  font-size: 12px;
+  vertical-align: top;
+  line-height: 1.5;
+}
+.com_jomres table tbody tr td {
+  font-size: 12px;
+  vertical-align: top;
+}
+.com_jomres .input-medium {
+  width: 200px;
+}
+.com_jomres .form-actions {
+  overflow: hidden;
+  clear: right;
+  width: 100%;
+  padding: 20px 0;
+}
+.com_jomres .form-actions div {
+  margin: 0;
+}
+.com_jomres .form-inline {
+  padding-top: 20px;
+}
+.com_jomres .form-group {
+  margin-bottom: 10px;
+}
+.com_jomres .form-group label.control-label {
+  width: 100%;
+  text-align: left;
+  margin-bottom: 10px;
+}
+.com_jomres .form-horizontal .form-group .col-md-10 #discount {
+  float: left;
+}
+.com_jomres .form-horizontal .form-group .col-md-10 .help-block {
+  margin-top: 8px;
+  margin-left: 5px;
+  float: left;
+}
+.com_jomres .form-horizontal .form-actions {
+  margin-top: 20px;
+  border-top: 1px solid #eeeeee;
+}
+.com_jomres .dataTables_length {
+  overflow: hidden;
+}
+.com_jomres .ColVis {
+  overflow: hidden;
+  float: left;
+}
+.com_jomres .ColVis button {
+  font-size: 14px;
+  color: #ffffff !important;
+  background: #43a047 no-repeat;
+  border: none;
+  box-shadow: none;
+}
+.com_jomres .pagination {
+  margin: 0;
+}
+.com_jomres .DTTT_container {
+  float: left;
+}
+.com_jomres .DTTT_container a.DTTT_button {
+  font-size: 14px;
+  color: #ffffff !important;
+  background: #8bc34a no-repeat;
+  border: none;
+  box-shadow: none;
+}
+.com_jomres .dataTables_wrapper label select {
+  margin: 0 10px;
+}
+.com_jomres .dataTables_wrapper label input {
+  margin-left: 10px;
+}
+.com_jomres .dataTables_wrapper .row:first-child,
+.com_jomres .dataTables_wrapper .row-fluid {
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+.com_jomres .dataTables_wrapper .row:first-child .col-xs-4:first-child,
+.com_jomres .dataTables_wrapper .row-fluid .col-xs-4:first-child,
+.com_jomres .dataTables_wrapper .row:first-child .span4:first-child,
+.com_jomres .dataTables_wrapper .row-fluid .span4:first-child {
+  width: 100%;
+  border-bottom: 1px solid #dddddd;
+  padding-bottom: 15px;
+  margin-bottom: 17px;
+}
+.com_jomres .dataTables_wrapper .row:first-child .col-xs-4:nth-child(2),
+.com_jomres .dataTables_wrapper .row-fluid .col-xs-4:nth-child(2),
+.com_jomres .dataTables_wrapper .row:first-child .span4:nth-child(2),
+.com_jomres .dataTables_wrapper .row-fluid .span4:nth-child(2) {
+  width: 50%;
+}
+.com_jomres .dataTables_wrapper .row:first-child .col-xs-4:last-child,
+.com_jomres .dataTables_wrapper .row-fluid .col-xs-4:last-child,
+.com_jomres .dataTables_wrapper .row:first-child .span4:last-child,
+.com_jomres .dataTables_wrapper .row-fluid .span4:last-child {
+  float: right;
+}
+.com_jomres .dataTables_wrapper .row:last-child,
+.com_jomres .dataTables_wrapper .row-fluid {
+  margin-top: 20px;
+  padding-top: 10px;
+}
+.com_jomres #map_canvas img {
+  max-width: none;
+}
+.com_jomres .form-group .btn.btn-primary,
+.com_jomres .form-group .btn.btn-primary:hover,
+.com_jomres .form-group .btn.btn-primary:focus,
+.com_jomres .form-group .btn.btn-primary:active,
+.com_jomres .form-group .btn.btn-primary.active,
+.com_jomres .form-group .open > .dropdown-toggle.btn.btn-primary {
+  background: url(../../../../plugins/system/t3/base-bs3/imgs/blank.gif) no-repeat transparent !important;
+}
+.com_jomres .form-group .btn:hover,
+.com_jomres .form-group .btn:focus,
+.com_jomres .form-group .btn:active,
+.com_jomres .form-group .btn.active,
+.com_jomres .form-group .open > .dropdown-toggle.btn {
+  background-color: transparent;
+}
+.com_jomres .form-group .btn-default:hover,
+.com_jomres .form-group .btn-default:focus,
+.com_jomres .form-group .btn-default:active,
+.com_jomres .form-group .btn-default.active,
+.com_jomres .form-group .open > .dropdown-toggle.btn-default {
+  background-color: transparent;
+}
+.com_jomres .form-actions .btn.btn-primary,
+.com_jomres .form-actions .btn.btn-primary:hover,
+.com_jomres .form-actions .btn.btn-primary:focus,
+.com_jomres .form-actions .btn.btn-primary:active,
+.com_jomres .form-actions .btn.btn-primary.active,
+.com_jomres .form-actions .open > .dropdown-toggle.btn.btn-primary {
+  background-color: #32408f !important;
+}
+.com_jomres .t3onoff label {
+  border: 0;
+  left: 0;
+  top: 0;
+}
+.com_jomres .t3onoff label:before,
+.com_jomres .t3onoff label:after {
+  border: 0;
+}
+.com_jomres .t3onoff .btn:hover,
+.com_jomres .t3onoff .btn:focus,
+.com_jomres .t3onoff .btn:active,
+.com_jomres .t3onoff .btn.active,
+.com_jomres .t3onoff .open > .dropdown-toggle.btn {
+  background-color: none;
+}
+.com_jomres .well {
+  box-shadow: none;
+  border: none;
+}
+.com_jomres .well-small {
+  text-align: center;
+}
+.com_jomres .well-small .page-header {
+  margin: 0;
+  background-color: #5bc0de;
+  padding: 20px 0;
+  margin-bottom: 20px;
+}
+.com_jomres .well-small .page-header h4 {
+  margin: 0;
+  color: #ffffff;
+}
+.com_jomres .well-small .btn-success,
+.com_jomres .well-small .btn-default,
+.com_jomres .well-small .btn-primary {
+  margin: 15px;
+}
+.com_jomres #tour_target_editing_mode_dropdown {
+  border-top: 1px solid #eeeeee;
+  border-bottom: 1px solid #eeeeee;
+  padding: 20px 10px;
+  width: 100%;
+}
+.com_jomres .jomres-propertylist-toolbar {
+  margin-top: 20px;
+}
+.com_jomres .jomres_property_list_propertywrapper .panel-heading {
+  overflow: hidden;
+}
+.com_jomres .jomres_property_list_propertywrapper .panel-heading h3 {
+  padding-top: 5px;
+}
+.com_jomres .jomres_property_list_propertywrapper .panel-heading .col-md-10 .panel-title a {
+  margin-top: 3px;
+}
+.com_jomres .jomres_property_list_propertywrapper .panel-heading .col-md-2 .plist-compare label input {
+  margin: 4px 0 0 -20px;
+}
+.com_jomres .jomres_property_list_propertywrapper .panel-default {
+  border-radius: 0;
+  box-shadow: none;
+}
+.com_jomres .jomres_property_list_propertywrapper .panel-body span.label {
+  padding: .3em .6em .3em;
+}
+.com_jomres .jomres_property_list_propertywrapper .panel-body .well .row .col-xs-6,
+.com_jomres .jomres_property_list_propertywrapper .panel-body .well .row .col-sm-6,
+.com_jomres .jomres_property_list_propertywrapper .panel-body .well .row .col-md-6,
+.com_jomres .jomres_property_list_propertywrapper .panel-body .well .row .col-lg-6 {
+  width: 100%;
+}
+.com_jomres .jomres_property_list_propertywrapper .panel-body .well .row .col-xs-6 span,
+.com_jomres .jomres_property_list_propertywrapper .panel-body .well .row .col-sm-6 span,
+.com_jomres .jomres_property_list_propertywrapper .panel-body .well .row .col-md-6 span,
+.com_jomres .jomres_property_list_propertywrapper .panel-body .well .row .col-lg-6 span {
+  float: left;
+}
+.com_jomres .jomres_property_list_propertywrapper .panel-body span:nth-child(2) {
+  display: block;
+  width: 100%;
+  padding: 5px 0;
+}
+.com_jomres .jomres_property_list_propertywrapper .panel-body .col-md-6 span:nth-child(2) {
+  display: block;
+  width: 100%;
+  padding: 10px 0;
+}
+.com_jomres .jomres_property_list_propertywrapper .panel-body .col-md-6 .label {
+  padding: 5px 10px;
+}
+.com_jomres .jomres_property_list_propertywrapper .panel-body .col-md-6 .small {
+  padding: 10px 0;
+}
+.com_jomres .jomres_property_list_propertywrapper .panel-body .col-md-3 .well {
+  background-color: #5bc0de;
+  color: #ffffff;
+}
+.com_jomres .jomres_property_list_propertywrapper .panel-body .col-md-3 .well .big-price {
+  font-size: 28px;
+  line-height: 1.5;
+}
+.com_jomres .jomres_property_list_propertywrapper .panel-footer {
+  overflow: hidden;
+}
+.com_jomres .jomres_property_list_propertywrapper .photoview-compare {
+  margin-top: 10px;
+}
+.com_jomres .jomres_property_list_propertywrapper .photoview-compare input[type='radio'],
+.com_jomres .jomres_property_list_propertywrapper .photoview-compare input[type='radio'],
+.com_jomres .jomres_property_list_propertywrapper .photoview-compare input[type='checkbox'],
+.com_jomres .jomres_property_list_propertywrapper .photoview-compare input[type='checkbox'] {
+  margin: 4px -20px;
+}
+.com_jomres #jomres_alternate_menu_position .navbar {
+  padding: 20px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+  min-height: 100%;
+}
+.com_jomres #jomres_alternate_menu_position .navbar ul.nav li {
+  float: left;
+}
+.com_jomres #jomres_alternate_menu_position .navbar ul.nav li a:hover,
+.com_jomres #jomres_alternate_menu_position .navbar ul.nav li a:focus,
+.com_jomres #jomres_alternate_menu_position .navbar ul.nav li a:active {
+  color: #2c6a2f;
+}
+.com_jomres #jomres_alternate_menu_position .navbar-brand {
+  padding: 0;
+  height: auto;
+}
+.com_jomres #jomres_alternate_menu_position #jomres-mainmenu-collapse {
+  padding: 0;
+}
+.com_jomres #jomres_alternate_menu_position #jomres-mainmenu-collapse .navbar-nav > .open ul.dropdown-menu {
+  padding: 15px;
+}
+.com_jomres #jomres_alternate_menu_position #jomres-mainmenu-collapse .navbar-nav > .open ul.dropdown-menu li {
+  border-bottom: 1px solid #eeeeee;
+  padding: 8px 5px;
+  width: 100%;
+}
+.com_jomres #jomres_alternate_menu_position #jomres-mainmenu-collapse .navbar-nav > .open ul.dropdown-menu li:last-child {
+  border: 0;
+  padding-bottom: 0;
+}
+.com_jomres #jomres_alternate_menu_position ul {
+  float: left;
+}
+.com_jomres #jomres_alternate_menu_position ul li {
+  margin-right: 10px;
+}
+.com_jomres #jomres_alternate_menu_position ul li a {
+  padding: 0;
+  font-size: 14px;
+  text-transform: capitalize;
+}
+.com_jomres #jomres_alternate_menu_position ul li a:hover {
+  color: #2c6a2f;
+}
+.com_jomres #jomres_content_area {
+  background-color: #ffffff;
+  padding: 20px;
+}
+.com_jomres #jomres_content_area:after {
+  content: '.';
+  display: block;
+  clear: both;
+  overflow: hidden;
+  visibility: hidden;
+  width: 0;
+  height: 0;
+  font-size: 0;
+  line-height: 0;
+}
+.com_jomres #jomres_content_area .label {
+  font-size: 12px;
+}
+.com_jomres #jomres_content_area h2.page-header {
+  font-size: 18px;
+  text-align: left;
+}
+.com_jomres #jomres_content_area h2.page-header h2,
+.com_jomres #jomres_content_area h2.page-header span {
+  font-size: 18px;
+}
+.com_jomres #jomres_content_area h2.page-header span {
+  color: #43a047;
+}
+.com_jomres #jomres_content_area h2#tour_target_property_name {
+  padding-bottom: 20px;
+}
+.com_jomres #jomres_content_area #property_details #tour_target_property_details_buttons #tour_target_inline_calendar .ui-datepicker {
+  width: 100%;
+  margin-bottom: 20px;
+}
+.com_jomres #jomres_content_area #property_details #tour_target_property_details_buttons .pdetails-reviews .col-xs-6 {
+  padding: 10px;
+}
+.com_jomres #jomres_content_area #property_details #tour_target_property_details_buttons .pdetails-reviews .col-xs-6 span {
+  color: #43a047;
+}
+.com_jomres #jomres_content_area #property_details #tour_target_property_details_buttons .pdetails-reviews .col-xs-6:first-child {
+  border-right: 1px solid #dddddd;
+}
+.com_jomres #jomres_content_area #property_details #tour_target_property_details_buttons .pdetails-icons {
+  border-top: none;
+  margin-bottom: 0;
+}
+.com_jomres #jomres_content_area #property_details #tour_target_property_details_buttons .pdetails-icons .col-xs-6 a {
+  text-shadow: none;
+}
+.com_jomres #jomres_content_area #property_details #tour_target_property_details_buttons .pdetails-icons .col-xs-6 .fa-envelope,
+.com_jomres #jomres_content_area #property_details #tour_target_property_details_buttons .pdetails-icons .col-xs-6 .fa-print {
+  font-size: 24px;
+  color: #000000;
+}
+.com_jomres #jomres_content_area #property_details #tour_target_property_details_buttons .pdetails-icons .col-xs-6:first-child {
+  border-right: 1px solid #dddddd;
+}
+.com_jomres #jomres_content_area .property-header {
+  margin-top: 20px;
+  padding: 30px 0;
+}
+.com_jomres #jomres_content_area .property-header h1#tour_target_property_header {
+  margin-bottom: 15px;
+  font-size: 18px;
+  color: #2c6a2f;
+}
+.com_jomres #jomres_content_area .property-header h1#tour_target_property_header span {
+  margin-left: 20px;
+}
+.com_jomres #jomres_content_area .property-header address {
+  margin: 0;
+}
+.com_jomres #jomres_content_area #booking_form .input-mini {
+  width: auto;
+}
+.com_jomres #jomres_content_area table.ui-widget-content tbody tr td {
+  width: 100%;
+  padding: 5px;
+  vertical-align: top !important;
+}
+.com_jomres #jomres_content_area table.ui-widget-content tbody tr:first-child td h3 {
+  margin: 15px;
+}
+.com_jomres #jomres_content_area #blackBookingModal .modal-dialog .modal-content .modal-body #modalForm .row .col-md-4 {
+  width: 100%;
+}
+.com_jomres #jomres_content_area #blackBookingModal .modal-dialog .modal-content .modal-body #modalForm .row .col-md-4 .form-group {
+  overflow: hidden;
+}
+.com_jomres #jomres_content_area table[border="0"] td[width="40%"],
+.com_jomres #jomres_content_area table[border="0"] td[width="60%"] {
+  padding: 22px;
+}
+.com_jomres .t3-sidebar .row .col-md-4 h4.page-header {
+  border-top: 1px solid #f5f5f5 ;
+  padding-top: 20px;
+  text-align: left;
+}
+.com_jomres .t3-sidebar .col-md-4 {
+  width: 100%;
+}
+.com_jomres .t3-sidebar .col-md-4 .ui-slider .ui-slider-handle {
+  background: #dddddd;
+  border: none;
+}
+.com_jomres .t3-sidebar .col-md-4 .ui-slider .ui-slider-range {
+  background: #f5f5f5;
+  border: none;
+}
+.com_jomres .t3-sidebar .col-md-8 {
+  width: 100%;
+}
+.com_jomres .t3-sidebar .col-md-8 .btn-group {
+  width: 100%;
+}
+.com_jomres .t3-sidebar .col-md-8 .btn-group button {
+  margin-bottom: 10px;
+  max-width: 100%;
+  white-space: normal;
+}
+.com_jomres .t3-sidebar .col-md-12 .btn {
+  margin-bottom: 10px;
+}
+.com_jomres #cfg_booking_form_rooms_list_style,
+.com_jomres #cfg_newTariffModels {
+  border: 1px solid #eeeeee;
+}
+.com_jomres #cfg_booking_form_rooms_list_style .btn,
+.com_jomres #cfg_newTariffModels .btn {
+  border: 0;
+  background-color: #f7f7f7;
+}
+.com_jomres #cfg_booking_form_rooms_list_style .btn:hover,
+.com_jomres #cfg_newTariffModels .btn:hover,
+.com_jomres #cfg_booking_form_rooms_list_style .btn:focus,
+.com_jomres #cfg_newTariffModels .btn:focus,
+.com_jomres #cfg_booking_form_rooms_list_style .btn:active,
+.com_jomres #cfg_newTariffModels .btn:active {
+  background-color: #efefef !important;
+  color: #555555;
+}
+.com_jomres #cfg_booking_form_rooms_list_style .btn.active,
+.com_jomres #cfg_newTariffModels .btn.active {
+  background: #43a047 !important;
+  color: #ffffff;
+}
+.t3-sidebar .module-inner .row .col-md-4 h4.page-header {
+  border-top: 1px solid #f5f5f5;
+  padding-top: 20px;
+  text-align: left;
+}
+.t3-sidebar .module-inner .col-md-4 {
+  width: 100%;
+}
+.t3-sidebar .module-inner .col-md-4 .ui-slider .ui-slider-handle {
+  background: #dddddd;
+  border: none;
+}
+.t3-sidebar .module-inner .col-md-4 .ui-slider .ui-slider-range {
+  background: #f5f5f5;
+  border: none;
+}
+.t3-sidebar .module-inner .col-md-8 {
+  width: 100%;
+}
+.t3-sidebar .module-inner .col-md-8 .btn-group {
+  width: 100%;
+}
+.t3-sidebar .module-inner .col-md-8 .btn-group button {
+  margin-bottom: 10px;
+}
+.t3-sidebar .module-inner .col-md-12 .btn {
+  margin-bottom: 10px;
+}
+.t3-sidebar .module-inner #dates-content > .form-inline {
+  margin-bottom: 11px;
+}
+.t3onoff label.on.active::before {
+  width: auto;
+}
+.contentpane .property-header {
+  padding: 22px;
+  overflow: hidden;
+}
+.contentpane > .well {
+  background-color: #ffffff;
+  box-shadow: none;
+  margin-right: 22px;
+  margin-left: 22px;
+  overflow: hidden;
+}

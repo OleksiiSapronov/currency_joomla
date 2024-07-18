@@ -1,0 +1,1 @@
+FD31.component("EasyDiscuss", {"environment":"static","source":"local","mode":"compressed","baseUrl":"http:\/\/www.migracja.avsh.pl\/migr\/index.php?option=com_easydiscuss&lang=none&Itemid=135","version":"3.2.9599","scriptVersioning":false,"responsive":false});

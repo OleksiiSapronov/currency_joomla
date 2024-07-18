@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension
+	type="module"
+	version="2.5"
+	client="site"
+	method="upgrade">
+	<name>mod_rates</name>
+	<author>Evgeniy Skulditskiy</author>
+	<creationDate>May 2012</creationDate>
+	<authorEmail>skulditsky@gmail.com</authorEmail>
+	<version>1.0</version>
+	<description>This module show historical chart of exchange rate between two currencies</description>
+	<files>
+		<filename module="mod_rates">mod_rates.php</filename>
+		<filename>index.html</filename>
+		<filename>tmpl/default.php</filename>
+		<filename>sql/install.sql</filename>
+		<filename>cron.php</filename>
+		<filename>mod_rates.xml</filename>
+	</files>
+ 	<languages folder="language">
+ 		<language tag="pl-PL">pl-PL/pl-PL.mod_rates.ini</language>
+	</languages>
+	<install> <!-- Runs on install -->
+		<sql>
+			<file driver="mysql" charset="utf8">sql/install.sql</file>
+		</sql>
+	</install>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field
+					name="cid1"
+					type="text"
+					label="Default input currency"
+				/>
+				<field
+					name="cid2"
+					type="text"
+					label="Default output currency"
+				/>
+				<field
+					name="amount"
+					type="text"
+					label="Default amount"
+				/>
+				<field
+					name="currencies_from"
+					type="text"
+					width="100%"
+					label="Currencies from which we convert, separated by comma, e.g. USD,PLN,AUD"
+				/>
+				<field
+					name="currencies_to"
+					type="text"
+					label="Currencies to which we convert, separated by comma, e.g. USD,PLN,AUD"
+				/>
+                <field
+                        name="show_zero_values"
+                        type="list"
+                        label="Show 0 values?"
+                        >
+                    <option value="0">No</option>
+                    <option value="1">Yes</option>
+                        </field>
+				<field
+					name="advertice"
+					type="textarea"
+					width="100"
+					height="50"
+					filter="raw"
+					label="Ad text"
+				/>
+			</fieldset>
+		</fields>
+	</config>
+</extension>

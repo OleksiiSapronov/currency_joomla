@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<extension type="plugin" group="user" method="upgrade">
+    <name>plg_user_jchoptimizeuserstate</name>
+    <author>Samuel Marshall</author>
+    <creationDate>2023-08-09</creationDate>
+    <copyright>Copyright (C) 2022 JCH Optimize Inc. All rights reserved</copyright>
+    <license>GNU/GPLv3 http://www.gnu.org/copyleft/gpl.html</license>
+    <authorEmail>samuel@jch-optimize.net</authorEmail>
+    <authorUrl>https://www.jch-optimize.net</authorUrl>
+    <version>8.0.6</version>
+    <description>PLG_USER_JCHOPTIMIZEUSERSTATE_DESCRIPTION</description>
+    <files>
+        <filename plugin="jchoptimizeuserstate">jchoptimizeuserstate.php</filename>
+        <filename>index.html</filename>
+    </files>
+    <languages>
+        <language tag="en-GB">language/en-GB/en-GB.plg_user_jchoptimizeuserstate.ini</language>
+        <language tag="en-GB">language/en-GB/en-GB.plg_user_jchoptimizeuserstate.sys.ini</language>
+    </languages>
+</extension>

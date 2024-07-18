@@ -1,0 +1,129 @@
+// RTL STYLES
+// ------------------------------------------------------
+
+html[dir="rtl"] {
+	// Global
+	// ---------
+	.carousel-control {
+		left: 0;
+		right: auto;
+
+		&.right {
+			right: 0;
+    	left: auto;
+		}
+	}
+
+	// Modules
+	// ----------
+
+	// Slideshow
+	.block-slideshow .carousel-control {
+		right: auto;
+	  left: @grid-gutter-width;
+
+	  &.right {
+	    left: auto;
+	    right: @grid-gutter-width;
+	  }
+	}
+
+	// Gallery
+	#blueimp-gallery.blueimp-gallery .modal-dialog {
+		.modal-footer .btn {
+			float: right;
+
+			&.prev {
+				float: left !important;
+			}
+		}
+
+		.modal-header button.close {
+			left: auto;
+			right: 0;
+		}
+	}
+	
+
+	// Solidres
+	#solidres .carousel .carousel-control {
+		right: auto;
+	  left: @grid-gutter-width;
+
+	  &.left {
+	    left: auto;
+	    right: @grid-gutter-width;
+	  }
+	}
+
+	.wizard ul li .badge {
+		margin-right: 0;
+		margin-left: @t3-global-margin/2;
+	}
+
+	#coupon_code {
+		float: right;
+
+		// Control screen mobile
+		@media screen and (max-width: @screen-xs-max) {
+			margin-bottom: @t3-global-margin / 4;
+		}
+	}
+
+	#sr-reservation-form-guest {
+		.reservation-navigate-back + .btn {
+			direction: ltr;
+		}
+
+		.fa-angle-left:before {
+			content: "\f105";
+		}
+
+		.fa-angle-right:before {
+			content: "\f104";
+		}
+	}
+
+	.statistics-box.dark i {
+		right: auto;
+		left: 0;
+	}
+
+	// K2 
+	div.itemIsFeatured,
+	div.catItemIsFeatured,
+	div.userItemIsFeatured {
+	}
+}
+
+div.itemNavigation a {
+	width: 50%;
+	text-align: left;
+}
+
+html.ie8 .ja-isotope-wrap .item {
+	left: auto!important;
+}
+
+// Popular Tags
+//-------------
+.tagspopular {
+
+  ul > li {
+    white-space: nowrap;
+  }
+}
+
+
+// Topbar
+//-------------
+.t3-topbar .nav > li {
+  white-space: nowrap;
+}
+
+
+// Login
+//-------------
+.login-wrap .other-links ul li {
+  white-space: nowrap;
+}

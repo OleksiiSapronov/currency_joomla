@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE install PUBLIC "-//Joomla! 1.6//DTD template 1.0//EN" "http://www.joomla.org/xml/dtd/1.6/template-install.dtd">
+<extension version="2.5" type="template" method="upgrade" client="site">
+	<name>Ja_Hotel</name>
+	<version>1.0.6</version>
+	<creationDate>Nov 02, 2017</creationDate>
+	<author>JoomlArt.com</author>
+	<authorEmail>webmaster@joomlart.com</authorEmail>
+	<authorUrl>http://www.t3-framework.org</authorUrl>
+	<copyright>Copyright (C), J.O.O.M Solutions Co., Ltd. All Rights Reserved.</copyright>
+	<license>license GNU/GPLv3 http://www.gnu.org/licenses/gpl-3.0.html</license>
+	<t3>
+		<base>base-bs3</base>
+	</t3>
+	<description>
+		<![CDATA[
+		<div align="center">
+			<div class="alert alert-success" style="background-color:#DFF0D8;border-color:#D6E9C6;color: #468847;padding: 1px 0;">
+				<h4>Responsive travel and hotel template for Joomla 3 - JA Hotel</h4>
+				<p>Clean and simple design, JA Hotel is a first class solution for your travel and hotel booking website.</p> 
+        <p>The homepage of JA Hotel will help the travelers with useful information about travel planning from sightseeing spot, delicious food to local culture, and interesting activites.</p>
+        <p>We have integrated Solidres component - a simple yet effective booking solution for Joomla. Solidres will power your travel/hotel site with simple booking solution, it helps collect room type and rates, check-in time, guest numbers, payment and contact info, and also simplify the reservation process for your convenience. We will add another Joomla hotel booking component in the next version of JA Hotel. JA Hotel is built on the latest version of T3 Framework with Bootstrap 3, this travel booking template is fully responsive and supports RTL language layout. Hotel also features ThemeMagic, xx styled colors, and xx custom pages.</p>
+        <p>It's time for holiday planning and hotel booking, are you going to travel with us!?</p>
+			</div>
+			<style>table.adminform{width: 100%;}</style>
+		</div>
+		]]>
+	</description>
+	<files>
+    <filename>helper.php</filename>
+    <filename>helper.content.php</filename>
+    <filename>helper.solidres.php</filename>  
+		<filename>component.php</filename>
+		<filename>favicon.ico</filename>
+		<filename>index.html</filename>
+		<filename>index.php</filename>
+		<filename>thememagic.xml</filename>
+		<filename>templateInfo.php</filename>
+		<filename>templateHook.php</filename>
+		<filename>template_preview.png</filename>
+		<filename>template_thumbnail.png</filename>
+		<filename>templateDetails.xml</filename>
+    <filename>router.php</filename>
+    <filename>error.php</filename>
+    <filename>offline.php</filename>
+		<folder>acm</folder>
+        <folder>etc</folder>
+		<folder>fonts</folder>
+		<folder>html</folder>
+		<folder>css</folder>
+		<folder>js</folder>
+		<folder>less</folder>
+		<folder>language</folder>
+		<folder>images</folder>
+		<folder>tpls</folder>
+        <folder>helpers</folder>
+        <folder>contenttype</folder>
+	</files>
+	
+	<languages folder="language">
+		<language tag="en-GB">en-GB/en-GB.tpl_ja_hotel.ini</language>
+		<language tag="en-GB">en-GB/en-GB.tpl_ja_hotel.sys.ini</language>
+	</languages>
+
+	<positions>
+		<position>languageswitcherload</position>
+		<position>head-search</position>
+		<position>mainnav</position>
+		<position>slideshow</position>
+		<position>masshead</position>
+		<position>navhelper</position>
+		<position>breadcrumbs</position>
+		<position>off-canvas</position>
+		<position>sidebar-1</position>
+		<position>sidebar-2</position>
+		<position>mast-col</position>
+		<position>footer</position>
+		<position>home-0</position>
+		<position>home-1</position>
+		<position>home-2</position>
+		<position>home-3</position>
+		<position>home-4</position>
+		<position>home-5</position>
+		<position>position-0</position>
+		<position>position-1</position>
+		<position>position-2</position>
+		<position>position-3</position>
+		<position>position-4</position>
+		<position>position-5</position>
+		<position>position-6</position>
+		<position>position-7</position>
+		<position>position-8</position>
+		<position>position-9</position>
+		<position>position-10</position>
+		<position>position-11</position>
+		<position>position-12</position>
+		<position>position-13</position>
+		<position>position-14</position>
+		<position>position-15</position>
+		<position>footer-0</position>
+		<position>footer-1</position>
+		<position>footer-2</position>
+		<position>footer-3</position>
+		<position>footer-4</position>
+		<position>footer-5</position>
+		<position>footer-6</position>
+		<position>footer-7</position>
+		<position>footer-8</position>
+		<position>footer-9</position>
+		<position>footer-10</position>
+		<position>debug</position>
+    <position>section-1</position>
+    <position>section-2</position>
+    <position>masthead</position>
+    <position>slideshow</position>
+    <position>topbar-1</position>
+    <position>topbar-2</position>
+	</positions>
+
+	<config>
+		<fields name="params" addfieldpath="/plugins/system/t3/includes/depend">
+
+			<!-- Sample for add or disable template parameters -->
+			<!--fieldset name="menu_params" label="T3_PARAMS_MEGAMENU">
+				<field name="group_disable" type="t3depend" function="@group">
+					<option for="menu_as_bg" value="no">menu_as_bg</option>
+				</field>
+			</fieldset-->
+			
+		</fields>
+	</config>
+
+	<updateservers>
+		<server type="extension">https://zyczeniakartki.pl/!03Xinstalki/ja_hotel.xml</server>
+	</updateservers>
+
+</extension>
+

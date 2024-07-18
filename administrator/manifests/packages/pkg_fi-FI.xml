@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extension type="package" version="3.9" method="upgrade">
+	<name>fi-FI_joomla_lang_full_3.9.16v1</name>
+	<packagename>fi-FI</packagename>
+	<version>3.9.16.1</version>
+	<creationDate>2020-03-11</creationDate>
+	<author>Finnish translation team: Joomla.fi</author>
+	<authorEmail>finnish@joomla.fi</authorEmail>
+	<authorUrl>https://joomla.fi</authorUrl>
+	<copyright>Copyright (C) 2005 - 2020 Open Source Matters. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<url></url>
+	<packager></packager>
+	<packagerurl></packagerurl>
+	<description><![CDATA[<div style="text-align: left;">
+		<h3>Joomla! 3.9.16 Full Finnish (fi-FI) Language Package - Version 3.9.16v1</h3>
+		<h4>Joomla! 3.9.16 kielitiedostopaketti sivuston ja ylläpidon puolelle suomeksi - Versio 3.9.16v1.</h4>
+		</div>]]></description>
+	<blockChildUninstall>true</blockChildUninstall>
+	<files>
+		<file type="language" client="site" id="fi-FI">site_fi-FI.zip</file>
+		<file type="language" client="administrator" id="fi-FI">admin_fi-FI.zip</file>
+	</files>
+	<updateservers>
+		<server type="collection" priority="1" name="Accredited Joomla! Translations">https://update.joomla.org/language/translationlist_3.xml</server>
+	</updateservers>
+</extension>

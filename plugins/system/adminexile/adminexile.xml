@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="2.5.0" type="plugin" group="system" method="upgrade">
+    <name>PLG_SYS_ADMINEXILE</name>
+    <author>Michael Richey</author>
+    <creationDate>March 2017</creationDate>
+    <copyright>Copyright (C) 2011 Michael Richey. All rights reserved.</copyright>
+    <license>GNU General Public License</license>
+    <authorEmail>support@richeyweb.com</authorEmail>
+    <authorUrl>http://www.richeyweb.com</authorUrl>
+    <version>3.16.3</version>
+    <description>PLG_SYS_ADMINEXILE_XML_DESC</description>
+    
+    <media folder="media" destination="plg_system_adminexile">
+        <folder>js</folder>
+    </media>
+    <files>
+        <folder>classes</folder>
+        <folder>fields</folder>
+        
+        <filename plugin="adminexile">adminexile.php</filename>
+    </files>
+    <languages>
+        <language tag="en-GB">en-GB.plg_system_adminexile.ini</language>
+        <language tag="en-GB">en-GB.plg_system_adminexile.sys.ini</language>
+    </languages>
+    <config>
+        <fields name="params" addfieldpath="plugins/system/adminexile/fields">
+            <fieldset name="basic">
+                
+                <field name="url" type="spacer"
+                       label="PLG_SYS_ADMINEXILE_BACKEND_URL_LABEL"
+                />
+                <field name="key" type="text" default="adminexile"
+                       label="PLG_SYS_ADMINEXILE_KEY_LABEL"
+                       description="PLG_SYS_ADMINEXILE_KEY_DESC"
+                       class="validate-notnumeric"
+                />
+                <field name="twofactor" type="radio" class="radio btn-group"
+                       default="0" label="PLG_SYS_ADMINEXILE_KEYPAIR_LABEL"
+                       description="PLG_SYS_ADMINEXILE_KEYPAIR_DESC"
+                >
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+                <field name="keyvalue" type="text" default="ROCKS" showon="twofactor:1"
+                       label="PLG_SYS_ADMINEXILE_KEYVALUE_LABEL"
+                       description="PLG_SYS_ADMINEXILE_KEYVALUE_DESC"
+                />
+                <field name="redirect" type="radio" class="radio btn-group"
+                       default="404" label="PLG_SYS_ADMINEXILE_REDIRECT_LABEL"
+                       description="PLG_SYS_ADMINEXILE_REDIRECT_DESC">
+                    <option value="HOME">PLG_SYS_ADMINEXILE_REDIRECT_HOME</option>
+                    <option value="404">PLG_SYS_ADMINEXILE_REDIRECT_404</option>
+                    <option value="URL">PLG_SYS_ADMINEXILE_REDIRECT_URL</option>                    
+                </field>
+                <field name="fourofour" type="textarea" showon="redirect:404"
+                       default="&#60;!DOCTYPE HTML PUBLIC &#34;-//IETF//DTD HTML 2.0//EN&#34;&#62;&#13;&#10;&#60;html&#62;&#60;head&#62;&#13;&#10;&#60;title&#62;404 Not Found&#60;/title&#62;&#13;&#10;&#60;/head&#62;&#60;body&#62;&#13;&#10;&#60;h1&#62;Not Found&#60;/h1&#62;&#13;&#10;&#60;p&#62;The requested URL {url} was not found on this server.&#60;/p&#62;&#13;&#10;&#60;hr&#62;&#13;&#10;{serversignature}&#13;&#10;&#60;/body&#62;&#60;/html&#62;" 
+                       label="PLG_SYS_ADMINEXILE_FOUROFOUR_LABEL" 
+                       description="PLG_SYS_ADMINEXILE_FOUROFOUR_DESC" 
+                       filter="raw"
+                />
+                <field name="redirecturl" type="url" showon="redirect:URL" default="https://www.fbi.gov"
+                       label="PLG_SYS_ADMINEXILE_REDIRECTURL_LABEL" 
+                       description="PLG_SYS_ADMINEXILE_REDIRECTURL_DESC"
+                />
+                     
+                <field name="frontrestrictspacer" type="spacer" label="PLG_SYS_ADMINEXILE_FRONTRESTRICT_SPACER" />
+                <field name="frontrestrict" type="radio" class="radio btn-group"
+                       default="0" label="PLG_SYS_ADMINEXILE_FRONTRESTRICT_LABEL"
+                       description="PLG_SYS_ADMINEXILE_FRONTRESTRICT_DESC"
+                >
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+                <field type="usergroup" name="restrictgroup" showon="frontrestrict:1"
+                       multiple="true" default="" 
+                       label="PLG_SYS_ADMINEXILE_RESTRICTGROUP_LABEL" 
+                       description="PLG_SYS_ADMINEXILE_RESTRICTGROUP_DESC"
+                />
+                <field name="maillinkspacer" type="spacer" label="PLG_SYS_ADMINEXILE_MAILLINK_SPACER" />
+                <field name="maillink" type="radio" 
+                       class="radio btn-group" default="1" 
+                       label="PLG_SYS_ADMINEXILE_MAILLINK_LABEL" 
+                       description="PLG_SYS_ADMINEXILE_MAILLINK_DESC"
+                >
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+                <field type="usergroup" name="maillinkgroup" showon="maillink:1"
+                       multiple="true" default="8" 
+                       label="PLG_SYS_ADMINEXILE_MAILLINKGROUP_LABEL" 
+                       description="PLG_SYS_ADMINEXILE_MAILLINKGROUP_DESC"
+                />           
+                <field name="faillogspacer" type="spacer" label="PLG_SYS_ADMINEXILE_FAILLOG_SPACER" />             
+                <field name="faillog" type="radio" class="radio btn-group"
+                       default="0" label="PLG_SYS_ADMINEXILE_FAILLOG_LABEL"
+                       description="PLG_SYS_ADMINEXILE_FAILLOG_DESC"
+                >
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+                <field name="javascripts" type="javascript" label="" />
+            </fieldset>
+            
+        </fields>
+    </config>
+    <updateservers>
+        <server type="extension" priority="1" name="RicheyWeb Update Site">https://cdn.richeyweb.com/updates/adminexile.xml</server>
+    </updateservers>
+</extension>

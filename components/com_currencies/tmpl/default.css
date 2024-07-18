@@ -1,0 +1,190 @@
+.percentagered {
+   color: red;    
+   width:30px;   
+}
+
+.percentagegreen {
+   color: green; 
+   width:30px;
+}
+
+
+.flagDefault {
+   background-position: 0 15px;
+   width: 20px;
+   height: 15px;
+   background-image:url('flagi.png');
+   display: inline-block;
+   background-repeat:no-repeat;
+   margin-right: 3px;
+}
+
+
+.flagAUD {background-position: 0 -48px;}
+.flagBGN {background-position: 0 -80px;}
+.flagBRL {background-position: 0 -144px;}
+.flagCAD {background-position: 0 -176px;}
+.flagCHF {background-position: 0 -192px;}
+.flagCLP {background-position: 0 -208px;}
+.flagCNY {background-position: 0 -224px;}
+.flagCZK {background-position: 0 -272px;}
+.flagCZK {background-position: 0 -272px;} 
+.flagDKK {background-position: 0 -288px;}
+.flagEUR {background-position: 0 -368px;}
+.flagGBP {background-position: 0 -400px;}
+.flagHKD {background-position: 0 -416px;}
+.flagHRK {background-position: 0 -448px;}
+.flagHUF {background-position: 0 -464px;}
+.flagILS {background-position: 0 -496px;}
+.flagINR {background-position: 0 -512px;}
+.flagISK {background-position: 0 -528px;}
+.flagJPY {background-position: 0 -560px;}
+.flagKRW {background-position: 0 -592px;}
+.flagLTL {background-position: 0 -688px;}
+.flagLVL {background-position: 0 -704px;}
+.flagMXN {background-position: 0 -800px;}
+.flagMYR {background-position: 0 -816px;}
+.flagNOK {background-position: 0 -880px;}
+.flagNZD {background-position: 0 -368px;}
+.flagNZD {background-position: 0 -912px;}
+.flagPHP {background-position: 0 -976px;}
+.flagPLN {background-position: 0 -1008px;}
+.flagRON {background-position: 0 -1056px;}
+.flagRUB {background-position: 0 -1088px;}
+.flagRUB {background-position: 0 -1088px;} 
+.flagSEK {background-position: 0 -1136px;}
+.flagSGD {background-position: 0 -1152px;}
+.flagTHB {background-position: 0 -1216px;}
+.flagTRY {background-position: 0 -1248px;}
+.flagUAH {background-position: 0 -1312px;}
+.flagUSD {background-position: 0 -1344px;}
+.flagZAR {background-position: 0 -1456px;}
+
+ 
+
+#currencies2_table {
+   height: 60px;
+   border: 1px solid #bad0dd;
+   
+}
+
+#currencies2_table td {
+
+   width: 90px;
+   white-space: nowrap; 
+   text-align: center;   
+}
+
+#currencies2_table .first_row {
+
+   width: 80px;     
+   
+}
+
+#currencies2_table .first_column1 {
+   width: 195px;
+}
+
+#currencies_tabs {
+   max-width: 640px;
+}
+
+#currencies_tabs div table tr td{
+   padding: 6px; 
+/*    border-bottom: 2px solid #6678B1;        */
+   
+}
+
+.currency_header {
+  /* background-color: #f4f4f4;     */ 
+ border-bottom: 2px solid #6678B1;   
+}   
+
+
+.tdcenter {
+   text-align: center;
+}
+
+.tdright {
+   text-align: right;
+}
+
+#currencies_tabs ul {  
+	margin:0 !important; 
+	padding:0;
+	height:30px;
+	border-bottom:1px solid #ddd;	 	
+}
+
+#currencies_tabs ul li {  
+	float:left;	 
+	padding:0; 
+	margin:0;  
+	list-style-type:none;	
+}
+
+#currencies_tabs ul a { 
+	float:left;
+	font-size:12px;
+  font-family: Arial,"Trebuchet MS",Verdana,sans-serif;
+	display:block;
+	padding:5px 7px;	
+	text-decoration:none;
+	border:1px solid #ddd;	
+	border-bottom:0px;
+	height:18px;
+/*background-color:#f4f4f4; 
+	color:#777;       */
+	margin-right:2px;
+	position:relative;
+	top:1px;	
+	outline:0;
+	-moz-border-radius:4px 4px 0 0;	
+
+
+}
+
+#currencies_tabs ul a:hover {
+	background-color:#F7F7F7;
+	color:#333;
+}
+	
+#currencies_tabs ul li.ui-state-active a {
+	background-color:#fff;
+	border-bottom:1px solid #fff;	
+	color:#000;	
+	cursor:default;
+}
+
+	
+/* tab pane */
+#currencies_tabs div {
+	display:none;
+	border:1px solid #ddd;
+	border-width:0 1px 1px 1px;
+	padding:5px 5px;
+	background-color:#fff;
+  color: #4C4546;
+}
+
+.kod_waluty_currencies {
+  width:  10%px;
+
+}
+ 
+
+.table_currencies {
+ /*border-collapse: separate;     */
+  border-spacing: 2px;
+  font-size:13px;  
+  font-family: Arial,"Trebuchet MS",Verdana,sans-serif;
+  width: auto;   
+  padding: 6px 8px;
+   
+  *border-collapse: expression('separate', cellSpacing = '2px');
+}                                       
+
+
+a {
+    color: #5A5A5A;
+}

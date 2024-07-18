@@ -1,0 +1,969 @@
+/** 
+ *------------------------------------------------------------------------------
+ * @package       T3 Framework for Joomla!
+ *------------------------------------------------------------------------------
+ * @copyright     Copyright (C) 2004-2013 JoomlArt.com. All Rights Reserved.
+ * @license       GNU General Public License version 2 or later; see LICENSE.txt
+ * @authors       JoomlArt, JoomlaBamboo, (contribute to this project at github 
+ *                & Google group to become co-author)
+ * @Google group: https://groups.google.com/forum/#!forum/t3fw
+ * @Link:         http://t3-framework.org 
+ *------------------------------------------------------------------------------
+ */
+
+
+// --------------------------------------------------
+// MODULE STYLES
+// --------------------------------------------------
+
+// 
+// GENECRIC MODULE
+// --------------------------------------------------
+.t3-module {
+  background: @t3-module-bg;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+  border-radius: (@border-radius-base / 2);
+  color: @t3-module-color;
+  margin-bottom: @grid-gutter-width;
+  padding: @t3-global-padding;
+  position: relative;
+
+  // Module padding
+  .module-inner {
+    padding: @t3-module-padding;
+  }
+}
+
+// Module Title
+// ------------
+.module-title {
+  background: @t3-module-title-bg;
+  color: @t3-module-title-color;
+  font-size: @font-size-h3;
+  margin: 0 0 (@line-height-computed / 2) 0;
+  padding: @t3-module-title-padding;
+  font-weight: @font-weight-normal;
+
+  // Larger margin on Tablet / Desktop
+  @media screen and (min-width: @screen-sm) {
+    margin-bottom: @line-height-computed;
+  }
+
+}
+
+// Module Content
+// --------------
+.module-ct {
+  background: @t3-module-content-bg;
+  color: @t3-module-content-color;
+  padding: @t3-module-content-padding;
+  .clearfix();
+
+  a {
+    color: @t3-module-link-color;
+
+    &:hover, &:active, &:focus {
+      color: @t3-module-link-hover-color;
+    }
+  }
+}
+
+// Module List
+// -----------
+.module-ct,
+.module-ct .custom {
+  > ul,
+  > ol {
+    margin-left: 20px;
+    padding-left: 0;
+  }
+  
+  > ul.unstyled,
+  > ol.unstyled {
+    padding-left: 0;
+  }
+
+  > ul.nav,
+  > ol.nav {
+    padding-left: 0;
+    margin-left: 0;
+  }
+}
+
+
+// 
+// SPECIAL MODULE
+// --------------------------------------------------
+.t3-module {
+
+  // None Background : Banner...
+  &.none-background {
+    padding: 0;
+    background: none;
+    .box-shadow(none);
+
+    .module-ct {
+      background: none;
+    }
+  }
+
+  // Module title is a grid item
+  &.module-grid {
+    padding: 0;
+    background: none;
+    .box-shadow(none);
+
+    .module-inner {
+      position: relative;
+      .clearfix();
+    }
+
+    .module-title {
+      width: 20%;
+      height: 100%;
+      right: 0;
+      top: 0;
+      position: absolute;
+      margin-bottom: 0;
+      margin-left: @grid-gutter-width/2;
+    }
+
+    .module-ct {
+      background: none;
+      margin-right: 20%;
+      padding-right: @grid-gutter-width;
+    }
+
+    &.title-secondary .module-title {
+      background: @brand-secondary;
+      color: @white;
+      padding: @t3-global-padding;
+    }
+  }
+
+  &.title-lg {
+    .module-title {
+      margin: @t3-global-margin 0;
+      padding-bottom: 0;
+      text-align: center;
+      font-weight: @font-weight-normal;
+      text-transform: uppercase;
+
+      span {
+        color: @brand-primary;
+        margin-bottom: @t3-global-margin/2;
+        display: block;
+      }
+
+      .module-intro {
+        font-size: @font-size-large;
+        color: @text-color;
+        text-transform: none;
+      }
+    }
+  }
+
+  // Module in Section 2
+  .t3-section-2 & {
+    padding: @t3-global-padding*1.5 @t3-global-padding*2;
+    margin-bottom: @t3-global-margin * 2;
+
+    @media (max-width: @screen-sm-max) {
+      padding: @t3-global-padding;
+    }
+    
+    // None Background : Banner...
+    &.none-background {
+      padding: 0;
+      background: none;
+      .box-shadow(none);
+
+      .module-ct {
+        background: none;
+      }
+    }
+  }
+}
+
+//
+// JOOMLA! MODULES
+// --------------------------------------------------
+
+// Menu
+// ----
+.module_menu {
+  .nav {
+  }
+  
+  .nav > li {
+  }
+  
+  .nav > li > a,
+  .nav > li > .separator {
+    padding: @padding-base-vertical 5px;
+    display: block;
+  }
+
+  // Hover state
+  .nav > li > a:hover {
+  }
+  
+  // Active state
+  .nav > li.active > a {
+  }
+}
+
+
+// Login Form
+// ----------
+#login-form {
+  
+  input[type="text"],
+  input[type="password"] {
+    width: 100%;
+
+    // Control screen mobile
+    @media screen and (max-width: @screen-xs-max) {
+      float: left;
+      width: 82%;
+    }
+  }
+  
+  .btn-primary {
+  }
+  
+  ul.unstyled {
+    margin-top: @line-height-computed;
+    padding-left: @t3-global-padding/2;
+  }
+
+  #form-login-username {
+  }
+  
+  #form-login-password {
+  }
+  
+  #form-login-remember {
+    label {
+      font-weight: normal;
+      display: block;
+    }
+  }
+
+  .login-greeting {
+    margin-bottom: @t3-global-margin/2;
+  }
+
+  .input-group-addon {
+    border-radius: 0;
+    border-width: 2px;
+
+    // Control screen mobile
+    @media screen and (max-width: @screen-xs-max) {
+      display: inline-block;
+      float: left;
+      height: 40px;
+      line-height: 23px;
+      width: 40px;
+    }
+  }
+
+  .input-group {
+    // COntrol screen mobile
+    @media screen and (max-width: @screen-xs-max) {
+      display: block;
+      overflow: hidden;
+    }
+  }
+}
+
+
+// Advertisement
+// -------------
+.bannergroup {
+}
+
+.banneritem {
+  text-align: center;
+  a {
+    font-weight: bold;
+  }
+
+  img {
+    max-width: 100%;
+  }
+}
+
+.bannerfooter {
+  border-top: 1px solid @t3-border-color;
+  font-size: @t3-font-size-smaller;
+  padding-top: @t3-global-padding / 2;
+  text-align: right;
+}
+
+
+// Categories
+// ----------
+.categories-module, ul.categories-module,
+.category-module, ul.category-module {
+  margin: 0;
+
+  li {
+    list-style: none;
+    padding: (@line-height-computed / 2) 0;
+    border-top: 1px solid @t3-border-color;
+    // Remove border for first item
+    &:first-child {
+      border-top: 0;
+    }
+  }
+  
+  h4 {
+    font-size: @font-size-base;
+    font-weight: normal;
+    margin: 0;
+  }
+}
+
+.categories-module {
+  > div {
+    margin: @t3-global-margin 0 0;
+  }
+
+  a {
+    color: @gray-light-max;
+    font-size: @font-size-large;
+
+    &:hover, &:focus, &:active {
+      text-decoration: none;
+      color: @brand-secondary;
+    }
+
+    .active & {
+      color: @brand-secondary;
+    }
+  }
+
+  // Style for enable descriptions
+  &.descriptions {
+    .text-description {
+      font-size: @t3-font-size-smaller;
+      margin-top: @t3-global-margin / 4;
+
+      // Control screen tablet/desktop
+      @media screen and (min-width: @screen-sm-min) {
+        height: 59px;
+        overflow: hidden;
+      }
+    }
+  }
+
+  // Subcategories
+  .subcategories {
+    padding-left: 0;
+
+    > div {
+      padding: 0;
+      width: 100%;
+
+      h5 {
+        margin-bottom: 0;
+      }
+
+      a {
+        font-size: @font-size-base;
+      }
+    }
+
+    .text-description {
+      p {
+        margin-bottom: 0;
+      }
+      
+      // Control screen tablet/desktop
+      @media screen and (min-width: @screen-sm-min) {
+        height: auto;
+      }
+    }
+  }
+}
+
+
+// News Feed
+// ----------
+.feed {
+  // Feed Title
+  h4 {
+    font-weight: bold;
+  }
+  // Feed list
+  .newsfeed,
+  ul.newsfeed {
+    border-top: 1px solid @hr-border;
+    li {}
+    .feed-link, 
+    h5.feed-link {
+      font-size: @font-size-base;
+      font-weight: normal;
+      margin: 0;
+    }
+  }
+
+}
+
+
+// Latest Users 
+// ------------
+.latestusers,
+ul.latestusers {
+  margin-left: 0;
+  li {
+    background: @gray-lighter;
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: @border-radius-base;
+  }
+}
+
+
+// Stats 
+// -----
+.stats-module {
+  dt, dd {
+    display: inline-block;
+    margin: 0;
+  }
+  dt {
+    font-weight: bold;
+    width: 35%;
+  }
+  dd {
+    width: 60%;
+  }
+}
+
+
+// Popular Tags
+//-------------
+.tagspopular {
+  ul {
+    display: block;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    overflow: hidden;
+  }
+
+  ul > li {
+    color: @gray;
+    display: inline-block;
+    margin: 0 10px 5px 0;
+  }
+
+  ul > li > a {
+    color: @yellow;
+    display: block;
+
+    // Links states
+    &:hover,
+    &:focus,
+    &:active {
+      color: @brand-primary;
+      text-decoration: none;
+    }
+
+    &:before {
+      content: "#";
+      display: inline-block;
+    }
+  }
+}
+
+
+
+// Similar tags
+// ------------
+.tagssimilar {
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  ul > li {
+    border-bottom: 1px solid @gray-lighter;
+    padding: 8px 0;
+  }
+
+  ul > li > a {
+    color: @gray;
+    // Link states
+    &:hover,
+    &:focus,
+    &:active {
+      color: @link-hover-color;
+    }
+  }
+}
+
+
+// Breadcrums Module
+// -----------------
+.module-ct > ol.breadcrumb {
+  padding: @padding-base-vertical @padding-base-horizontal;
+  margin-left: 0;
+}
+
+
+// Solidres Homepage Module Advanced Search 
+// ----------------------------------------
+
+#sr-advancedsearch-form {
+  &.form-inline {
+    padding: @t3-global-padding*2 0;
+    text-align: center;
+
+    @media (max-width: @screen-xs-max) {
+      text-align: left;
+    }
+
+    label {
+      display: none;
+    }
+
+    .form-group {
+      padding-left: @t3-global-padding;
+      position: relative;
+      .clearfix();
+
+      @media (max-width: @screen-xs-max) {
+        padding-left: 0;
+      }
+
+      &.location {
+        position: relative;
+
+        &:before { 
+          content: "\f124";
+          font-family: FontAwesome; 
+          font-style: normal; 
+          font-weight: normal; 
+          text-decoration: inherit;
+          padding-right: 0.5em; 
+          position: absolute; 
+          top: 10px; 
+          right: 0; 
+
+          @media (max-width: @screen-xs-max) {
+            right: 10px;
+            z-index: 2;
+          }
+        }
+      }
+
+      .datepicker_inline {
+        position: absolute;
+        z-index: 1001;
+      }
+
+      .room_num_row {
+        line-height: 40px;
+      }
+    }
+
+    .form-control {
+      border-width: 0;
+      border-bottom-width: 2px;
+
+      &:focus {
+        .box-shadow(none);
+        outline: 0;
+      }
+
+      &#location {
+        position: relative;
+
+        &:before {
+          content: "\f041";
+          font-family: FontAwesome;
+          font-style: normal;
+          font-weight: normal;
+          text-decoration: inherit;
+          color: @gray-lighter;
+          position: absolute;
+          top: 10px;
+          right: 10px;
+          z-index: 2;
+        }
+      }
+    }
+
+    .datefield {
+      position: relative;
+      border: 0;
+      padding: @t3-global-padding/2 @t3-global-padding*1.5 @t3-global-padding/2 @t3-global-padding/2;
+      border-bottom: 2px solid #cfd8dc;
+      margin: 0;
+      border-radius: 0;
+      height: 40px;
+      color: @text-color;
+      .box-shadow(none);
+
+      &:focus {
+        border-color: @link-color;
+      }
+
+      &:after {
+        content: "\f073";
+        font-family: FontAwesome;
+        font-style: normal;
+        font-weight: normal;
+        text-decoration: inherit;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        color: @text-color;
+      }
+    }
+
+    .btn {
+      margin-left: @t3-global-margin;
+
+      @media (max-width: @screen-xs-max) {
+        margin-left: 0;
+      }
+    }
+
+    .ui-datepicker {
+      margin: 0 5px;
+      width: auto;
+      border-radius: 0;
+      font-family: @font-family-base;
+      border-color: @t3-border-color;
+
+
+      .ui-datepicker-header {
+        border-radius: 0;
+        background: @gray-lightest;
+        border: 0;
+      }
+
+      .ui-state-highlight, 
+      .ui-widget-content .ui-state-highlight, 
+      .ui-widget-header .ui-state-highlight {
+        background: @green;
+        color: @white;
+      }
+
+      .ui-datepicker-buttonpane button.ui-datepicker-current {
+        background: @link-color;
+        font-family: @font-family-base;
+        border-radius: 2px;
+        color: @white;
+      }
+    }
+
+    .availability-calendar {
+      padding: @t3-global-padding;
+      z-index: 2;
+      position: absolute;
+      background: #fff;
+      text-align: left;
+      color: @gray;
+      border: 1px solid @t3-border-color;
+
+      .legend-busy {
+      }
+
+      table tr.row-week-day {
+        background: @gray-lightest;
+      }
+    }
+  }
+}
+
+.home-search-asset {
+  margin: 0;
+  padding: 0;
+  .clearfix();
+  .box-shadow(none);
+
+  .module-title {
+    float: left;
+    margin: @t3-global-margin*2 0;
+    line-height: 1;
+    text-align: right;
+
+    span {
+      font-size: @font-size-h4;
+      padding: @t3-global-padding/2 0;
+      display: inline-block;
+    }
+
+    @media screen and (min-width: @screen-lg) {
+      min-width: 240px;
+    }
+
+    @media (max-width: @screen-xs-max) {
+      display: none;
+    }
+  }
+
+  .module-ct {
+    float: left;
+
+    @media (max-width: @screen-xs-max) {
+      float: none;
+    }
+  }
+}
+
+
+// Solidres Check Availability
+// --------------------------
+#sr-checkavailability-form {
+  .btn-block {
+    margin-top: @t3-global-margin;
+  }
+
+  label {
+    display: block;
+  }
+
+  .room_num_row {
+    margin-bottom: @t3-global-margin/2;
+  }
+}
+
+// Solidres Filter Form
+// ---------------------
+#sr-filter-form {
+  fieldset {
+    margin-bottom: @t3-global-margin;
+    legend {
+      font-size: @font-size-h5;
+      margin: 0;
+      text-transform: uppercase;
+      color: @gray-light;
+    }
+    ul {
+      padding: 0;
+      margin:0;
+
+      li {
+        display: block;
+        a {
+          display: block;
+          padding: @t3-global-padding/4 0;
+          color: @gray;
+
+          &:hover,
+          &:focus {
+            background: none;
+            color: @link-color;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+// Masthead module
+// ---------------
+.ja-masthead {
+  z-index: 1;
+  position: relative;
+}
+
+.jamasshead {
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  .mask {
+    background: @black;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 5;
+    .opacity(0.6);
+  }
+  .container {
+    color: @white;
+    padding-top: @t3-global-padding * 3;
+    padding-bottom: @t3-global-padding * 3;
+    position: relative;
+    z-index: 10;
+  }
+
+  h3 {
+    color: @white;
+    font-size: @font-size-h1;
+    margin: 0 0 (@t3-global-margin / 2) 0;
+  }
+
+  .jamasshead-description {
+    font-size: @font-size-h4;
+  }
+}
+
+// Articles category
+// -----------------
+.item-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  
+  li {
+    margin-bottom: @t3-global-margin * 1.5;
+    
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    .item-image {
+      position: relative;
+      max-height: @t3-global-padding * 6;
+      overflow: hidden;
+
+      .mask {
+        #gradient > .vertical(rgba(0, 0, 0, 0); rgba(0, 0, 0, 0.9); 0%; 100%);
+        display: block;
+        height: 60%;
+        left: 0;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        z-index: 5;
+        .opacity(0.4);
+      }
+
+      img {
+        z-index: 2;
+      }
+
+      .category {
+        position: absolute;
+        bottom: @t3-global-margin / 2;
+        left: @t3-global-padding / 2;
+        z-index: 10;
+        a {
+          color: @white;
+        }
+      }
+    }
+
+    .item-title {
+      font-weight: normal;
+
+      a {
+        color: @gray-dark;
+
+        &:hover, &:focus, &:active {
+          color: @link-hover-color;
+        }
+      }
+    }
+
+    .item-meta {
+      box-shadow: none;
+      font-size: @font-size-small;
+      margin-bottom: @t3-global-margin / 2;
+      padding: 0;
+      text-transform: uppercase;
+
+      span {
+        display: inline-block;
+        margin-right: 5px;
+      }
+    }
+
+    .mod-articles-category-readmore {
+      text-transform: uppercase;
+      text-align: right;
+      a {
+        color: @gray-light;
+
+        &:hover, &:focus, &:active {
+          color: @link-hover-color;
+        }
+      }
+    }
+  }
+}
+
+// MODULE SWITCH LANG
+// ----------------------------
+.t3-topbar div.mod-languages {
+  display: inline-block;
+
+  ul.lang-inline {
+    li {
+      display: inline-block;
+      margin: 0;
+      padding-left: @t3-global-padding / 5;
+      padding-right: @t3-global-padding / 5;
+    }
+  }
+
+  &.dropdown {
+    .fa-caret-down {
+      color: @gray-light-max;
+      position: relative;
+      top: 3px;
+    }
+
+    &.open {
+      .fa-caret-down {
+        color: @white;
+      }
+    }
+
+    .dropdown-menu {
+      left: auto;
+      right: 0;
+    }
+  }
+}
+
+
+// SIDEBAR BANNERS 
+// ---------------
+
+.t3-sidebar {
+  .t3-module {
+    .bannergroup {
+      margin: -@t3-global-margin + 2;
+
+      img {
+        border-radius: 2px;
+      }
+    }
+  }
+}
+
+
+// FRONT-END EDIT STYLE for JA HOTEL 
+// ---------------------------------
+#modules-form {
+  .jatools-row {
+    .control-group .controls {
+      margin-left: 200px;
+    }
+    
+    .control-label {
+      padding: 20px 0 0 0;
+      label {
+        display: inline-block;
+        padding-right: 20px;
+      }
+    }
+  }
+
+  .media-preview {
+    height: 40px;
+    padding-top: 8px;
+  }
+}

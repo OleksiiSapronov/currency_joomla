@@ -1,0 +1,105 @@
+
+/** JavaScript Excludes **/
+div.jch-js-fieldset-children:only-child {
+    display: none;
+}
+
+.jch-js-excludes-container, .jch-js-excludes-header {
+    display: flex;
+    flex-direction: row;
+    clear: both;
+    width: 240px;
+}
+
+.jch-js-excludes-header {
+    font-size: 13px;
+    text-decoration: underline #aaaaaa;
+    text-underline-offset: 2px;
+}
+
+.jch-js-excludes-header .jch-js-ieo-header {
+    width: 88%;
+    border-right: 1px solid #aaaaaa;
+    padding-bottom: 3px;
+    text-align: right;
+}
+
+.jch-js-excludes-header .jch-js-dontmove-header {
+    width: 12%;
+    text-align: left;
+    overflow: visible;
+    white-space: nowrap;
+    padding-bottom: 3px;
+}
+
+.jch-js-excludes-container .jch-js-ieo {
+    width: 12%;
+    border-right: 1px solid #aaaaaa;
+    text-align: center;
+}
+
+.jch-js-excludes-container .jch-js-dontmove {
+    width: 12%;
+    text-align: center;
+}
+
+.jch-js-excludes-container .jch-js-excludes {
+    width: 76%;
+    text-align: right;
+    overflow: visible;
+    display: inline-flex;
+    justify-content: flex-end;
+}
+
+.jch-js-excludes-container .jch-js-excludes span {
+    position: relative;
+    margin: 0 2px 3px 0;
+    padding: 0 7px;
+    border: 0;
+    max-width: 100%;
+    border-radius: 3px;
+    background-color: #3071A9;
+    background-image: none;
+    background-size: 100% 19px;
+    background-repeat: repeat-x;
+    background-clip: padding-box;
+    box-shadow: none;
+    color: #fff;
+    line-height: 20px;
+    cursor: default;
+    font-size: 13px;
+    font-weight: 400;
+    height: 21px;
+    white-space: nowrap;
+    display: inline-table;
+    box-sizing: border-box;
+    border-collapse: separate;
+}
+
+.jch-js-excludes-container .jch-js-excludes input {
+    display: none;
+}
+
+.jch-js-excludes .jch-multiselect-remove-button {
+    position: relative;
+    top: 0;
+    left: 0;
+    display: inline-block;
+    margin-left: 5px;
+    width: 12px;
+    height: 12px;
+    background-image:none;
+    font-size: inherit;
+    cursor: pointer;
+    border: none;
+    background-color: #3071A9;
+}
+
+.jch-js-excludes .jch-multiselect-remove-button:before {
+    font-family: IcoMoon;
+    content: "\004A";
+    position: relative;
+    right: 6px;
+    bottom: 4px;
+    color: #fff;
+}

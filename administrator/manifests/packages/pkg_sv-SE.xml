@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extension type="package" version="3.10" method="upgrade">
+	<name>sv-SE_joomla_lang_full_3.10.12v1</name>
+	<packagename>sv-SE</packagename>
+	<version>3.10.12.1</version>
+	<creationDate>09/07/2023</creationDate>
+	<author>Swedish Joomla translator team - SvenskJoomla</author>
+	<authorEmail>info@svenskjoomla.se</authorEmail>
+	<authorUrl>https://www.svenskjoomla.se</authorUrl>
+	<copyright>Copyright (C) 2005 - 2023 Open Source Matters, Inc. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<url></url>
+	<packager></packager>
+	<packagerurl></packagerurl>
+	<description><![CDATA[<h2><strong>Svensk översättning för Joomla! 3.10.12 version 1 </strong></h2><h4>Översatt av SvenskJoomla - Stefan Gagner, Sune Hultman, Henrik Mattson-Mårn, Oscar Signell och många fler som bidragit genom åren. Inget tidigare arbete har gått till spillo.</h4><hr /><h4>Besök gärna vår hemsida <a href="https://www.svenskjoomla.se">svenskjoomla.se och stöd vårt arbete.</a></h4><hr />]]></description>
+	<blockChildUninstall>true</blockChildUninstall>
+	<files>
+		<file type="language" client="site" id="sv-SE">site_sv-SE.zip</file>
+		<file type="language" client="administrator" id="sv-SE">admin_sv-SE.zip</file>
+	</files>
+	<updateservers>
+		<server type="collection" priority="1" name="Accredited Joomla! Translations">http://update.joomla.org/language/translationlist_3.xml</server>
+	</updateservers>
+</extension>

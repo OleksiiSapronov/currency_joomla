@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extension type="package" version="3.9" method="upgrade">
+	<name>Portuguese (pt-PT) Language Pack</name>
+	<packagename>pt-PT</packagename>
+	<version>3.9.29.2</version>
+	<creationDate>2021-07-14</creationDate>
+	<author>Comunidade JoomlaPortugal</author>
+	<authorEmail>comunidadejoomlapt@gmail.com</authorEmail>
+	<authorUrl>www.joomlaportugal.org</authorUrl>
+	<copyright>Direitos de Autor (C) 2005 - 2020 Open Source Matters. Todos os direitos reservados.</copyright>
+	<license>https://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<url>https://github.com/joomla/joomla-cms</url>
+	<packager>Comunidade JoomlaPortugal</packager>
+	<packagerurl>www.joomlaportugal.org</packagerurl>
+	<description><![CDATA[Idioma português de Portugal (pt-PT) para Joomla 3]]></description>
+	<blockChildUninstall>true</blockChildUninstall>
+	<files>
+		<folder type="language" client="site" id="pt-PT">language/pt-PT</folder>
+		<folder type="language" client="administrator" id="pt-PT">administrator/language/pt-PT</folder>
+	</files>
+	<updateservers>
+		<server type="collection" priority="1" name="Accredited Joomla! Translations">https://update.joomla.org/language/translationlist_3.xml</server>
+	</updateservers>
+</extension>

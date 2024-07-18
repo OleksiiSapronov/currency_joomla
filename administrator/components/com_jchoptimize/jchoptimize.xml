@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" method="upgrade" version="3.10">
+    <name>com_jchoptimize</name>
+    <!-- The following elements are optional and free of formatting constraints -->
+    <creationDate>2023-08-09</creationDate>
+    <author>Samuel Marshall</author>
+    <authorEmail>samuel@jch-optimize.net</authorEmail>
+    <authorUrl>https://www.jch-optimize.net</authorUrl>
+    <copyright>(c) 2022 JCH Optimize Inc. All rights reserved</copyright>
+    <license>GNU General Public License version 2 or later</license>
+    <!--  The version string is recorded in the components table -->
+    <version>8.0.6</version>
+    <!-- The description is optional and defaults to the name -->
+    <description>Performs several front end optimizations for fast site downloads</description>
+    <variant>PRO</variant>
+
+    <files folder="frontend"/>
+
+    <media destination="com_jchoptimize" folder="media">
+        <folder>assets</folder>
+        <folder>assets2</folder>
+        <folder>assets3</folder>
+        <folder>cache</folder>
+        <folder>css</folder>
+        <folder>js</folder>
+        <folder>lazysizes</folder>
+        <folder>jquery-ui</folder>
+        <folder>icons</folder>
+        <folder>filetree</folder>
+        <folder>core</folder>
+        <folder>bootstrap</folder>
+    </media>
+
+    <administration>
+        <menu>COM_JCHOPTIMIZE_PRO</menu>
+        <submenu>
+            <menu view="ControlPanel">
+                COM_JCHOPTIMIZE_CONTROLPANEL
+            </menu>
+            <menu view="OptimizeImages">
+                COM_JCHOPTIMIZE_OPTIMIZEIMAGES
+            </menu>
+            <menu view="PageCache">
+                COM_JCHOPTIMIZE_PAGECACHE
+            </menu>
+        </submenu>
+        <files folder="backend">
+            <!-- Admin Main File Copy Section -->
+            <filename>index.html</filename>
+            <filename>jchoptimize.php</filename>
+            <filename>version.php</filename>
+            <filename>autoload.php</filename>
+            <filename>config.xml</filename>
+            <filename>access.xml</filename>
+
+            <folder>fields</folder>
+            <folder>lib</folder>
+        </files>
+
+        <languages folder="language/backend">
+            <language tag="en-GB">en-GB/en-GB.com_jchoptimize.ini</language>
+            <language tag="en-GB">en-GB/en-GB.com_jchoptimize.sys.ini</language>
+        </languages>
+    </administration>
+
+    <scriptfile>script.com_jchoptimize.php</scriptfile>
+</extension>

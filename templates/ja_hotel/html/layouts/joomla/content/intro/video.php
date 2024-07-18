@@ -1,0 +1,105 @@
+<?php
+/**
+ * @package     Joomla.Site
+ * @subpackage  Layout
+ *
+ * @copyright   Copyright (C) 2005 - 2014 Open Source Matters, Inc. All rights reserved.
+ * @license     GNU General Public License version 2 or later; see LICENSE.txt
+ */
+
+defined('JPATH_BASE') or die;
+
+$item = $displayData['item'];
+$aparams = $displayData['params'];
+$positions = $aparams->get('intro_block_position', 0);
+
+$useDefList =
+	($aparams->get('show_modify_date') ||
+		$aparams->get('show_publish_date') ||
+		$aparams->get('show_create_date') ||
+		$aparams->get('show_parent_category') ||
+		$aparams->get('show_author'));
+$aparams->set('show_category',1);
+
+$img_size = isset($displayData['img-size']) ? $displayData['img-size'] : 'medium';
+
+?>
+<div class="magazine-item-media videos-item-media">
+  <?php echo JLayoutHelper::render('joomla.content.image.video', $displayData); ?>
+	<?php $title = $item->category_title; ?>
+</div>
+
+<div class="magazine-item-main">
+  <?php if ($aparams->get('show_intro_category')) : ?>
+		<?php echo JLayoutHelper::render('joomla.content.info_block.magazine_category', array('item' => $item, 'params' => $aparams)); ?>
+	<?php endif; ?>
+	<?php echo JLayoutHelper::render('joomla.content.blog_style_default_item_title', $item); ?>
+
+	<?php if ($useDefList && in_array($positions, array(0, 2))) : ?>
+		<aside class="article-aside clearfix">
+			<?php echo JLayoutHelper::render('joomla.content.info_block.nonecateogry_block', array('item' => $item, 'params' => $aparams, 'position' => 'above')); ?>
+		</aside>
+	<?php endif; ?>
+
+	<?php if (!$aparams->get('show_intro', 1)) : ?>
+		<?php echo $item->event->afterDisplayTitle; ?>
+	<?php endif; ?>
+	<?php echo $item->event->beforeDisplayContent; ?>
+
+	<?php if ($aparams->get('show_intro', 1)) : ?>
+		<div class="magazine-item-ct">   
+    <?php 
+      $max_length = $aparams->get('intro_limit');
+      $s = strip_tags($item->introtext);                    
+      if (strlen($s) > $max_length) {
+        $offset = ($max_length - 3) - strlen($s);
+        $s = substr($s, 0, strrpos($s, ' ', $offset)) . '...';
+      } 
+      echo $s;
+      ?>
+		</div>
+	<?php endif; ?>
+  
+  <?php if ($aparams->get('show_hits') && in_array($positions, array(1,2))) : ?>
+		<aside class="article-aside article-aside-bottom clearfix">
+			<?php echo JLayoutHelper::render('joomla.content.info_block.block', array('item' => $item, 'params' => $aparams, 'position' => 'below')); ?>
+		</aside>
+	<?php endif; ?>
+  
+	<?php if ($aparams->get('show_intro_readmore') && $item->readmore) :
+		if ($item->params->get('access-view')) :
+			$link = JRoute::_(ContentHelperRoute::getArticleRoute($item->slug, $item->catid));
+		else :
+			$menu = JFactory::getApplication()->getMenu();
+			$active = $menu->getActive();
+			$itemId = $active->id;
+			$link1 = JRoute::_('index.php?option=com_users&view=login&Itemid=' . $itemId);
+			$returnURL = JRoute::_(ContentHelperRoute::getArticleRoute($item->slug, $item->catid));
+			$link = new JUri($link1);
+			$link->setVar('return', base64_encode($returnURL));
+		endif; ?>
+
+		<section class="readmore">
+			<a class="btn btn-default" href="<?php echo $link; ?>"><span>
+
+								<?php if (!$item->params->get('access-view')) :
+									echo JText::_('COM_CONTENT_REGISTER_TO_READ_MORE');
+								elseif ($readmore = $item->alternative_readmore) :
+									echo $readmore;
+									if ($aparams->get('show_readmore_title', 0) != 0) :
+										echo JHtml::_('string.truncate', ($item->title), $aparams->get('readmore_limit'));
+									endif;
+								elseif ($aparams->get('show_readmore_title', 0) == 0) :
+									echo JText::sprintf('COM_CONTENT_READ_MORE_TITLE');
+								else :
+									echo JText::_('COM_CONTENT_READ_MORE');
+									echo JHtml::_('string.truncate', ($item->title), $aparams->get('readmore_limit'));
+								endif; ?>
+
+								</span></a>
+		</section>
+
+	<?php endif; ?>
+
+	<?php echo $item->event->afterDisplayContent; ?>
+</div>

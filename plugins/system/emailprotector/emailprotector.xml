@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3" type="plugin" group="system" method="upgrade">
+  <name>PLG_SYSTEM_EMAILPROTECTOR</name>
+  <description>PLG_SYSTEM_EMAILPROTECTOR_DESC</description>
+  <version>5.2.0PRO</version>
+  <creationDate>September 2023</creationDate>
+  <author>Regular Labs (Peter van Westen)</author>
+  <authorEmail>info@regularlabs.com</authorEmail>
+  <authorUrl>https://regularlabs.com</authorUrl>
+  <copyright>Copyright © 2023 Regular Labs - All Rights Reserved</copyright>
+  <license>GNU General Public License version 2 or later</license>
+  <scriptfile>script.install.php</scriptfile>
+  <files>
+    <file plugin="emailprotector">emailprotector.php</file>
+    <file>jhtmlemail.php</file>
+    <folder>language</folder>
+    <folder>src</folder>
+    <folder>vendor</folder>
+  </files>
+  <config>
+    <fields name="params" addfieldpath="/libraries/regularlabs/fields">
+      <fieldset name="basic">
+        <field name="@load_language_regularlabs" type="rl_loadlanguage" extension="plg_system_regularlabs"/>
+        <field name="@load_language_emailcloak" type="rl_loadlanguage" extension="plg_content_emailcloak"/>
+        <field name="@load_language_emailprotector" type="rl_loadlanguage" extension="plg_system_emailprotector"/>
+        <field name="@version" type="rl_version" extension="EMAILPROTECTOR"/>
+        <field name="@header" type="rl_header" label="EMAILPROTECTOR" description="EMAILPROTECTOR_DESC" url="https://regularlabs.com/emailprotector"/>
+      </fieldset>
+      <fieldset name="RL_BEHAVIOUR">
+        <field name="mode" type="list" default="2" label="PLG_CONTENT_EMAILCLOAK_MODE_LABEL" description="PLG_CONTENT_EMAILCLOAK_MODE_DESC">
+          <option value="0">PLG_CONTENT_EMAILCLOAK_NONLINKABLE</option>
+          <option value="1">PLG_CONTENT_EMAILCLOAK_LINKABLE</option>
+          <option value="2">EP_AS_IS</option>
+        </field>
+        <field name="spoof" type="radio" default="0" label="EP_SPOOF" description="EP_SPOOF_DESC">
+          <option value="0">EP_EMAIL_FORMAT_0</option>
+          <option value="1">EP_METHOD_TEXT</option>
+          <option value="2">EP_CUSTOM_STRING</option>
+        </field>
+        <field name="custom_text" type="text" default="" label="EP_CUSTOM_TEXT" description="EP_CUSTOM_TEXT_DESC" showon="spoof:2"/>
+        <field name="protect_in_feeds" type="radio" default="1" label="EP_PROTECT_IN_FEEDS" description="EP_PROTECT_IN_FEEDS_DESC">
+          <option value="0">JNO</option>
+          <option value="1">EP_METHOD_TEXT</option>
+          <option value="2">EP_CUSTOM_STRING</option>
+        </field>
+        <field name="feed_text" type="text" default="XXX" label="EP_FEED_TEXT" description="EP_FEED_TEXT_DESC" showon="protect_in_feeds:2"/>
+        <field name="protect_in_pdfs" type="radio" default="1" label="EP_PROTECT_IN_PDFS" description="EP_PROTECT_IN_PDFS_DESC">
+          <option value="0">JNO</option>
+          <option value="1">EP_METHOD_TEXT</option>
+          <option value="2">EP_CUSTOM_STRING</option>
+        </field>
+        <field name="pdf_text" type="text" default="XXX" label="EP_PDF_TEXT" description="EP_PDF_TEXT_DESC" showon="protect_in_pdfs:2"/>
+        <field name="protect_in_json" type="radio" default="1" label="EP_PROTECT_IN_JSON" description="EP_PROTECT_IN_JSON_DESC">
+          <option value="0">JNO</option>
+          <option value="1">EP_METHOD_TEXT</option>
+          <option value="2">EP_CUSTOM_STRING</option>
+        </field>
+        <field name="json_text" type="text" default="XXX" label="EP_JSON_TEXT" description="EP_JSON_TEXT_DESC" showon="protect_in_json:2"/>
+        <field name="protect_in_js" type="radio" class="btn-group" default="1" label="EP_PROTECT_IN_JS" description="EP_PROTECT_IN_JS_DESC">
+          <option value="0">JNO</option>
+          <option value="1">JYES</option>
+        </field>
+      </fieldset>
+    </fields>
+  </config>
+</extension>

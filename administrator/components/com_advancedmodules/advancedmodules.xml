@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3" type="component" method="upgrade">
+  <name>COM_ADVANCEDMODULES</name>
+  <description>COM_ADVANCEDMODULES_DESC</description>
+  <version>9.9.0PRO</version>
+  <creationDate>September 2023</creationDate>
+  <author>Regular Labs (Peter van Westen)</author>
+  <authorEmail>info@regularlabs.com</authorEmail>
+  <authorUrl>https://regularlabs.com</authorUrl>
+  <copyright>Copyright © 2023 Regular Labs - All Rights Reserved</copyright>
+  <license>GNU General Public License version 2 or later</license>
+  <scriptfile>script.install.php</scriptfile>
+  <administration>
+    <files>
+      <file>advancedmodules.php</file>
+      <file>assignments.xml</file>
+      <file>config.xml</file>
+      <file>controller.php</file>
+      <folder>controllers</folder>
+      <folder>helpers</folder>
+      <folder>language</folder>
+      <folder>layouts</folder>
+      <folder>models</folder>
+      <folder>tables</folder>
+      <folder>views</folder>
+    </files>
+  </administration>
+  <files folder="site">
+    <file>advancedmodules.php</file>
+    <file>controller.php</file>
+    <file>empty.xml</file>
+    <folder>controllers</folder>
+    <folder>helpers</folder>
+    <folder>layouts</folder>
+    <folder>models</folder>
+    <folder>tables</folder>
+    <folder>views</folder>
+  </files>
+  <media folder="media" destination="advancedmodules">
+    <folder>js</folder>
+  </media>
+</extension>

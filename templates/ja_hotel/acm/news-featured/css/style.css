@@ -1,0 +1,433 @@
+.magazine-featured .row-articles {
+  margin-bottom: 18px;
+}
+.magazine-featured .row-articles.last-row {
+  margin-bottom: 0;
+}
+.magazine-featured .magazine-item-media {
+  margin: -22px -22px 0;
+}
+.magazine-featured .magazine-featured-leading {
+  background: #ffffff;
+  border-radius: 3px;
+  margin-bottom: 22px;
+  overflow: hidden;
+  padding: 22px;
+  -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+}
+.magazine-featured .magazine-featured-intro .magazine-item article {
+  background: #ffffff;
+  border-radius: 3px;
+  margin-bottom: 22px;
+  overflow: hidden;
+  padding: 22px;
+  margin-bottom: 0;
+  -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+}
+.magazine-featured .magazine-featured-intro .magazine-item .article-aside {
+  margin: 0;
+}
+.magazine-featured .magazine-featured-intro .magazine-item .article-aside.article-aside-bottom {
+  float: left;
+}
+.magazine-featured .magazine-featured-intro .magazine-item .article-info {
+  text-transform: none;
+}
+.magazine-featured .magazine-featured-intro .magazine-item .category-name a {
+  color: #ffb74d;
+}
+.magazine-featured .magazine-featured-intro .magazine-item .category-name a:hover,
+.magazine-featured .magazine-featured-intro .magazine-item .category-name a:focus,
+.magazine-featured .magazine-featured-intro .magazine-item .category-name a:active {
+  text-decoration: none;
+}
+.magazine-featured .magazine-featured-intro .magazine-item .readmore {
+  float: right;
+}
+.magazine-featured .magazine-featured-intro .magazine-item .readmore .btn {
+  padding: 0;
+  border: 0;
+  background: none;
+  color: #3f51b5;
+}
+.magazine-featured .magazine-featured-intro .magazine-item .readmore .btn:hover,
+.magazine-featured .magazine-featured-intro .magazine-item .readmore .btn:focus,
+.magazine-featured .magazine-featured-intro .magazine-item .readmore .btn:active {
+  background: none;
+  color: #2b387c;
+}
+.magazine-featured .magazine-featured-intro .magazine-item .article-title {
+  margin-bottom: 11px;
+}
+.magazine-featured .magazine-featured-intro .magazine-item .article-title h3 {
+  font-size: 18px;
+  line-height: 1.625;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.magazine-featured .magazine-featured-intro .magazine-item .article-title h3 a {
+  color: #616161;
+}
+.magazine-featured .magazine-featured-intro .magazine-item .article-title h3 a:hover,
+.magazine-featured .magazine-featured-intro .magazine-item .article-title h3 a:focus,
+.magazine-featured .magazine-featured-intro .magazine-item .article-title h3 a:active {
+  color: #3f51b5;
+  text-decoration: none;
+}
+.magazine-featured .magazine-featured-intro .magazine-item .magazine-item-ct {
+  margin-top: 11px;
+}
+.magazine-featured .magazine-featured-intro .magazine-item .item-image {
+  float: none !important;
+  position: relative;
+  overflow: hidden;
+}
+.magazine-featured .magazine-featured-intro .magazine-item-main {
+  margin-top: 22px;
+}
+.magazine-featured .magazine-featured-intro .magazine-section-heading article {
+  background: #3f51b5;
+}
+.magazine-featured .magazine-featured-intro .magazine-section-heading article .section-title {
+  color: #ffffff;
+  font-size: 14px;
+  margin-top: 0;
+}
+.magazine-featured .magazine-featured-intro .magazine-section-heading article .section-info {
+  color: #ffffff;
+  font-size: 30px;
+  font-weight: 300;
+  line-height: 1.2;
+}
+.magazine-featured .magazine-featured-intro .magazine-section-heading article .btn {
+  position: absolute;
+  right: 22px;
+  bottom: 22px;
+}
+.magazine-featured .logo-text a,
+.magazine-featured .logo-text a:hover,
+.magazine-featured .logo-text a:focus,
+.magazine-featured .logo-text a:active {
+  color: #ffffff;
+}
+.magazine-featured.ja-isotope-wrap {
+  margin-left: -9px;
+  margin-right: -9px;
+  
+  
+  
+  
+  
+}
+.magazine-featured.ja-isotope-wrap .page-header {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.magazine-featured.ja-isotope-wrap .magazine-featured-intro .item {
+  padding-left: 9px;
+  padding-right: 9px;
+  padding-bottom: 18px;
+  margin-bottom: 0;
+  float: left;
+}
+.magazine-featured.ja-isotope-wrap .magazine-featured-intro .item article {
+  background: #ffffff;
+  border-radius: 3px;
+  overflow: hidden;
+  padding: 22px;
+  -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+}
+.magazine-featured.ja-isotope-wrap .magazine-featured-intro .magazine-section-heading {
+  background: none;
+}
+@media (max-width: 767px) {
+  .magazine-featured.ja-isotope-wrap .magazine-featured-intro .magazine-section-heading {
+    height: 240px !important;
+  }
+}
+.magazine-featured.ja-isotope-wrap .magazine-featured-intro .magazine-section-heading article {
+  position: relative;
+  background: #3f51b5;
+  color: #ffffff;
+  min-height: 360px;
+}
+@media (max-width: 767px) {
+  .magazine-featured.ja-isotope-wrap .magazine-featured-intro .magazine-section-heading article {
+    height: 240px !important;
+  }
+}
+.magazine-featured.ja-isotope-wrap .magazine-featured-intro .magazine-section-heading article .btn {
+  position: absolute;
+  right: 22px;
+  bottom: 22px;
+}
+.magazine-featured.ja-isotope-wrap .category-title {
+  color: #ffffff;
+  font-size: 14px;
+  margin-top: 0;
+}
+.magazine-featured.ja-isotope-wrap .category-des {
+  color: #ffffff;
+  font-size: 30px;
+  font-weight: 300;
+  line-height: 1.2;
+}
+.magazine-featured.ja-isotope-wrap .grid-xs-1 .item {
+  width: 100%;
+}
+.magazine-featured.ja-isotope-wrap .grid-xs-1 .item.height2 {
+  height: 500px;
+}
+.magazine-featured.ja-isotope-wrap .grid-xs-1 .item.height2 article {
+  height: 482px;
+}
+.magazine-featured.ja-isotope-wrap .grid-xs-2 .item {
+  width: 50%;
+}
+.magazine-featured.ja-isotope-wrap .grid-xs-3 .item {
+  width: 33.3%;
+}
+.magazine-featured.ja-isotope-wrap .grid-xs-4 .item {
+  width: 25%;
+}
+.magazine-featured.ja-isotope-wrap .grid-xs-5 .item {
+  width: 20%;
+}
+.magazine-featured.ja-isotope-wrap .grid-xs-6 .item {
+  width: 16.6%;
+}
+.magazine-featured.ja-isotope-wrap .grid-xs-7 .item {
+  width: 14.28%;
+}
+.magazine-featured.ja-isotope-wrap .grid-xs-8 .item {
+  width: 12.5%;
+}
+.magazine-featured.ja-isotope-wrap .grid-xs-9 .item {
+  width: 11.1%;
+}
+.magazine-featured.ja-isotope-wrap .grid-xs-10 .item {
+  width: 10%;
+}
+@media (min-width: 600px) {
+  .magazine-featured.ja-isotope-wrap .grid-smx-1 .item {
+    width: 100%;
+  }
+  .magazine-featured.ja-isotope-wrap .grid-smx-1 .item.height2 {
+    height: 450px;
+  }
+  .magazine-featured.ja-isotope-wrap .grid-smx-1 .item.height2 article {
+    height: 432px;
+  }
+  .magazine-featured.ja-isotope-wrap .grid-smx-2 .item {
+    width: 50%;
+  }
+  .magazine-featured.ja-isotope-wrap .grid-smx-2 .item.height2 {
+    height: 450px;
+  }
+  .magazine-featured.ja-isotope-wrap .grid-smx-2 .item.height2 article {
+    height: 432px;
+  }
+  .magazine-featured.ja-isotope-wrap .grid-smx-3 .item {
+    width: 33.3%;
+  }
+  .magazine-featured.ja-isotope-wrap .grid-smx-4 .item {
+    width: 25%;
+  }
+  .magazine-featured.ja-isotope-wrap .grid-smx-5 .item {
+    width: 20%;
+  }
+  .magazine-featured.ja-isotope-wrap .grid-smx-6 .item {
+    width: 16.6%;
+  }
+  .magazine-featured.ja-isotope-wrap .grid-smx-7 .item {
+    width: 14.28%;
+  }
+  .magazine-featured.ja-isotope-wrap .grid-smx-8 .item {
+    width: 12.5%;
+  }
+  .magazine-featured.ja-isotope-wrap .grid-smx-9 .item {
+    width: 11.1%;
+  }
+  .magazine-featured.ja-isotope-wrap .grid-smx-10 .item {
+    width: 10%;
+  }
+}
+@media (min-width: 768px) {
+  .magazine-featured.ja-isotope-wrap .grid-sm-1 .item {
+    width: 100%;
+  }
+  .magazine-featured.ja-isotope-wrap .grid-sm-2 .item {
+    width: 50%;
+  }
+  .magazine-featured.ja-isotope-wrap .grid-sm-2 .item.height2 {
+    height: 450px;
+  }
+  .magazine-featured.ja-isotope-wrap .grid-sm-2 .item.height2 article {
+    height: 432px;
+  }
+  .magazine-featured.ja-isotope-wrap .grid-sm-3 .item {
+    width: 33.3%;
+  }
+  .magazine-featured.ja-isotope-wrap .grid-sm-4 .item {
+    width: 25%;
+  }
+  .magazine-featured.ja-isotope-wrap .grid-sm-5 .item {
+    width: 20%;
+  }
+  .magazine-featured.ja-isotope-wrap .grid-sm-6 .item {
+    width: 16.6%;
+  }
+  .magazine-featured.ja-isotope-wrap .grid-sm-7 .item {
+    width: 14.28%;
+  }
+  .magazine-featured.ja-isotope-wrap .grid-sm-8 .item {
+    width: 12.5%;
+  }
+  .magazine-featured.ja-isotope-wrap .grid-sm-9 .item {
+    width: 11.1%;
+  }
+  .magazine-featured.ja-isotope-wrap .grid-sm-10 .item {
+    width: 10%;
+  }
+}
+@media (min-width: 992px) {
+  .magazine-featured.ja-isotope-wrap .grid-md-1 .item {
+    width: 100%;
+  }
+  .magazine-featured.ja-isotope-wrap .grid-md-2 .item {
+    width: 50%;
+  }
+  .magazine-featured.ja-isotope-wrap .grid-md-2 .item.height2 {
+    height: 500px;
+  }
+  .magazine-featured.ja-isotope-wrap .grid-md-2 .item.height2 article {
+    height: 482px;
+  }
+  .magazine-featured.ja-isotope-wrap .grid-md-3 .item {
+    width: 33.3%;
+  }
+  .magazine-featured.ja-isotope-wrap .grid-md-4 .item {
+    width: 25%;
+  }
+  .magazine-featured.ja-isotope-wrap .grid-md-5 .item {
+    width: 20%;
+  }
+  .magazine-featured.ja-isotope-wrap .grid-md-6 .item {
+    width: 16.6%;
+  }
+  .magazine-featured.ja-isotope-wrap .grid-md-7 .item {
+    width: 14.28%;
+  }
+  .magazine-featured.ja-isotope-wrap .grid-md-8 .item {
+    width: 12.5%;
+  }
+  .magazine-featured.ja-isotope-wrap .grid-md-9 .item {
+    width: 11.1%;
+  }
+  .magazine-featured.ja-isotope-wrap .grid-md-10 .item {
+    width: 10%;
+  }
+}
+@media (min-width: 1200px) {
+  .magazine-featured.ja-isotope-wrap .grid-lg-1 .item {
+    width: 100%;
+  }
+  .magazine-featured.ja-isotope-wrap .grid-lg-2 .item {
+    width: 50%;
+  }
+  .magazine-featured.ja-isotope-wrap .grid-lg-3 .item {
+    width: 33.3%;
+  }
+  .magazine-featured.ja-isotope-wrap .grid-lg-4 .item {
+    width: 25%;
+  }
+  .magazine-featured.ja-isotope-wrap .grid-lg-4 .item.height2 {
+    height: 400px;
+  }
+  .magazine-featured.ja-isotope-wrap .grid-lg-4 .item.height2 article {
+    height: 382px;
+  }
+  .magazine-featured.ja-isotope-wrap .grid-lg-5 .item {
+    width: 20%;
+  }
+  .magazine-featured.ja-isotope-wrap .grid-lg-6 .item {
+    width: 16.6%;
+  }
+  .magazine-featured.ja-isotope-wrap .grid-lg-7 .item {
+    width: 14.28%;
+  }
+  .magazine-featured.ja-isotope-wrap .grid-lg-8 .item {
+    width: 12.5%;
+  }
+  .magazine-featured.ja-isotope-wrap .grid-lg-9 .item {
+    width: 11.1%;
+  }
+  .magazine-featured.ja-isotope-wrap .grid-lg-10 .item {
+    width: 10%;
+  }
+}
+.magazine-featured.ja-isotope-wrap.packery .isotope:before,
+.magazine-featured.ja-isotope-wrap.packery .isotope:after {
+  content: " ";
+  display: table;
+}
+.magazine-featured.ja-isotope-wrap.packery .isotope:after {
+  clear: both;
+}
+.magazine-featured.ja-isotope-wrap.packery .item {
+  float: left;
+  height: 200px;
+  padding: 0;
+}
+.magazine-featured.ja-isotope-wrap.packery .item article {
+  margin-left: 9px;
+  margin-right: 9px;
+  height: 182px;
+  min-height: 0 !important;
+}
+.magazine-featured.ja-isotope-wrap.packery .item .magazine-item-media {
+  display: none;
+}
+.magazine-featured.ja-isotope-wrap.packery .item .magazine-item-main {
+  margin-top: 0;
+}
+.magazine-featured.ja-isotope-wrap.packery .item .article-title a {
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.magazine-featured.ja-isotope-wrap.packery .item.width2 {
+  width: 50%;
+}
+.magazine-featured.ja-isotope-wrap.packery .item.height2 .magazine-item-media {
+  display: block;
+}
+.magazine-featured.ja-isotope-wrap.packery .item.height2 .magazine-item-main {
+  margin-top: 22px;
+}
+
+html.ie8 .ja-isotope-wrap .item {
+  display: inline-block;
+  margin-left: -0.5px;
+  position: relative !important;
+  left: auto !important;
+  top: auto !important;
+  float: none !important;
+  width: 24% !important;
+}
+html.ie8 .ja-isotope-wrap .item.height2 {
+  height: 200px !important;
+}
+html.ie8 .ja-isotope-wrap .item.height2 article {
+  height: 182px !important;
+}
+html.ie8 .ja-isotope-wrap .item .item-image img {
+  display: none;
+}
+html.ie8 .ja-isotope-wrap .item .section-info {
+  display: none;
+}

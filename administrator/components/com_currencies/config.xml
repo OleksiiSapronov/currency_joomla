@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config>
+	<fieldset
+		name="settings"
+		label="COM_CURRENCIES_GENERAL_SETTINGS"
+		description="COM_CURRENCIES_GENERAL_SETTINGS_DESC">
+
+		<field
+			name="primary_currency" 
+			type="text"
+			label="COM_CURRENCIES_PRIMARY_CURRENCY"
+			description="COM_CURRENCIES_PRIMARY_CURRENCY_DESC"
+		/>
+		
+			<field
+			name="base_currency" 
+			type="text"
+			label="COM_CURRENCIES_BASE_CURRENCY"
+			description="COM_CURRENCIES_BASE_CURRENCY_DESC"
+		/>
+		
+			<field
+			name="component_lang" 
+			type="text"
+			label="COM_CURRENCIES_COMPONENT_LANG"
+			description="COM_CURRENCIES_COMPONENT_LANG_DESC"
+		/>
+				
+		
+		
+		
+		<field
+			name="primary_value" 
+			type="text"
+			label="COM_CURRENCIES_PRIMARY_VALUE"
+			description="COM_CURRENCIES_PRIMARY_VALUE_DESC"
+		/>
+		<field
+			name="landing_page_currencies" 
+			type="text"
+			label="COM_CURRENCIES_LANDING_PAGE_CURRENCIES"
+			description="COM_CURRENCIES_LANDING_PAGE_CURRENCIES_DESC"
+		/>
+		<field
+			name="landing_page_rates_list_limit" 
+			type="text"
+			label="COM_CURRENCIES_LANDING_PAGE_RATES_LIST"
+			description="COM_CURRENCIES_LANDING_PAGE_RATES_LIST_DESC"
+		/>
+		<field
+			name="decimal_places" 
+			type="text"
+			label="COM_CURRENCIES_DECIMAL_PLACES"
+			description="COM_CURRENCIES_DECIMAL_PLACES_DESC"
+		/>
+		
+		<field
+			name="featured_currencies" 
+			type="text"
+			label="COM_CURRENCIES_FEATURED_CURRENCIES"
+			description="COM_CURRENCIES_FEATURED_CURRENCIES_DESC"
+		/>
+		<field
+			name="history_days_limit" 
+			type="text"
+			label="COM_CURRENCIES_HISTORY_DAYS_LIMIT"
+			description="COM_CURRENCIES_HISTORY_DAYS_LIMIT_DESC"
+		/>
+		
+		<field
+			name="history_rates_list_limit" 
+			type="text"
+			label="COM_CURRENCIES_HISTORY_RATES_LIST_LIMIT"
+			description="COM_CURRENCIES_RATES_LIST_LIMIT_DESC"
+		/>
+		<field
+			name="exchange_currency" 
+			type="text"
+			label="COM_CURRENCIES_EXCHANGE_CURRENCY"
+			description="COM_CURRENCIES_EXCHANGE_CURRENCY"
+		/>
+      <field 
+	        name="pairs_itemid" 
+			type="menuitem" 
+			default="" 
+			label="Pairs Itemid" 
+			description="Menu itemid " 
+			/>
+			 <field 
+	        name="about_itemid" 
+			type="menuitem" 
+			default="" 
+			label="About currency Itemid" 
+			description="Menu itemid for about page " 
+			/>
+			
+			<field
+			name="update_currencies" 
+			type="text"
+			label="COM_CURRENCIES_UPDATE_CURRENCIES"
+			description="COM_CURRENCIES_UPDATE_CURRENCIES_DESC"
+		/>
+		
+		<field
+			name="dropdown_currencies" 
+			type="text"
+			label="COM_CURRENCIES_DROPDOWN_CURRENCIES"
+			description="COM_CURRENCIES_DROPDOWN_CURRENCIES_DESC"
+		/>
+	
+	</fieldset>
+
+
+	<fieldset
+		name="permissions"
+		label="JCONFIG_PERMISSIONS_LABEL"
+		description="JCONFIG_PERMISSIONS_DESC"
+		>
+
+		<field
+			name="rules"
+			type="rules"
+			label="JCONFIG_PERMISSIONS_LABEL"
+			class="inputbox"
+			validate="rules"
+			filter="rules"
+			component="com_content"
+			section="component" />
+	</fieldset>
+</config>

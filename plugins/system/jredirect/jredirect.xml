@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="1.7" type="plugin" group="system">
+    <name>JRedirect</name>
+    <author>Ross Farinella</author>
+    <authorEmail>support@findross.com</authorEmail>
+    <authorUrl>http://findross.com.com</authorUrl>
+    <creationDate>September 2008</creationDate>
+    <copyright>2008 Ross Farinella</copyright>
+    <license>GPL</license>
+    <version>1.7.0</version>
+    <description>
+        This plugin allows you to configure specific URLs to redirect to designated pages.
+        The redirection will only happen if the URL entered by your users is within your Joomla! site.
+    </description>
+    <files>
+        <filename plugin="jredirect">jredirect.php</filename>
+    </files>
+    <config><fields name="params"><fieldset name="basic">
+    	<field name="urls" type="textarea"
+			default=""
+			label="Special URLs and their destinations"
+			description="Enter entries on their own line in the form special.html|index.php?real_url.html"
+			rows="5" cols="40" />
+    </fieldset></fields></config>
+</extension>

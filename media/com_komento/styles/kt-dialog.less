@@ -1,0 +1,274 @@
+/**
+* @package    Komento
+* @copyright  Copyright (C) 2010 - 2016 Stack Ideas Sdn Bhd. All rights reserved.
+* @license    Proprietary Use License http://stackideas.com/licensing.html
+* @author     Stack Ideas Sdn Bhd
+**/
+
+@kt-dialog-gutter: @fd-base-spacing;
+@kt-dialog-header-size: 50px;
+@kt-dialog-footer-size: 40px;
+@kt-dialog-body-min-width: 320px;
+@kt-dialog-body-min-height: 120px;
+@kt-dialog-header-bg: @fd-ui-bg;
+@kt-dialog-body-bg: @fd-ui-bg;
+@kt-dialog-footer-bg: @fd-ui-bg;
+@kt-dialog-border-color: @fd-ui-border-color;
+@kt-dialog-border-radius: 3px;
+
+&.kt-dialog {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	z-index: @zindex-dialog;
+	.transition(all .5s ease);
+	.transform_(scale(1.2));
+	opacity: 0;
+	background: transparent;
+
+	&.active {
+		.transform_(scale(1));
+		opacity: 1;
+	}
+
+	&.is-loading {
+		.no-transition();
+	}
+
+	&.is-failed {
+		.o-empty {
+			display: inline-block;
+			min-height: 80px;
+
+		}
+	}
+	.o-empty__icon {
+		font-size: 30px;
+	}
+	.o-empty__text {
+		font-size: @fd-base-font-size--xl;
+	}
+	.kt-hint {
+		display: none;
+		background: @fd-ui-bg;
+		text-align: center;
+		margin: 0 auto;
+	}
+
+
+	// Override .widget which elements from administrator
+	.widget {
+		border: none;
+	}
+	
+	// #5333 Make popover display on top of dialog
+	+ .o-popover--es {
+		z-index: @zindex-dialog + 1;
+	}
+}
+
+.kt-dialog-modal {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	.transform_(translateX(-50%) translateY(-50%));
+
+	display: block;
+	border-radius: @kt-dialog-border-radius;
+	.box-shadow(0 2px 3px rgba(0,0,0,0.2));
+	max-width: 100%;
+	max-height: 100%;
+	min-width: @kt-dialog-body-min-width;
+	min-height: @kt-dialog-header-size + @kt-dialog-body-min-height;
+}
+
+&.kt-dialog.has-footer {
+
+	.kt-dialog-modal {
+		min-height: @kt-dialog-header-size + @kt-dialog-body-min-height + @kt-dialog-footer-size;
+	}
+}
+
+&.is-mobile {
+	.kt-dialog-header {
+		border-radius: 0;
+		text-align: center;
+		font-weight: 700;
+	}
+}
+
+.kt-dialog-header {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: @kt-dialog-header-size;
+	line-height: 38px;
+	z-index: 3;
+
+	background: @kt-dialog-header-bg;
+	border: 1px solid @kt-dialog-border-color;
+	border-bottom: none;
+	padding: @fd-base-spacing--sm @fd-base-spacing;
+	border-radius: @kt-dialog-border-radius @kt-dialog-border-radius 0 0;
+
+	&__grid {
+		.flex-display(flex);
+		.flex-wrap(wrap);
+		.align-items(center);
+		margin: 0;
+		padding: 0;
+	}
+	&__cell {
+		.flex(1 1 0);
+	}
+}
+
+.kt-dialog-footer {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: @kt-dialog-footer-size;
+	z-index: 2;
+	display: none;
+
+	background: @kt-dialog-footer-bg;
+	border: 1px solid @kt-dialog-border-color;
+	border-top: none;
+	padding: @fd-base-spacing--sm @fd-base-spacing;
+	border-radius: 0 0 @kt-dialog-border-radius @kt-dialog-border-radius;
+}
+
+.kt-dialog-body {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 1;
+
+	border-top: @kt-dialog-header-size solid transparent;
+	border-bottom: 0;
+
+}
+
+.kt-dialog-container {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	overflow-x: hidden;
+
+	// Without footer
+	background: @kt-dialog-body-bg;
+	border: 1px solid @kt-dialog-border-color;
+	border-radius: 0 0 @kt-dialog-border-radius @kt-dialog-border-radius;
+}
+
+&.is-loading {
+	.kt-dialog-container {
+		overflow: hidden;
+	}
+}
+
+// With footer
+&.kt-dialog.has-footer {
+
+	.kt-dialog-body {
+		border-bottom: @kt-dialog-footer-size solid transparent;
+	}
+
+	.kt-dialog-container {
+		border-radius: 0;
+	}
+
+	.kt-dialog-footer {
+		display: block;
+	}
+}
+
+.kt-dialog-title {
+	font-size: @fd-base-font-size--xl;
+	font-weight: bold;
+}
+
+.kt-dialog-close-button {
+	color: #bbb;
+	font-size: @fd-base-font-size--xl;
+	cursor: pointer;
+	text-align: center;
+	.flex(0 0 auto);
+	&:hover {
+		color: #888;
+	}
+
+	i {
+		padding: 0 @kt-dialog-gutter / 6 0 @kt-dialog-gutter / 2;
+	}
+}
+
+.kt-dialog-content {
+	position: relative;
+	padding: @fd-base-spacing--sm @fd-base-spacing;
+	font-size: @fd-base-font-size;
+	height: 100%;
+	* {
+		font-size: @fd-base-font-size;
+	}
+	
+}
+
+.kt-dialog-footer-content {
+	text-align: right;
+}
+
+.kt-dialog-error-message {
+	display: block;
+	font-weight: normal;
+}
+
+&.kt-dialog.type-iframe {
+
+	.kt-dialog-container {
+		overflow: hidden;
+	}
+
+	.kt-dialog-content {
+		width: 100%;
+		height: 100%;
+		padding: 0;
+	}
+
+	iframe {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		border: 0;
+	}
+}
+
+&.is-mobile {
+	
+	&.kt-dialog {
+		// Since it have to cover full screen good to bring it top
+		z-index: 2147483647;
+		width: 100%;
+		height: 100%;
+	}
+	.kt-dialog-modal {
+		width: 100% !important; // Override inline style
+		height: 100% !important;
+		// height: 300px !important;
+		// left: 1%;
+	}
+	.kt-dialog-body {
+		-webkit-overflow-scrolling: touch;
+		overflow-y: scroll;
+	}
+}

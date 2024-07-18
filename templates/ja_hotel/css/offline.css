@@ -1,0 +1,209 @@
+/**
+ * ------------------------------------------------------------------------
+ * JA Jason Template
+ * ------------------------------------------------------------------------
+ * Copyright (C) 2004-2011 J.O.O.M Solutions Co., Ltd. All Rights Reserved.
+ * @license - Copyrighted Commercial Software
+ * Author: J.O.O.M Solutions Co., Ltd
+ * Websites:  http://www.joomlart.com -  http://www.joomlancers.com
+ * This file may not be redistributed in whole or significant part.
+ * ------------------------------------------------------------------------
+ */
+ 
+/**
+ * @copyright	Copyright (C) 2005 - 2014 Open Source Matters, Inc. All rights reserved.
+ * @license		GNU General Public License version 2 or later; see LICENSE.txt
+ */
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	font-size: 14px;
+	line-height: 1.625;
+	font-family: "Open Sans", arial;
+}
+
+.clearfix:after {
+   content: " ";
+   visibility: hidden;
+   display: block;
+   height: 0;
+   clear: both;
+}
+
+/* BODY 
+---------------------*/
+#frame {
+	margin-top: 8%;
+	text-align: left;
+}
+
+/* Container Offline */
+.offline-container {
+	width: 380px;
+	background: #fff;
+	border: 2px solid #cfd8dc;
+	box-shadow: 0 1px 3px #ddd;
+	padding: 35px 25px;
+	margin: 0 auto;
+}
+
+/* Title Offline */
+#offline-title h1 {
+	color: #3f51b5;
+  font-family: 'Pacifico', cursive;
+	font-size: 40px;
+	font-weight: 100;
+	margin: 0 0 10px 0;
+	text-align: center;
+}
+
+/* Description offline */
+.des-offline {
+	color: #90a4ae;
+	margin-bottom: 26px;
+	text-align: center;
+}
+
+#offline-img {
+	margin: 0 0 26px 0;
+	text-align: center;
+}
+
+#offline-img img {
+	max-width: 100%;
+}
+
+/* Form Offline */
+.form-offline {
+
+}
+
+.form-group {
+	margin-bottom: 20px;
+}
+
+.control-label {
+	display: block;
+	margin-bottom: 5px;
+	color: #3f51b5;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.control-input {
+	border: 2px solid #cfd8dc;
+	width: 100%;
+	height: 40px;
+	padding: 0 10px;
+}
+
+.control-input:focus {
+	border-color: #3f51b5;
+}
+
+/* Remember */
+#form-login-remember {
+	margin-bottom: 20px;
+	float: left;
+}
+
+#form-login-remember label {
+	font-size: 14px;
+	color: #90a4ae;
+}
+
+.inputbox {
+	margin: 0 3px 0 0;
+}
+
+/* Button */
+.button {
+	background: #3f51b5;
+	border: 0;
+	color: #fff;
+	display: inline-block;
+	font-size: 14px;
+	padding: 10px 20px;
+	text-decoration: none;
+	text-transform: uppercase;
+	float: right;
+}
+
+.button:hover,
+.button:active,
+.button:focus {
+	cursor: pointer;
+	background: #32408f;
+}
+
+/* Message Error */
+#system-message .error,
+#system-message .alert {
+	background: #f2dede;
+	color: #b94a48;
+	margin: auto;
+	padding: 20px;
+	width: 700px;
+	margin-bottom: 20px;
+}
+
+.error.message ul {
+	padding: 0;
+	list-style: none;
+}
+
+.alert {
+	position: relative;
+}
+
+.alert h4 {
+	font-size: 18px;
+	margin: 0;
+}
+
+.alert p {
+	margin: 5px 0 0 0;
+}
+
+.close {
+	right: 15px;
+	top: 15px;
+	position: absolute;
+	cursor: pointer;
+	height: 16px;
+	text-align: center;
+	width: 16px;
+	line-height: 16px;
+	font-size: 20px;
+}
+
+
+@media (max-width:  360px){
+	#frame {
+		padding: 0 20px;
+		margin-top: 25%;
+	}
+
+	/* Title Offline */
+
+	.offline-container {
+		width: 100%;
+		background: none;
+		padding: 0;
+		border: none;
+		box-shadow: none;
+	}
+
+	.form-group {
+		width: 100%;
+	}
+
+	/* Message Error */
+	#system-message .error,
+	#system-message .alert {
+		width: 100%;
+	}
+}

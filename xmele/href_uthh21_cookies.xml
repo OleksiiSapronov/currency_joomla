@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<replacements>
+	<items>
+
+
+		
+	<item>
+			<search><meta charset="utf-8" /></search>
+<replace>
+<meta charset="utf-8" />
+
+	<link href="https://tgmpanel.pl/cookies-policy.html" rel="alternate" hreflang="pl-pl" />
+	<link href="https://tgmpanel.hu/cookies-policy.html" rel="alternate" hreflang="hu-hu" />
+	
+</replace>
+
+			<params>
+				<param name="regex" value="1" />
+				<param name="casesensitive" value="1" />
+				
+				
+			</params>
+		</item>		
+		
+		
+
+	</items>
+</replacements>

@@ -1,0 +1,333 @@
+
+.countries {
+    border: 1px solid #ccc;
+    background:#fff;
+    padding:5px;
+
+}
+
+span.tabelkacurr {
+    font-weight: normal;
+    font-size: 0.9em;
+}
+
+
+.rowx {
+    display: flex; /* equal height of the children */
+}
+
+.colx {
+    flex: 1; /* additionally, equal width */
+
+    padding: 0px;
+    border: none;
+}
+
+td.range2 {
+    padding:4px;	
+
+}
+
+@media all and (max-width:480px){
+    /*---CSS for Tabs --*/
+
+    #t3-content .currenciesc .nav-tabs > li > a{
+        padding: 3px 3px 3px 1px  !important;
+        font-size: 13px  !important;
+    }
+}
+@media all and (max-width:320px){
+    #t3-content .currenciesc .nav-tabs > li > a {
+        font-size: 9px  !important;
+    }
+}
+
+
+@media (min-width: 992px) and (max-width: 1199px){
+    table.table.flightpedia tr td, table.table.flightpedia tr th {
+        font-size: 12px;
+    }
+}
+
+.col-md-1.col-sm-2.flag-col {
+    width: 7%;
+}
+.col-md-1.col-sm-2.rate-col {
+    width: 7%;
+}
+
+.col-md-1.col-sm-2.rate-col2 {
+    width: 7%;
+}
+
+.col-sm-2.base-flag, .col-sm-2.base-rate {
+    width: 14%;
+	padding-right:1px;
+}
+
+.col-sm-2.base-flag {
+    margin-top: -44px;
+}
+
+.col-sm-4.date-col {
+    width: 14%;	
+	padding-right:1px;
+}
+
+p.waluta {
+    margin-top: 21px;
+}
+
+@media all and (max-width: 480px) {
+.col-sm-4.date-col {
+    width: 40%;	
+	padding-right: 5px;
+}
+
+.reklama {
+    width: 300px;
+    height: 250px;
+background-color:#ccc;	
+
+}
+.col-sm-2.base-flag {
+    width: 40%;
+}
+.row.rate-row {
+    padding-right: 10px;
+}
+
+.col-md-1.col-sm-2.rate-col2 {
+    width: auto;
+}
+.col-md-1.col-sm-2.flag-col {
+    width: 15%;
+}
+.col-md-1.col-sm-2.rate-col {
+    width: 15%;
+}
+
+
+}
+
+
+
+@media all and (min-width: 480px) and (max-width: 768px)  {
+.col-sm-4.date-col {
+    width: 17%;	
+	padding-right: 5px;
+}
+
+.reklama {
+    width: 300px;
+    height: 250px;
+background-color:#ccc;	
+
+}
+.col-sm-2.base-flag {
+    width: 17%;
+}
+.row.rate-row {
+    padding-right: 10px;
+}
+
+.col-md-1.col-sm-2.rate-col {
+    width: 10%;
+}
+.form-group {
+    width: 160px;
+}
+
+select#currencyselect_fromd, select#currencyselect_tod, input#inputamount{
+    width: 155px;
+}
+
+.col-md-1.col-sm-2.flag-col {
+    width: 10%;
+}
+.col-md-1.col-sm-2.rate-col {
+    width: 10%;
+}
+.col-md-1.col-sm-2.rate-col2 {
+    width: 10%;
+	//margin-right:5px;
+}
+
+}
+
+td.currencytd {
+	text-align: center; 
+padding-top:10px;	
+padding-bottom:5px;	
+}
+
+
+/* 
+Max width before this PARTICULAR table gets nasty
+This query will take effect for any screen smaller than 760px
+and also iPads specifically.
+
+@media 
+only screen and (max-width: 760px),
+(min-device-width: 768px) and (max-device-width: 1024px)  {
+
+        /* Force table to not be like tables anymore 
+        table, thead, tbody, th, td, tr { 
+                display: block; 
+        }
+        
+        /* Hide table headers (but not display: none;, for accessibility) */
+/*thead tr { 
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+}
+
+tr { border: 1px solid #ccc; }
+
+td { 
+         Behave  like a "row" 
+        border: none;
+        border-bottom: 1px solid #eee; 
+        position: relative;
+        padding-left: 50%; 
+}
+
+td:before { 
+ Now like a table header 
+        position: absolute;
+         Top/left values mimic padding 
+        top: 6px;
+        left: 6px;
+        width: 45%; 
+        padding-right: 10px; 
+        white-space: nowrap;
+}
+
+}
+
+.center{
+        text-align: center;
+}
+.bold{
+        
+        font-weight: bold;
+}
+
+.converter_inputs{
+        
+        width:150px;
+}
+
+.exdown {
+background: url("../images/down.jpg") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+float: right;
+height: 18px;
+padding: 0 5px;
+width: 18px;
+}
+
+.exup {
+background: url("../images/up.jpg") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+float: right;
+height: 18px;
+padding: 0 5px;
+width: 18px;
+}*/
+.com_currencies.view-pairs .shandow .praweokno td{
+     border-top: 1px solid #dddddd !important;
+}
+.com_currencies.view-pairs .currenciesc form, .com_currencies.view-history .currenciesc form {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.com_currencies.view-pairs .currency-flag {
+    padding: 2px 3px 2px 5px;
+}
+.com_currencies.view-pairs .side-modules .moduletable:first-child {
+    margin-left: 10px;
+}
+.currenciesc optgroup[label] {
+    background: #ccc none repeat scroll 0 0;    
+    text-align: center;
+}
+
+.currenciesc option {
+    background: #fff none repeat scroll 0 0;    
+    text-align: left;
+}
+/*-- currency converter start--*/
+
+.exup{
+    color: #61BD1A;
+}
+.exdown{
+    color: #EA0001;
+}
+table.table.flightpedia tr td, table.table.flightpedia tr th{
+    padding: 6px 3px;
+    font-size: 11.5px;
+}
+/*-- currency converter start--*/
+
+
+@media all and (min-width: 768px) and (max-width: 991px){
+    .flag-col{
+        width: 10%;
+    }
+}
+
+@media all and (max-width: 767px){
+    .date-col{
+        width: 30%;	
+        float:left;
+    }
+
+    .rate-col, .base-flag, .base-rate{
+        width: 13%;
+        float:left;
+    }
+
+    .flag-col{
+        width: 10%;
+        float:left;
+    }
+
+    .currenciesc .input-large{
+        width:100%;
+    }
+
+    /*---CSS for Tabs --*/
+    #t3-content .currenciesc .nav-tabs li{
+        float: left !important;
+    }
+}
+
+
+
+@media all and (max-width: 420px){	
+    td.currencyex {
+        width:15%;
+        padding: 4px;	
+    }	
+
+
+    td.country {
+        width:77%;
+        padding: 4px;	
+    }
+
+    td.pairingex {
+        width:10%;
+        padding: 4px;	
+    }
+
+}
+
+@media all and (min-width: 420px){	
+    td.country {
+        width:35%;
+
+    }
+}
+

@@ -1,0 +1,193 @@
+/** 
+ *------------------------------------------------------------------------------
+ * @package       T3 Framework for Joomla!
+ *------------------------------------------------------------------------------
+ * @copyright     Copyright (C) 2004-2013 JoomlArt.com. All Rights Reserved.
+ * @license       GNU General Public License version 2 or later; see LICENSE.txt
+ * @authors       JoomlArt, JoomlaBamboo, (contribute to this project at github 
+ *                & Google group to become co-author)
+ * @Google group: https://groups.google.com/forum/#!forum/t3fw
+ * @Link:         http://t3-framework.org 
+ *------------------------------------------------------------------------------
+ */
+
+.gallery-list {
+  .photos-item {
+    &:hover .magazine-item-main {
+      .opacity(1);
+    }
+  }
+
+  .magazine-item-main {
+    top: 0;
+    left: @grid-gutter-width/2;
+    right: @grid-gutter-width/2;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.2);
+    background: #000 \9; // Fix for ie8
+    padding: @t3-global-padding/2 @grid-gutter-width/2;
+    .opacity(0);
+    .transition(all .2s linear);
+
+    .article-title {
+      margin: 0;
+
+      h3 {
+        margin: 0;
+        font-size: @font-size-small;
+
+        a {
+          color: @white;
+          font-size: @font-size-small;
+
+          &:hover, &:focus, &:active {
+            text-decoration: none;
+            outline: none;
+          }
+        }
+      }
+    }
+  }
+
+  .magazine-item-media {
+    border-radius: @border-radius-small;
+
+    img {
+      border-radius: @border-radius-small;
+      margin-bottom: 0 !important;
+    }
+
+    div.img_caption {
+      margin-bottom: 0;
+      width: 100% !important;
+    }
+
+    p.img_caption {
+      display: none;
+    }
+  }
+
+  .magazine-section-heading {
+    article {
+      background: @brand-secondary;
+      color: @white;
+      padding: @t3-global-padding;
+      border-radius: @border-radius-small;
+      position: relative;
+      .box-shadow(0 2px 4px rgba(0, 0, 0, 0.15));
+
+      @media (max-width: @screen-sm-max) {
+        min-height: 240px !important;
+      }
+
+      .section-title {
+        color: @white;
+        font-size: @font-size-h5;
+        margin-top: 0;
+      }
+
+      .section-info {
+        color: @white;
+        font-size: @font-size-h2;
+        font-weight: @font-weight-lighter;
+        line-height: 1.2;
+      }
+
+      .btn {
+        position: absolute;
+        right: @t3-global-padding;
+        bottom: @t3-global-padding;
+
+        &:hover, &:active, &:focus {
+          color: @brand-secondary;
+        }
+      }
+    }
+  }
+
+  .last-row {
+    .magazine-item.photos-item {
+      padding-bottom: 0;
+
+      @media (max-width: @screen-sm-max) {
+        padding-bottom: @grid-gutter-width;
+      }
+    }
+  }
+
+  .has-loadmore {
+    &.hidden-xs {
+      display: block !important;
+    }
+    
+    .last-row {
+      .magazine-item.photos-item {
+        padding-bottom: @grid-gutter-width;
+      }
+    }
+  }
+
+  .magazine-categories {
+
+    .carousel-thumbnail {
+
+      .carousel-indicators {
+        left: 0;
+        right: 0;
+        bottom: 20px;
+        width: auto;
+        margin: 0;
+        
+        li {
+          text-indent: 0;
+          width: 50px;
+          height: 50px;
+          border-radius: 0;
+          overflow: hidden;
+          border-color: #fff;
+          .opacity(.6);
+          .transition(all .2s linear);
+          margin: 0;
+          position: relative;
+
+          img {
+            max-width: none !important;
+            max-height: none !important;
+            width: 100px;
+            height: auto;
+            position: absolute;
+            top: 45%;
+            left: 0;
+            margin-left: -50%;
+            margin-top: -55%;
+          }
+
+          @media screen and (max-width: @screen-sm-max) {
+            width: 8px;
+            height: 8px;
+          }
+
+          &:focus,
+          &:hover,
+          &.active {
+            .opacity(1);
+          }
+
+          &.active {
+            .box-shadow(0 0 10px rgba(0, 0, 0, 0.4));
+          }
+        }
+      }
+
+      .carousel-caption {
+        bottom: auto;
+        top: @grid-gutter-width/2;
+        background: rgba(0, 0, 0, 0.2);
+        padding: @t3-global-padding/2 @t3-global-padding;
+        left: @grid-gutter-width/2;
+        right: @grid-gutter-width/2;
+      }
+
+    }
+  }
+}

@@ -1,0 +1,31 @@
+
+/**
+ * JCH Optimize - Performs several front-end optimizations for fast downloads
+ *
+ *  @package   jchoptimize/core
+ *  @author    Samuel Marshall <samuel@jch-optimize.net>
+ *  @copyright Copyright (c) 2023 Samuel Marshall / JCH Optimize
+ *  @license   GNU/GPLv3, or later. See LICENSE file
+ *
+ *  If LICENSE file missing, see <http://www.gnu.org/licenses/>.
+ */
+
+.jch-modeswitcher .notification-icon{
+    background-color: var(--template-bg-light);
+}
+
+.jch-modeswitcher .notification-icon.production{
+    color: var(--success);
+}
+
+.jch-modeswitcher .notification-icon.development{
+    color: var(--danger);
+}
+
+.jch-modeswitcher .notification-icon.page-cache-disabled{
+    color: var(--gray-500);
+}
+
+.jch-modeswitcher .notification-icon.page-cache-only{
+    color: var(--warning);
+}

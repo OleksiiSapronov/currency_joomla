@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3" type="component" method="upgrade">
+  <name>COM_REGULARLABSMANAGER</name>
+  <description>COM_REGULARLABSMANAGER_DESC</description>
+  <version>8.5.0</version>
+  <creationDate>September 2023</creationDate>
+  <author>Regular Labs (Peter van Westen)</author>
+  <authorEmail>info@regularlabs.com</authorEmail>
+  <authorUrl>https://regularlabs.com</authorUrl>
+  <copyright>Copyright © 2023 Regular Labs - All Rights Reserved</copyright>
+  <license>GNU General Public License version 2 or later</license>
+  <scriptfile>script.install.php</scriptfile>
+  <administration>
+    <menu img="../media/regularlabsmanager/images/regularlabsmanager.png">COM_REGULARLABSMANAGER</menu>
+    <files>
+      <file>regularlabsmanager.php</file>
+      <file>config.xml</file>
+      <file>controller.php</file>
+      <file>extensions.xml</file>
+      <folder>controllers</folder>
+      <folder>language</folder>
+      <folder>models</folder>
+      <folder>views</folder>
+    </files>
+  </administration>
+  <media folder="media" destination="regularlabsmanager">
+    <folder>css</folder>
+    <folder>images</folder>
+    <folder>js</folder>
+    <folder>less</folder>
+  </media>
+</extension>

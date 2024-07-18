@@ -1,0 +1,160 @@
+/* Put your style for this layout here */
+
+// VARIABLES & MIXINS
+// ------------------
+@import "../../../less/vars.less"; // Modify this for custom colors, font-sizes, etc
+
+//
+// MAGAZINE FEATURED
+// --------------------------------------------------------
+.magazine-featured {
+  .row-articles {
+    margin-bottom: @grid-gutter-width;
+
+    &.last-row {
+      margin-bottom: 0;
+    }
+  }
+
+  // Article Media 
+  .magazine-item-media {
+    margin: -@t3-global-padding -@t3-global-padding 0
+  }
+
+  // Article Leading
+  .magazine-featured-leading {
+    background: @white;
+    border-radius: @border-radius-small;
+    margin-bottom: @t3-global-margin;
+    overflow: hidden;
+    padding: @t3-global-padding;
+    .box-shadow(0 2px 4px rgba(0, 0, 0, 0.15));
+  }
+
+  // Article Intro
+  .magazine-featured-intro {
+    .magazine-item {
+      article {
+        background: @white;
+        border-radius: @border-radius-small;
+        margin-bottom: @t3-global-margin;
+        overflow: hidden;
+        padding: @t3-global-padding;
+        margin-bottom: 0;
+        .box-shadow(0 2px 4px rgba(0, 0, 0, 0.15));
+      }
+
+      // Article Meta
+      .article-aside {
+        margin: 0;
+
+        &.article-aside-bottom {
+          float: left;
+        }
+      }
+
+      .article-info {
+        text-transform: none;
+      }
+
+      .category-name a {
+        color: @brand-warning;
+
+        &:hover, &:focus, &:active {
+          text-decoration: none;
+        }
+      }
+
+      // Article Readmore
+      .readmore {
+        float: right;
+
+        .btn {
+          padding: 0;
+          border: 0;
+          background: none;
+          color: @link-color;
+
+          &:hover, &:focus, &:active {
+            background: none;
+            color: @link-hover-color;
+          }
+        }
+      }
+
+      // Article Title
+      .article-title {
+        margin-bottom: @t3-global-margin/2;
+        
+        h3 {
+          font-size: @font-size-h4;
+          line-height: @line-height-base;
+          margin-top: 0;
+          margin-bottom: 0;
+
+          a {
+            color: @headings-color;
+
+            // Link states
+            &:hover, &:focus, &:active {
+              color: @link-color;
+              text-decoration: none;
+            }
+          }
+        }
+      }
+
+      // Article Intro
+      .magazine-item-ct {
+        margin-top: @t3-global-margin/2;
+      }
+
+      // Article Image
+      .item-image {
+        float: none !important;
+        position: relative;
+        overflow: hidden;
+      }
+    }
+
+    .magazine-item-main {
+      margin-top: @t3-global-margin;
+    }
+  }
+
+  // Section Leading
+  .magazine-featured-intro .magazine-section-heading {
+    article {
+      background: @brand-primary;
+      
+      .section-title {
+        color: @white;
+        font-size: @font-size-h5;
+        margin-top: 0;
+      }
+
+      .section-info {
+        color: @white;
+        font-size: @font-size-h2;
+        font-weight: @font-weight-lighter;
+        line-height: 1.2;
+      }
+
+      .btn {
+        position: absolute;
+        right: @t3-global-padding;
+        bottom: @t3-global-padding;
+      }
+    }
+  }
+
+  // logo
+  .logo-text a {
+    &,
+    &:hover, &:focus, &:active {
+      color: @white;
+    }
+  }
+}
+
+@import "packery.less";

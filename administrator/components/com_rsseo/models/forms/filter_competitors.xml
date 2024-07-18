@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fields name="filter">
+		<field name="search" type="text" label="JSEARCH_FILTER" hint="JSEARCH_FILTER" />
+	</fields>
+
+	<fields name="list">
+		<field name="fullordering" type="list" onchange="this.form.submit();" default="id ASC">
+			<option value="">JGLOBAL_SORT_BY</option>
+			<option value="id ASC">JGRID_HEADING_ID_ASC</option>
+			<option value="id DESC">JGRID_HEADING_ID_DESC</option>
+			<option value="name ASC">COM_RSSEO_COMPETITOR_ASC</option>
+			<option value="name DESC">COM_RSSEO_COMPETITOR_DESC</option>
+			<option value="date ASC">COM_RSSEO_DATE_ASC</option>
+			<option value="date DESC">COM_RSSEO_DATE_DESC</option>
+			<option value="age ASC">COM_RSSEO_COMPETITOR_AGE_ASC</option>
+			<option value="age DESC">COM_RSSEO_COMPETITOR_AGE_DESC</option>
+			<option value="alexa ASC">COM_RSSEO_COMPETITOR_ALEXA_ASC</option>
+			<option value="alexa DESC">COM_RSSEO_COMPETITOR_ALEXA_DESC</option>
+			<option value="bingb ASC">COM_RSSEO_COMPETITOR_BINGB_ASC</option>
+			<option value="bingb DESC">COM_RSSEO_COMPETITOR_BINGB_DESC</option>
+			<option value="bingp ASC">COM_RSSEO_COMPETITOR_BINGP_ASC</option>
+			<option value="bingp DESC">COM_RSSEO_COMPETITOR_BINGP_DESC</option>
+			<option value="mozpagerank ASC">COM_RSSEO_COMPETITOR_MOZPAGERANK_ASC</option>
+			<option value="mozpagerank DESC">COM_RSSEO_COMPETITOR_MOZPAGERANK_DESC</option>
+			<option value="mozda ASC">COM_RSSEO_COMPETITOR_MOZDA_ASC</option>
+			<option value="mozda DESC">COM_RSSEO_COMPETITOR_MOZDA_DESC</option>
+			<option value="mozpa ASC">COM_RSSEO_COMPETITOR_MOZPA_ASC</option>
+			<option value="mozpa DESC">COM_RSSEO_COMPETITOR_MOZPA_DESC</option>
+		</field>
+		
+		<field name="limit" type="limitbox" default="25" class="input-mini" onchange="this.form.submit();" />
+	</fields>
+</form>

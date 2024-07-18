@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3" type="module" client="administrator" method="upgrade">
+  <name>MOD_CACHECLEANER</name>
+  <description>MOD_CACHECLEANER_DESC</description>
+  <version>8.5.0PRO</version>
+  <creationDate>September 2023</creationDate>
+  <author>Regular Labs (Peter van Westen)</author>
+  <authorEmail>info@regularlabs.com</authorEmail>
+  <authorUrl>https://regularlabs.com</authorUrl>
+  <copyright>Copyright © 2023 Regular Labs - All Rights Reserved</copyright>
+  <license>GNU General Public License version 2 or later</license>
+  <files>
+    <file module="mod_cachecleaner">mod_cachecleaner.php</file>
+    <file>helper.php</file>
+    <folder>language</folder>
+    <folder>tmpl</folder>
+  </files>
+  <config>
+    <fields name="params" addfieldpath="/libraries/regularlabs/fields">
+      <fieldset name="description">
+        <field name="@load_language" type="rl_loadlanguage" extension="mod_cachecleaner" admin="1"/>
+        <field name="@license" type="rl_license" extension="CACHECLEANER"/>
+        <field name="@version" type="rl_version" extension="CACHECLEANER"/>
+        <field name="@dependency" type="rl_dependency" label="CC_THE_SYSTEM_PLUGIN" file="/plugins/system/cachecleaner/cachecleaner.xml"/>
+        <field name="@header" type="rl_header" label="CACHECLEANER" description="CACHECLEANER_DESC" url="https://regularlabs.com/cachecleaner"/>
+        <field name="@note__settings" type="note" class="alert alert-info" description="CC_SETTINGS,&lt;a href=&quot;index.php?option=com_plugins&amp;filter_folder=system&amp;filter_search=cache cleaner&quot; target=&quot;_blank&quot;&gt;,&lt;/a&gt;"/>
+      </fieldset>
+    </fields>
+  </config>
+</extension>

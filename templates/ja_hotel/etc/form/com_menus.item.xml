@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+ 
+<form>
+ 
+<fields name="params">
+ 
+	<fieldset name="items_params" label="TPL_GROUP_EXTRA_FIELDS_LABEL" description="TPL_GROUP_EXTRA_FIELDS_LABEL_DESC">
+      <field
+	            name="itemlg"
+	            type="text"
+	            global="4"
+	            default="4"
+	            label="TPL_NUMBER_IN_GRID_LG"
+	            description="TPL_NUMBER_IN_GRID_LG_DESC" />
+	    <field
+	            name="itemmd"
+	            type="text"
+	            global="3"
+	            default="4"
+	            label="TPL_NUMBER_IN_GRID_MD"
+	            description="TPL_NUMBER_IN_GRID_MD_DESC" />
+	    <field
+	            name="itemsm"
+	            type="text"
+	            global="2"
+	            default="3"
+	            label="TPL_NUMBER_IN_GRID_SM"
+	            description="TPL_NUMBER_IN_GRID_SM_DESC" />
+	    <field
+	            name="itemsmx"
+	            type="text"
+	            global="1"
+	            default="2"
+	            label="TPL_NUMBER_IN_GRID_SMX"
+	            description="TPL_NUMBER_IN_GRID_SMX_DESC" />
+	    <field
+	            name="itemxs"
+	            type="text"
+	            global="1"
+	            default="1"
+	            label="TPL_NUMBER_IN_GRID_XS"
+	            description="TPL_NUMBER_IN_GRID_XS_DESC" />
+	    <field
+	            name="gutter"
+	            type="text"
+	            global="1"
+	            default="40"
+	            label="TPL_GUTTER_IN_GRID"
+	            description="TPL_GUTTER_IN_GRID_DESC" />
+              
+      <field name="pagination_type" type="list"
+				     description="TPL_INFINITIVE_PAGINATION_DESC"
+				     label="TPL_INFINITIVE_PAGINATION_LABEL"
+             default="1" >
+				<option value="1">TPL_DISABLED</option>
+				<option value="2">TPL_MANUAL</option>
+        <option value="3">TPL_AUTO</option>
+			</field>
+	</fieldset>
+ 
+</fields>
+ 
+</form>

@@ -1,0 +1,50 @@
+screen {
+	xxs: 479;
+	xs: 767;
+	sm: 991;
+	md: 1199;
+	lg: 2048;
+}
+
+
+.magazine-intro img {
+	xxs: 400;
+	lg: 300;
+}
+
+
+
+.solidres .magazine-featured-intro .magazine-item .item-image img {
+	xxs: 480;
+	xs: 800;
+	sm: 400;
+	md: 300;
+	lg: 300;
+}
+
+.magazine-featured .magazine-featured-intro .magazine-item .item-image img {
+	xs: 800;
+	sm: 1000;
+	md: 320;
+	lg: 400;
+}
+
+.videos-featured-list img {
+	lg: 100;
+}
+
+.ja-masonry-wrap img {
+	lg: 300;
+}
+
+
+.block-slideshow-item .block-bg {
+	md: 1200;
+	lg: 1600;
+}
+
+#search-results .carousel-fade .carousel-inner .item img {
+	sm: 990;
+	md: 220;
+	lg: 300;
+}

@@ -1,0 +1,17 @@
+DROP TABLE IF EXISTS 
+`#__rsseo_broken_links`,
+`#__rsseo_competitors`,
+`#__rsseo_data`,
+`#__rsseo_errors`,
+`#__rsseo_error_links`,
+`#__rsseo_error_links_referer`,
+`#__rsseo_gkeywords`,
+`#__rsseo_gkeywords_data`,
+`#__rsseo_keywords`,
+`#__rsseo_logs`,
+`#__rsseo_pages`,
+`#__rsseo_page_images`,
+`#__rsseo_redirects`,
+`#__rsseo_redirects_referer`,
+`#__rsseo_statistics`,
+`#__rsseo_visitors`;

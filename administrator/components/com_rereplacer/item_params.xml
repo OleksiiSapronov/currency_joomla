@@ -1,0 +1,845 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config addfieldpath="/libraries/regularlabs/fields">
+  <fieldset name="header">
+    <field name="name" type="text" default="" class="input-xxlarge input-large-text" required="true" label="JGLOBAL_TITLE" description="RR_NAME_DESC"/>
+  </fieldset>
+  <fieldset name="details">
+    <field name="published" type="list" default="1" size="1" class="chzn-color-state" label="JSTATUS" description="RL_PUBLISHED_DESC">
+      <option value="1">JPUBLISHED</option>
+      <option value="0">JUNPUBLISHED</option>
+      <option value="-2">JTRASHED</option>
+    </field>
+    <field name="description" type="rl_textareaplus" class="input-full" height="160" default="" label="JGLOBAL_DESCRIPTION" description="RR_DESCRIPTION_DESC"/>
+    <field name="category" type="rl_simplecategories" default="" table="rereplacer" label="JCATEGORY" description="JGLOBAL_CHOOSE_CATEGORY_DESC"/>
+  </fieldset>
+  <fieldset name="search">
+    <field name="@showon__search__a" type="rl_showon" value="use_xml:0"/>
+    <field name="@block__search__a" type="rl_block" start="1" label="RR_SEARCH"/>
+    <field name="@note__search_list" type="rl_note" class="alert alert-warning" description="RR_SEARCH_LIST_DESC" showon="regex:0[AND]treat_as_list:1"/>
+    <field name="@note__search_regex" type="rl_note" class="alert alert-warning" description="RR_SEARCH_REGULAR_EXPRESSIONS_DESC" showon="regex:1"/>
+    <field name="@note__search_regex_2" type="rl_note" class="alert alert-info" description="RR_HELP_ON_REGULAR_EXPRESSIONS,&lt;a href=&quot;index.php?rl_qp=1&amp;folder=media.rereplacer.images&amp;file=popup.php&quot; target=&quot;_blank&quot;&gt;,&lt;/a&gt;" showon="regex:1"/>
+    <field name="search" type="rl_codeeditor" height="120" default="" label=""/>
+    <field name="@block__search__b" type="rl_block" end="1"/>
+    <field name="@showon__search__b" type="rl_showon"/>
+  </fieldset>
+  <fieldset name="replace">
+    <field name="@showon__replace__a" type="rl_showon" value="use_xml:0"/>
+    <field name="@block__replace__a" type="rl_block" start="1" label="RR_REPLACE"/>
+    <field name="@note__replace_list" type="rl_note" class="alert alert-warning" description="RR_REPLACE_LIST_DESC" showon="regex:0[AND]treat_as_list:1"/>
+    <field name="@note__replace_regex" type="rl_note" class="alert alert-warning" description="RR_REPLACE_REGULAR_EXPRESSIONS_DESC" showon="regex:1"/>
+    <field name="@note__replace_php" type="rl_note" class="alert alert-warning" description="RR_REPLACE_PHP_DESC" showon="treat_as_php:1"/>
+    <field name="replace" type="rl_codeeditor" height="120" default="" label=""/>
+    <field name="@block__replace__b" type="rl_block" end="1"/>
+    <field name="@showon__replace__b" type="rl_showon"/>
+  </fieldset>
+  <fieldset name="xml">
+    <field name="@showon__xml__a" type="rl_showon" value="use_xml:1"/>
+    <field name="@block__xml__a" type="rl_block" start="1" label="RR_USE_XML_FILE"/>
+    <field name="xml" type="text" size="80" default="" class="span-12" required="true" label="RR_XML_FILE" description="RR_XML_FILE_DESC"/>
+    <field name="@note__search_xml" type="note" class="alert alert-info" label="RR_USING_AN_XML_FILE" description="RR_USING_AN_XML_FILE_DESC"/>
+    <field name="@note__xml_list" type="rl_note" class="alert alert-warning" description="RR_SEARCH_LIST_DESC" showon="regex:0[AND]treat_as_list:1"/>
+    <field name="@note__xml_regex" type="rl_note" class="alert alert-warning" description="RR_SEARCH_REGULAR_EXPRESSIONS_DESC" showon="regex:1"/>
+    <field name="@note__xml_regex_2" type="rl_note" class="alert alert-info" description="RR_HELP_ON_REGULAR_EXPRESSIONS,&lt;a href=&quot;index.php?rl_qp=1&amp;folder=media.rereplacer.images&amp;file=popup.php&quot; target=&quot;_blank&quot;&gt;,&lt;/a&gt;" showon="regex:1"/>
+    <field name="@note__xml_php" type="rl_note" class="alert alert-warning" description="RR_REPLACE_PHP_DESC" showon="treat_as_php:1"/>
+    <field name="@block__xml__b" type="rl_block" end="1"/>
+    <field name="@showon__xml__b" type="rl_showon"/>
+  </fieldset>
+  <fieldset name="options">
+    <field name="use_xml" type="radio" class="btn-group" default="0" label="RR_USE_XML_FILE" description="RR_USE_XML_FILE_DESC">
+      <option value="0">JNO</option>
+      <option value="1">JYES</option>
+    </field>
+    <field name="regex" type="radio" class="btn-group" default="0" label="RR_REGULAR_EXPRESSIONS" description="RR_REGULAR_EXPRESSIONS_DESC">
+      <option value="0">JNO</option>
+      <option value="1">JYES</option>
+    </field>
+    <field name="treat_as_list" type="radio" class="btn-group" default="0" label="RR_TREAT_AS_LIST" description="RR_TREAT_AS_LIST_DESC" showon="regex:0">
+      <option value="0">JNO</option>
+      <option value="1">JYES</option>
+    </field>
+    <field name="word_search" type="radio" class="btn-group" default="0" label="RR_WORD_SEARCH" description="RR_WORD_SEARCH_DESC" showon="regex:0">
+      <option value="0">JNO</option>
+      <option value="1">JYES</option>
+    </field>
+    <field name="s_modifier" type="radio" class="btn-group" default="1" label="RR_USE_S_MODIFIER" description="RR_USE_S_MODIFIER_DESC" showon="regex:1">
+      <option value="0">JNO</option>
+      <option value="1">JYES</option>
+    </field>
+    <field name="casesensitive" type="radio" class="btn-group" default="0" label="RR_CASE_SENSITIVE" description="RR_CASE_SENSITIVE_DESC">
+      <option value="0">JNO</option>
+      <option value="1">JYES</option>
+    </field>
+    <field name="max_replacements" type="number" default="0" size="5" min="0" max="10" step="1" class="input-mini text-right" label="RR_MAX_REPLACEMENTS" description="RR_MAX_REPLACEMENTS_DESC"/>
+    <field name="max_replacements" type="list" size="1" class="input-medium text-center" default="" label="RR_MAX_REPLACEMENTS" description="RR_MAX_REPLACEMENTS_DESC">
+      <option value="" class="text-center">RR_REPLACE_ALL</option>
+      <option value="1" class="text-center">1</option>
+      <option value="2" class="text-center">2</option>
+      <option value="3" class="text-center">3</option>
+      <option value="4" class="text-center">4</option>
+      <option value="5" class="text-center">5</option>
+      <option value="6" class="text-center">6</option>
+      <option value="7" class="text-center">7</option>
+      <option value="8" class="text-center">8</option>
+      <option value="9" class="text-center">9</option>
+      <option value="10" class="text-center">10</option>
+    </field>
+    <field name="thorough" type="radio" class="btn-group" default="0" label="RR_THOROUGH" description="RR_THOROUGH_DESC" showon="max_replacements:">
+      <option value="0">JNO</option>
+      <option value="1">JYES</option>
+    </field>
+    <field name="strip_p_tags" type="radio" class="btn-group" default="0" label="RR_STRIP_SURROUNDING_P_TAGS" description="RR_STRIP_SURROUNDING_P_TAGS_DESC">
+      <option value="0">JNO</option>
+      <option value="1">JYES</option>
+    </field>
+    <field name="treat_as_php" type="radio" class="btn-group" default="0" label="RR_REPLACE_WITH_PHP" description="RR_REPLACE_WITH_PHP_DESC" showon="regex:1[OR]treat_as_list:0">
+      <option value="0">JNO</option>
+      <option value="1">JYES</option>
+    </field>
+  </fieldset>
+  <fieldset name="areas">
+    <field name="area" type="rl_list" default="body" label="RR_ENABLE_IN_AREA" description="RR_ENABLE_IN_AREA_TEMPLATE,RR_ENABLE_IN_AREA_DESC,RR_AREA_CONTENT,RR_AREA_CONTENT_DESC,RR_AREA_COMPONENT,RR_AREA_COMPONENT_DESC,RR_AREA_HEAD,RR_AREA_HEAD_DESC,RR_AREA_BODY,RR_AREA_BODY_DESC,RR_AREA_EVERYWHERE,RR_AREA_EVERYWHERE_DESC">
+      <option value="articles">RR_AREA_CONTENT</option>
+      <option value="component">RR_AREA_COMPONENT</option>
+      <option value="head">RR_AREA_HEAD</option>
+      <option value="body">RR_AREA_BODY</option>
+      <option value="everywhere">RR_AREA_EVERYWHERE</option>
+    </field>
+    <field name="@showon__areas_articles__a" type="rl_showon" value="area:articles"/>
+    <field name="@note__areas_articles" type="note" class="alert alert-info" description="RR_AREA_CONTENT_NOTE"/>
+    <field name="enable_in_category" type="radio" class="btn-group" default="1" label="RR_ENABLE_IN_CATEGORY" description="RR_ENABLE_IN_CATEGORY_DESC">
+      <option value="0">JNO</option>
+      <option value="1">JYES</option>
+    </field>
+    <field name="enable_in_title" type="radio" class="btn-group" default="1" label="RR_ENABLE_IN_TITLE" description="RR_ENABLE_IN_TITLE_DESC">
+      <option value="0">JNO</option>
+      <option value="1">JYES</option>
+    </field>
+    <field name="enable_in_author" type="radio" class="btn-group" default="1" label="RR_ENABLE_IN_AUTHOR" description="RR_ENABLE_IN_AUTHOR_DESC">
+      <option value="0">JNO</option>
+      <option value="1">JYES</option>
+    </field>
+    <field name="@showon__areas_articles__b" type="rl_showon"/>
+    <field name="enable_in_feeds" type="radio" class="btn-group" default="1" label="RR_ENABLE_IN_FEEDS" description="RR_ENABLE_IN_FEEDS_DESC">
+      <option value="0">JNO</option>
+      <option value="1">JYES</option>
+      <option value="2">RL_ONLY</option>
+    </field>
+    <field name="enable_in_admin" type="radio" class="btn-group" default="0" label="RR_ENABLE_IN_ADMIN" description="RR_ENABLE_IN_ADMIN_DESC">
+      <option value="0">JNO</option>
+      <option value="1">JYES</option>
+      <option value="2">RL_ONLY</option>
+    </field>
+    <field name="@note__areas_enable_in_admin" type="note" class="alert alert-notice" description="RR_ENABLE_IN_ADMIN_ARE_YOU_SURE" showon="enable_in_admin:1,2"/>
+    <field name="enable_in_edit_forms" type="radio" class="btn-group" default="0" label="RR_ENABLE_IN_EDIT_FORMS" description="RR_ENABLE_IN_EDIT_FORMS_DESC">
+      <option value="0">JNO</option>
+      <option value="1">JYES</option>
+    </field>
+    <field name="@note__enable_in_edit_forms" type="note" class="alert alert-danger" description="RR_ENABLE_IN_EDIT_FORMS_ARE_YOU_SURE" showon="enable_in_edit_forms:1"/>
+    <field name="between_start" type="text" size="80" default="" label="RR_ONLY_BETWEEN_START" description="%s&lt;br&gt;&lt;br&gt;%s,RR_ONLY_BETWEEN_DESC,RR_ONLY_BETWEEN_EXAMPLE"/>
+    <field name="between_end" type="text" size="80" default="" label="RR_ONLY_BETWEEN_END" description="%s&lt;br&gt;&lt;br&gt;%s,RR_ONLY_BETWEEN_DESC,RR_ONLY_BETWEEN_EXAMPLE"/>
+    <field name="enable_tags" type="radio" class="btn-group" default="1" label="RR_ENABLE_IN_TAGS" description="RR_ENABLE_IN_TAGS_DESC">
+      <option value="0">JNO</option>
+      <option value="1">JYES</option>
+      <option value="2">RL_ONLY</option>
+    </field>
+    <field name="limit_tagselect" type="radio" class="btn-group" default="0" label="RR_LIMIT_TO_TAG_SELECTION" description="RR_LIMIT_TO_TAG_SELECTION_DESC" showon="enable_tags:1,2">
+      <option value="0">JNO</option>
+      <option value="1">JYES</option>
+    </field>
+    <field name="tagselect" type="text" size="100" default="*[title,alt]_meta[content]" label="RR_TAG_SELECTION" description="RR_TAG_SELECTION_DESC" showon="enable_tags:1,2[AND]limit_tagselect:1"/>
+  </fieldset>
+  <fieldset name="assignments">
+    <field name="match_method" type="radio" class="btn-group" default="and" label="RL_MATCHING_METHOD" description="RL_MATCHING_METHOD_DESC,RL_ALL,RL_ALL_DESC,RL_ANY,RL_ANY_DESC">
+      <option value="and">RL_ALL</option>
+      <option value="or">RL_ANY</option>
+    </field>
+    <field name="@note__and" type="note" class="alert alert-info" description="RL_ALL_DESC" showon="match_method:and"/>
+    <field name="@note__or" type="note" class="alert alert-info" description="RL_ANY_DESC" showon="match_method:or"/>
+    <field name="show_assignments" type="radio" class="btn-group" default="1" label="RL_SHOW_ASSIGNMENTS" description="RL_SHOW_ASSIGNMENTS_DESC">
+      <option value="1">JALL</option>
+      <option value="2">RL_SELECTED</option>
+    </field>
+    <field name="@note__show_assignments" type="note" class="alert alert-info" description="RL_SHOW_ASSIGNMENTS_SELECTED_DESC" showon="show_assignments:2"/>
+    <!-- MENU ITEMS -->
+    <field name="assignto_menuitems" type="rl_conditionselection" label="RL_MENU_ITEMS"/>
+    <field name="assignto_menuitems_selection" type="rl_menuitems" multiple="true" default="" label="RL_SELECTION" description="RL_MENU_ITEMS_DESC"/>
+    <field name="assignto_menuitems_inc_children" type="radio" class="btn-group btn-group-yesno" default="0" label="RL_ALSO_ON_CHILD_ITEMS" description="RL_ALSO_ON_CHILD_ITEMS_DESC">
+      <option value="0">JNO</option>
+      <option value="1">JYES</option>
+      <option value="2">RL_ONLY</option>
+    </field>
+    <field name="@note__menuitems_inc_children" type="note" class="well well-small" description="RL_ALSO_ON_CHILD_ITEMS_MENUITEMS_DESC" showon="assignto_menuitems_inc_children:1,2"/>
+    <field name="assignto_menuitems_inc_noitemid" type="radio" class="btn-group btn-group-yesno" default="0" label="RL_INCLUDE_NO_ITEMID" description="RL_INCLUDE_NO_ITEMID_DESC">
+      <option value="0">JNO</option>
+      <option value="1">JYES</option>
+    </field>
+    <field name="@assignto_menuitems" type="rl_conditionselection"/>
+    <!-- HOMEPAGE -->
+    <field name="assignto_homepage" type="rl_conditionselection" label="RL_HOME_PAGE"/>
+    <field name="@note__homepage" type="note" description="RL_HOME_PAGE_DESC"/>
+    <field name="@assignto_homepage" type="rl_conditionselection"/>
+    <!-- DATE -->
+    <field name="@showon__group_date__a" type="rl_showon" value="show_assignments:1[OR]assignto_date:1,2[OR]assignto_seasons:1,2[OR]assignto_months:1,2[OR]assignto_days:1,2[OR]assignto_time:1,2"/>
+    <field name="@block__group_date__a" type="rl_block" start="1" label="RL_DATE_TIME"/>
+    <field name="assignto_date" type="rl_conditionselection" label="RL_DATE"/>
+    <field name="assignto_date_publish_up" type="calendar" showtime="true" filter="user_utc" format="%Y-%m-%d %H:%M" default="" label="RL_START_PUBLISHING" description="RL_START_PUBLISHING_DESC"/>
+    <field name="assignto_date_publish_down" type="calendar" showtime="true" filter="user_utc" format="%Y-%m-%d %H:%M" default="" label="RL_FINISH_PUBLISHING" description="RL_FINISH_PUBLISHING_DESC"/>
+    <field name="assignto_date_recurring" type="radio" class="btn-group btn-group-yesno" default="0" label="RL_DATE_RECURRING" description="RL_DATE_RECURRING_DESC">
+      <option value="0">JNO</option>
+      <option value="1">JYES</option>
+    </field>
+    <field name="@note__assignto_date_1" type="note" description="RL_DATE_TIME_DESC"/>
+    <field name="@note__assignto_date_2" type="rl_datetime" format="Y-m-d H:i" label="RL_CURRENT_DATE"/>
+    <field name="@assignto_date" type="rl_conditionselection"/>
+    <field name="assignto_seasons" type="rl_conditionselection" label="RL_SEASONS"/>
+    <field name="assignto_seasons_selection" type="rl_list" multiple="true" default="" label="RL_SELECTION" description="RL_SEASONS_DESC">
+      <option value="winter">RL_WINTER</option>
+      <option value="spring">RL_SPRING</option>
+      <option value="summer">RL_SUMMER</option>
+      <option value="fall">RL_FALL</option>
+    </field>
+    <field name="assignto_seasons_hemisphere" type="radio" class="btn-group" default="northern" label="RL_HEMISPHERE" description="RL_HEMISPHERE_DESC">
+      <option value="northern">RL_NORTHERN</option>
+      <option value="southern">RL_SOUTHERN</option>
+      <option value="australia">RL_AUSTRALIA</option>
+    </field>
+    <field name="@assignto_seasons" type="rl_conditionselection"/>
+    <field name="assignto_months" type="rl_conditionselection" label="RL_MONTHS"/>
+    <field name="assignto_months_selection" type="rl_list" multiple="true" default="" label="RL_SELECTION" description="RL_MONTHS_DESC">
+      <option value="1">JANUARY</option>
+      <option value="2">FEBRUARY</option>
+      <option value="3">MARCH</option>
+      <option value="4">APRIL</option>
+      <option value="5">MAY</option>
+      <option value="6">JUNE</option>
+      <option value="7">JULY</option>
+      <option value="8">AUGUST</option>
+      <option value="9">SEPTEMBER</option>
+      <option value="10">OCTOBER</option>
+      <option value="11">NOVEMBER</option>
+      <option value="12">DECEMBER</option>
+    </field>
+    <field name="@assignto_months" type="rl_conditionselection"/>
+    <field name="assignto_days" type="rl_conditionselection" label="RL_DAYS"/>
+    <field name="assignto_days_selection" type="rl_list" multiple="true" default="" label="RL_SELECTION" description="RL_DAYS_DESC">
+      <option value="1">MONDAY</option>
+      <option value="2">TUESDAY</option>
+      <option value="3">WEDNESDAY</option>
+      <option value="4">THURSDAY</option>
+      <option value="5">FRIDAY</option>
+      <option value="6">SATURDAY</option>
+      <option value="7">SUNDAY</option>
+    </field>
+    <field name="@assignto_days" type="rl_conditionselection"/>
+    <field name="assignto_time" type="rl_conditionselection" label="RL_TIME"/>
+    <field name="assignto_time_publish_up" type="text" size="10" default="0:00" class="input input-mini" label="RL_START_PUBLISHING" description="RL_TIME_START_PUBLISHING_DESC"/>
+    <field name="assignto_time_publish_down" type="text" size="10" default="0:00" class="input input-mini" label="RL_FINISH_PUBLISHING" description="RL_TIME_FINISH_PUBLISHING_DESC"/>
+    <field name="@note__assignto_time_1" type="note" description="RL_DATE_TIME_DESC"/>
+    <field name="@note__assignto_time_2" type="rl_datetime" format="Y-m-d H:i" label="RL_CURRENT_DATE"/>
+    <field name="@assignto_time" type="rl_conditionselection"/>
+    <field name="@block__group_date__b" type="rl_block" end="1"/>
+    <field name="@showon__group_date__b" type="rl_showon"/>
+    <!-- LANGUAGES -->
+    <field name="assignto_languages" type="rl_conditionselection" label="RL_LANGUAGES"/>
+    <field name="assignto_languages_selection" type="rl_languages" multiple="true" default="" label="RL_SELECTION" description="RL_LANGUAGES_DESC"/>
+    <field name="@assignto_languages" type="rl_conditionselection"/>
+    <!-- CONTENT -->
+    <field name="@load_language_content" type="rl_loadlanguage" extension="com_content"/>
+    <field name="@load_language_content_sys" type="rl_loadlanguage" extension="com_content.sys"/>
+    <field name="@showon__content__a" type="rl_showon" value="show_assignments:1[OR]assignto_contentpagetypes:1,2[OR]assignto_cats:1,2[OR]assignto_articles:1,2"/>
+    <field name="@block__content__a" type="rl_block" start="1" label="RL_JCONTENT"/>
+    <field name="assignto_contentpagetypes" type="rl_conditionselection" label="RL_PAGE_TYPES"/>
+    <field name="assignto_contentpagetypes_selection" type="rl_list" multiple="true" default="" label="RL_SELECTION" description="RL_PAGE_TYPES_DESC">
+      <option value="archive">COM_CONTENT_ARCHIVE_VIEW_DEFAULT_TITLE</option>
+      <option value="article">COM_CONTENT_ARTICLE_VIEW_DEFAULT_TITLE</option>
+      <option value="categories">COM_CONTENT_CATEGORIES_VIEW_DEFAULT_TITLE</option>
+      <option value="categoryblog">COM_CONTENT_CATEGORY_VIEW_BLOG_TITLE</option>
+      <option value="category">COM_CONTENT_CATEGORY_VIEW_DEFAULT_TITLE</option>
+      <option value="featured">COM_CONTENT_FEATURED_VIEW_DEFAULT_TITLE</option>
+      <option value="form">COM_CONTENT_FORM_VIEW_DEFAULT_TITLE</option>
+    </field>
+    <field name="@assignto_contentpagetypes" type="rl_conditionselection"/>
+    <field name="assignto_cats" type="rl_conditionselection" label="RL_CATEGORIES"/>
+    <field name="assignto_cats_selection" type="rl_content" group="categories" multiple="true" default="" label="RL_SELECTION" description="RL_CATEGORIES_DESC"/>
+    <field name="assignto_cats_inc_children" type="radio" class="btn-group btn-group-yesno" default="0" label="RL_ALSO_ON_CHILD_ITEMS" description="RL_ALSO_ON_CHILD_ITEMS_DESC">
+      <option value="0">JNO</option>
+      <option value="1">JYES</option>
+      <option value="2">RL_ONLY</option>
+    </field>
+    <field name="assignto_cats_inc" type="rl_checkbox" default="inc_cats,inc_arts" label="RL_PAGE_TYPES" description="RL_PAGE_TYPES_DESC">
+      <option value="inc_cats">RL_CATEGORIES</option>
+      <option value="inc_arts">RL_ARTICLES</option>
+      <option value="inc_others">RL_OTHERS</option>
+    </field>
+    <field name="@assignto_cats" type="rl_conditionselection"/>
+    <field name="assignto_articles" type="rl_conditionselection" label="RL_ARTICLES"/>
+    <field name="assignto_articles_selection" type="rl_content" group="items" multiple="true" default="" label="RL_SELECTION" description="RL_ARTICLES_DESC"/>
+    <field name="assignto_articles_featured" type="radio" class="btn-group rl_has-ignore" default="" label="JFEATURED" description="RL_FEATURED_DESC">
+      <option value="">RL_IGNORE</option>
+      <option value="1">JYES</option>
+      <option value="0">JNO</option>
+    </field>
+    <field name="assignto_articles_date" type="rl_list" default="" label="RL_DATE" description="RL_DATE_DESC">
+      <option value="">RL_IGNORE</option>
+      <option value="created">COM_CONTENT_FIELD_CREATED_LABEL</option>
+      <option value="modified">JGLOBAL_FIELD_MODIFIED_LABEL</option>
+      <option value="publish_up">COM_CONTENT_FIELD_PUBLISH_UP_LABEL</option>
+      <option value="publish_down">COM_CONTENT_FIELD_PUBLISH_DOWN_LABEL</option>
+    </field>
+    <field name="@showon__assignto_articles_date__a" type="rl_showon" value="assignto_articles_date!:"/>
+    <field name="assignto_articles_date_comparison" type="rl_list" default="fromto" label="" showon="assignto_articles_date!:">
+      <option value="fromto">RL_FROM_TO</option>
+      <option value="before">RL_BEFORE</option>
+      <option value="after">RL_AFTER</option>
+    </field>
+    <field name="@showon__assignto_articles_date_comparison__a" type="rl_showon" value="assignto_articles_date_comparison:before[OR]assignto_articles_date_comparison:after"/>
+    <field name="assignto_articles_date_type" type="radio" class="btn-group" default="specific" label="">
+      <option value="specific">RL_SPECIFY</option>
+      <option value="now">NOW</option>
+    </field>
+    <field name="assignto_articles_date_date" type="calendar" showtime="true" filter="user_utc" format="%Y-%m-%d %H:%M" default="" label="" showon="assignto_articles_date_type:specific"/>
+    <field name="@showon__assignto_articles_date_comparison__b" type="rl_showon"/>
+    <field name="assignto_articles_date_from" type="calendar" showtime="true" filter="user_utc" format="%Y-%m-%d %H:%M" default="" label="RL_DATE_FROM" showon="assignto_articles_date_comparison:fromto"/>
+    <field name="assignto_articles_date_to" type="calendar" showtime="true" filter="user_utc" format="%Y-%m-%d %H:%M" default="" label="RL_DATE_TO" showon="assignto_articles_date_comparison:fromto"/>
+    <field name="@showon__assignto_articles_date__b" type="rl_showon"/>
+    <field name="assignto_articles_authors" type="rl_users" multiple="true" show_current="true" default="" label="RL_ARTICLE_AUTHORS" description="RL_ARTICLE_AUTHORS_DESC"/>
+    <field name="assignto_articles_content_keywords" type="rl_textareaplus" height="40" default="" label="RL_CONTENT_KEYWORDS" description="RL_CONTENT_KEYWORDS_DESC"/>
+    <field name="assignto_articles_keywords" type="rl_textareaplus" height="40" default="" label="RL_META_KEYWORDS" description="RL_META_KEYWORDS_DESC"/>
+    <field name="assignto_articles_fields" type="rl_subform" icon="list" layout="repeatable-table" multiple="true" label="JGLOBAL_FIELDS" description="RL_FIELDS_DESC">
+      <form>
+        <fields>
+          <fieldset>
+            <field name="field" type="rl_field" label="RL_FIELD"/>
+            <field name="field_comparison" type="list" default="equals" label="RL_COMPARISON" description="RL_COMPARISON_DESC">
+              <option value="equals">RL_EQUALS</option>
+              <option value="not_equals">RL_NOT_EQUALS</option>
+              <option value="contains">RL_CONTAINS</option>
+              <option value="contains_one">RL_CONTAINS_ONE</option>
+              <option value="not_contains">RL_NOT_CONTAINS</option>
+              <option value="begins_with">RL_BEGINS_WITH</option>
+              <option value="ends_with">RL_ENDS_WITH</option>
+              <option value="less_than">RL_LESS_THAN</option>
+              <option value="greater_than">RL_GREATER_THAN</option>
+              <option value="regex">RL_REGEX</option>
+            </field>
+            <field name="field_value" type="text" default="" label="RL_FIELD_VALUE" hint="RL_FIELD_VALUE"/>
+          </fieldset>
+        </fields>
+      </form>
+    </field>
+    <field name="@assignto_articles" type="rl_conditionselection"/>
+    <field name="@block__content__b" type="rl_block" end="1"/>
+    <field name="@showon__content__b" type="rl_showon"/>
+    <!-- TAGS -->
+    <field name="assignto_tags" type="rl_conditionselection" label="RL_TAGS"/>
+    <field name="assignto_tags_selection" type="rl_tags" multiple="true" default="" label="RL_SELECTION" description="RL_TAGS_DESC"/>
+    <field name="assignto_tags_match_all" type="radio" class="btn-group btn-group-yesno" default="0" label="RL_MATCH_ALL" description="RL_MATCH_ALL_DESC">
+      <option value="0">JNO</option>
+      <option value="1">JYES</option>
+    </field>
+    <field name="@showon__tags_match_all__a" type="rl_showon" value="assignto_tags_match_all:0"/>
+    <field name="assignto_tags_inc_children" type="radio" class="btn-group btn-group-yesno" default="0" label="RL_ALSO_ON_CHILD_ITEMS" description="RL_ALSO_ON_CHILD_ITEMS_DESC">
+      <option value="0">JNO</option>
+      <option value="1">JYES</option>
+      <option value="2">RL_ONLY</option>
+    </field>
+    <field name="@showon__tags_match_all__b" type="rl_showon"/>
+    <field name="@assignto_tags" type="rl_conditionselection"/>
+    <!-- USER GROUPS -->
+    <field name="assignto_usergrouplevels" type="rl_conditionselection" label="RL_USER_GROUP_LEVELS"/>
+    <field name="assignto_usergrouplevels_selection" type="rl_grouplevel" multiple="true" notregistered="1" default="" label="RL_SELECTION" description="RL_USER_GROUPS_DESC"/>
+    <field name="assignto_usergrouplevels_match_all" type="radio" class="btn-group btn-group-yesno" default="0" label="RL_MATCH_ALL" description="RL_MATCH_ALL_DESC">
+      <option value="0">JNO</option>
+      <option value="1">JYES</option>
+    </field>
+    <field name="@showon__usergrouplevels_match_all__a" type="rl_showon" value="assignto_usergrouplevels_match_all:0"/>
+    <field name="assignto_usergrouplevels_inc_children" type="radio" class="btn-group btn-group-yesno" default="0" label="RL_ALSO_ON_CHILD_ITEMS" description="RL_ALSO_ON_CHILD_ITEMS_DESC">
+      <option value="0">JNO</option>
+      <option value="1">JYES</option>
+      <option value="2">RL_ONLY</option>
+    </field>
+    <field name="@showon__usergrouplevels_match_all__b" type="rl_showon"/>
+    <field name="@assignto_usergrouplevels" type="rl_conditionselection"/>
+    <!-- USERS -->
+    <field name="assignto_users" type="rl_conditionselection" label="RL_USERS"/>
+    <field name="assignto_users_selection" type="rl_users" multiple="true" default="" label="RL_USER_IDS" description="RL_USER_IDS_DESC"/>
+    <field name="@assignto_users" type="rl_conditionselection"/>
+    <!-- COMPONENTS -->
+    <field name="assignto_components" type="rl_conditionselection" label="RL_COMPONENTS"/>
+    <field name="assignto_components_selection" type="rl_components" multiple="true" admin="1" show_content="1" default="" label="RL_SELECTION" description="RL_COMPONENTS_DESC"/>
+    <field name="@assignto_components" type="rl_conditionselection"/>
+    <!-- TEMPLATES -->
+    <field name="assignto_templates" type="rl_conditionselection" label="RL_TEMPLATES"/>
+    <field name="assignto_templates_selection" type="rl_templates" multiple="true" default="" label="RL_SELECTION" description="RL_TEMPLATES_DESC"/>
+    <field name="@assignto_templates" type="rl_conditionselection"/>
+    <!-- URLS -->
+    <field name="assignto_urls" type="rl_conditionselection" label="RL_URL"/>
+    <field name="assignto_urls_selection" type="rl_textareaplus" texttype="regex" default="" label="RL_URL_PARTS" description="RL_URL_PARTS_DESC"/>
+    <field name="@note__urls" type="note" description="RL_URL_PARTS_DESC"/>
+    <field name="assignto_urls_casesensitive" type="radio" class="btn-group btn-group-yesno" default="0" label="RL_CASE_SENSITIVE" description="RL_URL_PARTS_CASE_SENSITIVE">
+      <option value="0">JNO</option>
+      <option value="1">JYES</option>
+    </field>
+    <field name="assignto_urls_regex" type="radio" class="btn-group btn-group-yesno" default="0" label="RL_REGULAR_EXPRESSIONS" description="RL_REGULAR_EXPRESSIONS_DESC">
+      <option value="0">JNO</option>
+      <option value="1">JYES</option>
+    </field>
+    <field name="@note__urls_regex" type="note" class="alert alert-danger" description="RL_URL_PARTS_REGEX" showon="assignto_urls_regex:1"/>
+    <field name="@assignto_urls" type="rl_conditionselection"/>
+    <!-- DEVICES -->
+    <field name="assignto_devices" type="rl_conditionselection" label="RL_DEVICES"/>
+    <field name="@note__devices" type="note" description="RL_DEVICES_DESC"/>
+    <field name="assignto_devices_selection" type="rl_list" multiple="true" default="" label="RL_SELECTION" description="RL_DEVICES_DESC">
+      <option value="desktop">RL_DEVICE_DESKTOP</option>
+      <option value="tablet">RL_DEVICE_TABLET</option>
+      <option value="mobile">RL_DEVICE_MOBILE</option>
+    </field>
+    <field name="@assignto_devices" type="rl_conditionselection"/>
+    <!-- OPERATING SYSTEMS -->
+    <field name="assignto_os" type="rl_conditionselection" label="RL_OS"/>
+    <field name="@note__os" type="note" description="RL_OS_DESC"/>
+    <field name="assignto_os_selection" type="rl_agents" group="os" multiple="true" default="" label="RL_SELECTION" description="RL_OS_DESC"/>
+    <field name="@assignto_os" type="rl_conditionselection"/>
+    <!-- BROWSERS -->
+    <field name="assignto_browsers" type="rl_conditionselection" label="RL_BROWSERS"/>
+    <field name="@note__browsers" type="note" description="RL_BROWSERS_DESC"/>
+    <field name="assignto_browsers_selection" type="rl_agents" group="browsers" multiple="true" default="" label="RL_BROWSERS" description="RL_BROWSERS_DESC"/>
+    <field name="assignto_mobile_selection" type="rl_agents" group="mobile" multiple="true" default="" label="RL_MOBILE_BROWSERS" description="RL_BROWSERS_DESC"/>
+    <field name="@assignto_browsers" type="rl_conditionselection"/>
+    <!-- IPS -->
+    <field name="assignto_ips" type="rl_conditionselection" label="RL_IPS"/>
+    <field name="assignto_ips_selection" type="rl_textareaplus" texttype="regex" default="" label="RL_IP_RANGES" description="RL_IP_RANGES_DESC"/>
+    <field name="@note__ips" type="note" description="RL_IP_RANGES_DESC"/>
+    <field name="@assignto_ips" type="rl_conditionselection"/>
+    <!-- GEO LOCATION -->
+    <field name="@showon__group_geo__a" type="rl_showon" value="show_assignments:1[OR]assignto_geocontinents:1,2[OR]assignto_geocountries:1,2[OR]assignto_georegions:1,2[OR]assignto_geopostalcodes:1,2"/>
+    <field name="@block__group_geo__a" type="rl_block" start="1" label="RL_GEO"/>
+    <field name="@showon__group_geo_1a" type="rl_showon" value="assignto_geocontinents:1,2[OR]assignto_geocountries:1,2[OR]assignto_georegions:1,2[OR]assignto_geopostalcodes:1,2"/>
+    <field name="@note__group_geo_1" type="note" description="RL_GEO_DESC"/>
+    <field name="@note__group_geo_2" type="rl_note" class="muted" description="RL_GEO_GEOIP_COPYRIGHT_DESC,&lt;a href=&quot;http://www.maxmind.com&quot; target=&quot;_blank&quot;&gt;http://www.maxmind.com&lt;/a&gt;" showon="has_geoip_library:1"/>
+    <field name="@note__group_geo_no_geoip_library" type="rl_note" class="alert alert-danger" description="RL_GEO_NO_GEOIP_LIBRARY,&lt;a href=&quot;https://regularlabs.com/geoip&quot; class=&quot;btn&quot; target=&quot;_blank&quot;&gt;,&lt;/a&gt;" showon="has_geoip_library:0"/>
+    <field name="@showon__group_geo_1b" type="rl_showon"/>
+    <field name="has_geoip_library" type="rl_isinstalled" extension="geoip" extension_type="library"/>
+    <field name="assignto_geocontinents" type="rl_conditionselection" label="RL_CONTINENTS"/>
+    <field name="assignto_geocontinents_selection" type="rl_geo" group="continents" multiple="true" default="" label="RL_CONTINENTS" description="RL_CONTINENTS_DESC"/>
+    <field name="@assignto_geocontinents" type="rl_conditionselection"/>
+    <field name="assignto_geocountries" type="rl_conditionselection" label="RL_COUNTRIES"/>
+    <field name="assignto_geocountries_selection" type="rl_geo" group="countries" multiple="true" default="" label="RL_COUNTRIES" description="RL_COUNTRIES_DESC"/>
+    <field name="@assignto_geocountries" type="rl_conditionselection"/>
+    <field name="assignto_georegions" type="rl_conditionselection" label="RL_REGIONS"/>
+    <field name="assignto_georegions_selection" type="rl_geo" group="regions" multiple="true" default="" label="RL_REGIONS" description="RL_REGIONS_DESC"/>
+    <field name="@assignto_georegions" type="rl_conditionselection"/>
+    <field name="assignto_geopostalcodes" type="rl_conditionselection" label="RL_POSTALCODES"/>
+    <field name="assignto_geopostalcodes_selection" type="rl_textareaplus" height="40" default="" label="RL_POSTALCODES"/>
+    <field name="@note__geopostalcodes" type="note" description="RL_POSTALCODES_DESC,&lt;a href=&quot;https://www.maxmind.com/en/locate-my-ip-address/&quot; target=&quot;_blank&quot;&gt;,&lt;/a&gt;"/>
+    <field name="@assignto_geopostalcodes" type="rl_conditionselection"/>
+    <field name="@block__group_geo__b" type="rl_block" end="1"/>
+    <field name="@showon__group_geo__b" type="rl_showon"/>
+    <!-- EASYBLOG -->
+    <field name="@showon__has_easyblog__a" type="rl_showon" value="has_easyblog:1" form="root"/>
+    <field name="@load_language_easyblog_sys" type="rl_loadlanguage" extension="com_easyblog.sys"/>
+    <field name="@showon__easyblog__a" type="rl_showon" value="show_assignments:1[OR]assignto_easyblogpagetypes:1,2[OR]assignto_easyblogcats:1,2[OR]assignto_easyblogtags:1,2[OR]assignto_easyblogitems:1,2"/>
+    <field name="@block__easyblog__a" type="rl_block" start="1" label="COM_EASYBLOG"/>
+    <field name="assignto_easyblogpagetypes" type="rl_conditionselection" label="RL_PAGE_TYPES"/>
+    <field name="assignto_easyblogpagetypes_selection" type="rl_list" multiple="true" default="" label="RL_SELECTION" description="RL_PAGE_TYPES_DESC">
+      <option value="archive">COM_EASYBLOG_MENU_ARCHIVE_LAYOUT</option>
+      <option value="blogger">COM_EASYBLOG_MENU_BLOGGERS_LAYOUT</option>
+      <option value="categories">COM_EASYBLOG_MENU_CATEGORIES_LAYOUT</option>
+      <option value="dashboard">COM_EASYBLOG_MENU_DASHBOARD_LAYOUT</option>
+      <option value="entry">COM_EASYBLOG_MENU_ENTRY_LAYOUT</option>
+      <option value="featured">COM_EASYBLOG_MENU_FEATURED_LAYOUT</option>
+      <option value="grid">COM_EASYBLOG_GRID_MENU_LAYOUT</option>
+      <option value="latest">COM_EASYBLOG_MENU_FRONTPAGE_LAYOUT</option>
+      <option value="login">COM_EASYBLOG_MENU_LOGIN_LAYOUT</option>
+      <option value="magazine">COM_EASYBLOG_MAGAZINE_MENU_LAYOUT</option>
+      <option value="myblog">COM_EASYBLOG_MENU_MYBLOG_LAYOUT</option>
+      <option value="search">COM_EASYBLOG_MENU_SEARCH_LAYOUT</option>
+      <option value="subscription">COM_EASYBLOG_MENU_SUBSCRIPTION_LAYOUT</option>
+      <option value="tags">COM_EASYBLOG_MENU_TAGS_LAYOUT</option>
+      <option value="teamblog">COM_EASYBLOG_MENU_TEAMBLOG_LAYOUT</option>
+    </field>
+    <field name="@assignto_easyblogpagetypes" type="rl_conditionselection"/>
+    <field name="assignto_easyblogcats" type="rl_conditionselection" label="RL_CATEGORIES"/>
+    <field name="assignto_easyblogcats_selection" type="rl_easyblog" group="categories" multiple="true" default="" label="RL_SELECTION" description="RL_CATEGORIES_DESC"/>
+    <field name="assignto_easyblogcats_inc_children" type="radio" class="btn-group btn-group-yesno" default="0" label="RL_ALSO_ON_CHILD_ITEMS" description="RL_ALSO_ON_CHILD_ITEMS_DESC">
+      <option value="0">JNO</option>
+      <option value="1">JYES</option>
+      <option value="2">RL_ONLY</option>
+    </field>
+    <field name="assignto_easyblogcats_inc" type="rl_checkbox" default="inc_cats,inc_items" label="RL_PAGE_TYPES" description="RL_PAGE_TYPES_DESC">
+      <option value="inc_cats">RL_CATEGORIES</option>
+      <option value="inc_items">RL_ITEMS</option>
+    </field>
+    <field name="@assignto_easyblogcats" type="rl_conditionselection"/>
+    <field name="assignto_easyblogtags" type="rl_conditionselection" label="RL_TAGS"/>
+    <field name="assignto_easyblogtags_selection" type="rl_easyblog" group="tags" multiple="true" default="" label="RL_SELECTION" description="RL_TAGS_DESC"/>
+    <field name="assignto_easyblogtags_inc" type="rl_checkbox" default="inc_tags,inc_items" label="RL_PAGE_TYPES" description="RL_PAGE_TYPES_DESC">
+      <option value="inc_tags">RL_TAGS</option>
+      <option value="inc_items">RL_ITEMS</option>
+    </field>
+    <field name="@assignto_easyblogtags" type="rl_conditionselection"/>
+    <field name="assignto_easyblogitems" type="rl_conditionselection" label="RL_ITEMS"/>
+    <field name="assignto_easyblogitems_selection" type="rl_easyblog" group="items" multiple="true" default="" label="RL_SELECTION" description="RL_ITEMS_DESC"/>
+    <field name="assignto_easyblogitems_authors" type="rl_users" multiple="true" default="" label="RL_ARTICLE_AUTHORS" description="RL_ARTICLE_AUTHORS_DESC"/>
+    <field name="@assignto_easyblogitems" type="rl_conditionselection"/>
+    <field name="@block__easyblog__b" type="rl_block" end="1"/>
+    <field name="@showon__easyblog__b" type="rl_showon"/>
+    <field name="@showon__has_easyblog__b" type="rl_showon"/>
+    <!-- FLEXICONTENT -->
+    <field name="@showon__has_flexicontent__a" type="rl_showon" value="has_flexicontent:1" form="root"/>
+    <field name="@load_language_flexicontent_sys" type="rl_loadlanguage" extension="com_flexicontent.sys"/>
+    <field name="@showon__flexicontent__a" type="rl_showon" value="show_assignments:1[OR]assignto_flexicontentpagetypes:1,2[OR]assignto_flexicontenttags:1,2[OR]assignto_flexicontenttypes:1,2"/>
+    <field name="@block__flexicontent__a" type="rl_block" start="1" label="COM_FLEXICONTENT"/>
+    <field name="@note__flexicontent_1a" type="note" class="alert alert-info" description="RL_USE_CONTENT_ASSIGNMENTS" showon="assignto_flexicontentpagetypes:1,2[OR]assignto_flexicontenttags:1,2[OR]assignto_flexicontenttypes:1,2"/>
+    <field name="@load_language_search_sys" type="rl_loadlanguage" extension="com_search.sys"/>
+    <field name="assignto_flexicontentpagetypes" type="rl_conditionselection" label="RL_PAGE_TYPES"/>
+    <field name="assignto_flexicontentpagetypes_selection" type="rl_list" multiple="true" default="" label="RL_SELECTION" description="RL_PAGE_TYPES_DESC">
+      <option value="author">FLEXICONTENT_AUTHOR</option>
+      <option value="category">FLEXICONTENT_CATEGORY</option>
+      <option value="myitems">FLEXICONTENT_MYITEMS</option>
+      <option value="favourites">FLEXICONTENT_FAVOURITES</option>
+      <option value="flexicontent">FLEXICONTENT_MAIN</option>
+      <option value="item">FLEXICONTENT_ITEM</option>
+      <option value="search">COM_SEARCH</option>
+      <option value="tags">FLEXICONTENT_TAGS</option>
+    </field>
+    <field name="@assignto_flexicontentpagetypes" type="rl_conditionselection"/>
+    <field name="assignto_flexicontenttags" type="rl_conditionselection" label="RL_TAGS"/>
+    <field name="assignto_flexicontenttags_selection" type="rl_flexicontent" group="tags" multiple="true" default="" label="RL_SELECTION" description="RL_TAGS_DESC"/>
+    <field name="assignto_flexicontenttags_inc" type="rl_checkbox" default="inc_tags,inc_items" label="RL_PAGE_TYPES" description="RL_PAGE_TYPES_DESC">
+      <option value="inc_tags">RL_TAGS</option>
+      <option value="inc_items">RL_ITEMS</option>
+    </field>
+    <field name="@assignto_flexicontenttags" type="rl_conditionselection"/>
+    <field name="assignto_flexicontenttypes" type="rl_conditionselection" label="RL_TYPES"/>
+    <field name="assignto_flexicontenttypes_selection" type="rl_flexicontent" group="types" multiple="true" default="" label="RL_SELECTION" description="RL_TYPES_DESC"/>
+    <field name="@assignto_flexicontenttypes" type="rl_conditionselection"/>
+    <field name="@block__flexicontent__b" type="rl_block" end="1"/>
+    <field name="@showon__flexicontent__b" type="rl_showon"/>
+    <field name="@showon__has_flexicontent__b" type="rl_showon"/>
+    <!-- FORM2CONTENT -->
+    <field name="@showon__has_form2content__a" type="rl_showon" value="has_form2content:1" form="root"/>
+    <field name="@load_language_form2content_sys" type="rl_loadlanguage" extension="com_form2content.sys"/>
+    <field name="@showon__form2content__a" type="rl_showon" value="show_assignments:1[OR]assignto_form2contentprojects:1,2"/>
+    <field name="@block__form2content__a" type="rl_block" start="1" label="COM_FORM2CONTENT"/>
+    <field name="@note__form2content_1a" type="note" class="alert alert-info" description="RL_USE_CONTENT_ASSIGNMENTS" showon="assignto_form2contentprojects:1,2"/>
+    <field name="assignto_form2contentprojects" type="rl_conditionselection" label="RL_TYPES"/>
+    <field name="assignto_form2contentprojects_selection" type="rl_form2content" group="projects" multiple="true" default="" label="RL_SELECTION" description="RL_TYPES_DESC"/>
+    <field name="@assignto_form2contentprojects" type="rl_conditionselection"/>
+    <field name="@block__form2content__b" type="rl_block" end="1"/>
+    <field name="@showon__form2content__b" type="rl_showon"/>
+    <field name="@showon__has_form2content__b" type="rl_showon"/>
+    <!-- K2 -->
+    <field name="@showon__has_k2_a" type="rl_showon" value="has_k2:1" form="root"/>
+    <field name="@load_language_k2" type="rl_loadlanguage" extension="com_k2"/>
+    <field name="@showon__k2_a" type="rl_showon" value="show_assignments:1[OR]assignto_k2pagetypes:1,2[OR]assignto_k2cats:1,2[OR]assignto_k2tags:1,2[OR]assignto_k2items:1,2"/>
+    <field name="@block__k2_a" type="rl_block" start="1" label="COM_K2"/>
+    <field name="assignto_k2pagetypes" type="rl_conditionselection" label="RL_PAGE_TYPES"/>
+    <field name="assignto_k2pagetypes_selection" type="rl_list" multiple="true" default="" label="RL_SELECTION" description="RL_PAGE_TYPES_DESC">
+      <option value="item">K2_ITEM</option>
+      <option value="itemform">K2_ITEM_EDIT_FORM</option>
+      <option value="category">K2_CATEGORIES</option>
+      <option value="tag">K2_TAG</option>
+      <option value="user">K2_USER_PAGE_BLOG</option>
+      <option value="latest">K2_LATEST_ITEMS_FROM_ONE_OR_MORE_USERS_OR_CATEGORIES</option>
+    </field>
+    <field name="@assignto_k2pagetypes" type="rl_conditionselection"/>
+    <field name="assignto_k2cats" type="rl_conditionselection" label="RL_CATEGORIES"/>
+    <field name="assignto_k2cats_selection" type="rl_k2" group="categories" multiple="true" default="" label="RL_SELECTION" description="RL_CATEGORIES_DESC"/>
+    <field name="assignto_k2cats_inc_children" type="radio" class="btn-group btn-group-yesno" default="0" label="RL_ALSO_ON_CHILD_ITEMS" description="RL_ALSO_ON_CHILD_ITEMS_DESC">
+      <option value="0">JNO</option>
+      <option value="1">JYES</option>
+      <option value="2">RL_ONLY</option>
+    </field>
+    <field name="assignto_k2cats_inc" type="rl_checkbox" default="inc_cats,inc_items" label="RL_PAGE_TYPES" description="RL_PAGE_TYPES_DESC">
+      <option value="inc_cats">RL_CATEGORIES</option>
+      <option value="inc_items">RL_ITEMS</option>
+    </field>
+    <field name="@assignto_k2cats" type="rl_conditionselection"/>
+    <field name="assignto_k2tags" type="rl_conditionselection" label="RL_TAGS"/>
+    <field name="assignto_k2tags_selection" type="rl_k2" group="tags" multiple="true" default="" label="RL_SELECTION" description="RL_TAGS_DESC"/>
+    <field name="assignto_k2tags_inc" type="rl_checkbox" default="inc_tags,inc_items" label="RL_PAGE_TYPES" description="RL_PAGE_TYPES_DESC">
+      <option value="inc_tags">RL_TAGS</option>
+      <option value="inc_items">RL_ITEMS</option>
+    </field>
+    <field name="@assignto_k2tags" type="rl_conditionselection"/>
+    <field name="assignto_k2items" type="rl_conditionselection" label="RL_ITEMS"/>
+    <field name="assignto_k2items_selection" type="rl_k2" group="items" multiple="true" default="" label="RL_SELECTION" description="RL_ITEMS_DESC"/>
+    <field name="assignto_k2items_content_keywords" type="rl_textareaplus" height="40" default="" label="RL_CONTENT_KEYWORDS" description="RL_CONTENT_KEYWORDS_DESC"/>
+    <field name="assignto_k2items_meta_keywords" type="rl_textareaplus" height="40" default="" label="RL_META_KEYWORDS" description="RL_META_KEYWORDS_DESC"/>
+    <field name="assignto_k2items_authors" type="rl_users" multiple="true" default="" label="RL_ARTICLE_AUTHORS" description="RL_ARTICLE_AUTHORS_DESC"/>
+    <field name="@assignto_k2items" type="rl_conditionselection"/>
+    <field name="@block__k2_b" type="rl_block" end="1"/>
+    <field name="@showon__k2_b" type="rl_showon"/>
+    <field name="@showon__has_k2_b" type="rl_showon"/>
+    <!-- ZOO -->
+    <field name="@showon__has_zoo__a" type="rl_showon" value="has_zoo:1" form="root"/>
+    <field name="@load_language_zoo_sys" type="rl_loadlanguage" extension="com_zoo.sys"/>
+    <field name="@showon__zoo__a" type="rl_showon" value="show_assignments:1[OR]assignto_zoopagetypes:1,2[OR]assignto_zoocats:1,2[OR]assignto_zooitems:1,2"/>
+    <field name="@block__zoo__a" type="rl_block" start="1" label="COM_ZOO"/>
+    <field name="assignto_zoopagetypes" type="rl_conditionselection" label="RL_PAGE_TYPES"/>
+    <field name="assignto_zoopagetypes_selection" type="rl_list" multiple="true" default="" label="RL_SELECTION" description="RL_PAGE_TYPES_DESC">
+      <option value="category">CATEGORY</option>
+      <option value="item">ITEM</option>
+      <option value="frontpage">FRONTPAGE</option>
+      <option value="mysubmissions">MY SUBMISSIONS</option>
+      <option value="submissions">SUBMISSION</option>
+    </field>
+    <field name="@assignto_zoopagetypes" type="rl_conditionselection"/>
+    <field name="assignto_zoocats" type="rl_conditionselection" label="RL_CATEGORIES"/>
+    <field name="assignto_zoocats_selection" type="rl_zoo" group="categories" multiple="true" default="" label="RL_SELECTION" description="RL_CATEGORIES_DESC"/>
+    <field name="assignto_zoocats_inc_children" type="radio" class="btn-group btn-group-yesno" default="0" label="RL_ALSO_ON_CHILD_ITEMS" description="RL_ALSO_ON_CHILD_ITEMS_DESC">
+      <option value="0">JNO</option>
+      <option value="1">JYES</option>
+      <option value="2">RL_ONLY</option>
+    </field>
+    <field name="assignto_zoocats_inc" type="rl_checkbox" default="inc_cats,inc_items" label="RL_PAGE_TYPES" description="RL_PAGE_TYPES_DESC">
+      <option value="inc_cats">RL_CATEGORIES</option>
+      <option value="inc_items">RL_ITEMS</option>
+    </field>
+    <field name="@assignto_zoocats" type="rl_conditionselection"/>
+    <field name="assignto_zooitems" type="rl_conditionselection" label="RL_ITEMS"/>
+    <field name="assignto_zooitems_selection" type="rl_zoo" group="items" multiple="true" default="" label="RL_SELECTION" description="RL_ITEMS_DESC"/>
+    <field name="assignto_zooitems_authors" type="rl_users" multiple="true" default="" label="RL_ARTICLE_AUTHORS" description="RL_ARTICLE_AUTHORS_DESC"/>
+    <field name="@assignto_zooitems" type="rl_conditionselection"/>
+    <field name="@block__zoo__b" type="rl_block" end="1"/>
+    <field name="@showon__zoo__b" type="rl_showon"/>
+    <field name="@showon__has_zoo__b" type="rl_showon"/>
+    <!-- AKEEBASUBS -->
+    <field name="@showon__has_akeebasubs__a" type="rl_showon" value="has_akeebasubs:1" form="root"/>
+    <field name="@load_language_akeebasubs_sys" type="rl_loadlanguage" extension="com_akeebasubs.sys"/>
+    <field name="@showon__akeebasubs__a" type="rl_showon" value="show_assignments:1[OR]assignto_akeebasubspagetypes:1,2[OR]assignto_akeebasubslevels:1,2"/>
+    <field name="@block__akeebasubs__a" type="rl_block" start="1" label="AKEEBASUBS"/>
+    <field name="assignto_akeebasubspagetypes" type="rl_conditionselection" label="RL_PAGE_TYPES"/>
+    <field name="assignto_akeebasubspagetypes_selection" type="rl_list" multiple="true" default="" label="RL_SELECTION" description="RL_PAGE_TYPES_DESC">
+      <option value="level">COM_AKEEBASUBS_VIEW_LEVEL_DEFAULT_TITLE</option>
+      <option value="levels">COM_AKEEBASUBS_VIEW_LEVELS_AWESOME_TITLE</option>
+      <option value="levels">COM_AKEEBASUBS_VIEW_LEVELS_DEFAULT_TITLE</option>
+      <option value="subscriptions">COM_AKEEBASUBS_VIEW_SUBSCRIPTIONS_DEFAULT_TITLE</option>
+      <option value="userinfo">COM_AKEEBASUBS_VIEW_USERINFO_DEFAULT_TITLE</option>
+    </field>
+    <field name="@assignto_akeebasubspagetypes" type="rl_conditionselection"/>
+    <field name="assignto_akeebasubslevels" type="rl_conditionselection" label="RL_LEVELS"/>
+    <field name="assignto_akeebasubslevels_selection" type="rl_akeebasubs" group="levels" multiple="true" default="" label="RL_SELECTION" description="RL_LEVELS_DESC"/>
+    <field name="@assignto_akeebasubslevels" type="rl_conditionselection"/>
+    <field name="@block__akeebasubs__b" type="rl_block" end="1"/>
+    <field name="@showon__akeebasubs__b" type="rl_showon"/>
+    <field name="@showon__has_akeebasubs__b" type="rl_showon"/>
+    <!-- HIKASHOP -->
+    <field name="@showon__has_hikashop__a" type="rl_showon" value="has_hikashop:1" form="root"/>
+    <field name="@load_language_hikashop_sys" type="rl_loadlanguage" extension="com_hikashop.sys"/>
+    <field name="@showon__hikashop__a" type="rl_showon" value="show_assignments:1[OR]assignto_hikashoppagetypes:1,2[OR]assignto_hikashopcats:1,2[OR]assignto_hikashopproducts:1,2"/>
+    <field name="@block__hikashop__a" type="rl_block" start="1" label="HikaShop"/>
+    <field name="assignto_hikashoppagetypes" type="rl_conditionselection" label="RL_PAGE_TYPES"/>
+    <field name="assignto_hikashoppagetypes_selection" type="rl_list" multiple="true" default="" label="RL_SELECTION" description="RL_PAGE_TYPES_DESC">
+      <option value="address">COM_HIKASHOP_ADDRESS_VIEW_DEFAULT_TITLE</option>
+      <option value="category">COM_HIKASHOP_CATEGORY_VIEW_DEFAULT_TITLE</option>
+      <option value="checkout">COM_HIKASHOP_CHECKOUT_VIEW_DEFAULT_TITLE</option>
+      <option value="order">COM_HIKASHOP_ORDER_VIEW_DEFAULT_TITLE</option>
+      <option value="product_contact">COM_HIKASHOP_CONTACT_VIEW_DEFAULT_TITLE</option>
+      <option value="product">COM_HIKASHOP_PRODUCT_VIEW_DEFAULT_TITLE</option>
+      <option value="product_show">COM_HIKASHOP_PRODUCT_FORM_VIEW_DEFAULT_TITLE</option>
+      <option value="user_cpanel">COM_HIKASHOP_USER_PANEL_VIEW_DEFAULT_TITLE</option>
+      <option value="user">COM_HIKASHOP_USER_VIEW_DEFAULT_TITLE</option>
+    </field>
+    <field name="@assignto_hikashoppagetypes" type="rl_conditionselection"/>
+    <field name="assignto_hikashopcats" type="rl_conditionselection" label="RL_CATEGORIES"/>
+    <field name="assignto_hikashopcats_selection" type="rl_hikashop" group="categories" multiple="true" default="" label="RL_SELECTION" description="RL_CATEGORIES_DESC"/>
+    <field name="assignto_hikashopcats_inc_children" type="radio" class="btn-group btn-group-yesno" default="0" label="RL_ALSO_ON_CHILD_ITEMS" description="RL_ALSO_ON_CHILD_ITEMS_DESC">
+      <option value="0">JNO</option>
+      <option value="1">JYES</option>
+      <option value="2">RL_ONLY</option>
+    </field>
+    <field name="assignto_hikashopcats_inc" type="rl_checkbox" default="inc_cats,inc_items" label="RL_PAGE_TYPES" description="RL_PAGE_TYPES_DESC">
+      <option value="inc_cats">RL_CATEGORIES</option>
+      <option value="inc_items">RL_PRODUCTS</option>
+    </field>
+    <field name="@assignto_hikashopcats" type="rl_conditionselection"/>
+    <field name="assignto_hikashopproducts" type="rl_conditionselection" label="RL_PRODUCTS"/>
+    <field name="assignto_hikashopproducts_selection" type="rl_hikashop" group="products" multiple="true" default="" label="RL_SELECTION" description="RL_ITEMS_DESC"/>
+    <field name="@assignto_hikashopproducts" type="rl_conditionselection"/>
+    <field name="@block__hikashop__b" type="rl_block" end="1"/>
+    <field name="@showon__hikashop__b" type="rl_showon"/>
+    <field name="@showon__has_hikashop__b" type="rl_showon"/>
+    <!-- MIJOSHOP -->
+    <field name="@showon__has_mijoshop__a" type="rl_showon" value="has_mijoshop:1" form="root"/>
+    <field name="@load_language_mijoshop_sys" type="rl_loadlanguage" extension="com_mijoshop.sys"/>
+    <field name="@showon__mijoshop__a" type="rl_showon" value="show_assignments:1[OR]assignto_mijoshoppagetypes:1,2[OR]assignto_mijoshopcats:1,2[OR]assignto_mijoshopproducts:1,2"/>
+    <field name="@block__mijoshop__a" type="rl_block" start="1" label="COM_MIJOSHOP"/>
+    <field name="assignto_mijoshoppagetypes" type="rl_conditionselection" label="RL_PAGE_TYPES"/>
+    <field name="assignto_mijoshoppagetypes_selection" type="rl_list" multiple="true" default="" label="RL_SELECTION" description="RL_PAGE_TYPES_DESC">
+      <option value="account">COM_MIJOSHOP_ACCOUNT_VIEW_DEFAULT_TITLE</option>
+      <option value="admin">COM_MIJOSHOP_ADMIN_VIEW_DEFAULT_TITLE</option>
+      <option value="affiliates">COM_MIJOSHOP_AFFILIATES_VIEW_DEFAULT_TITLE</option>
+      <option value="bestseller">COM_MIJOSHOP_BESTSELLER_VIEW_DEFAULT_TITLE</option>
+      <option value="cart">COM_MIJOSHOP_CART_VIEW_DEFAULT_TITLE</option>
+      <option value="category">COM_MIJOSHOP_CATEGORY_VIEW_DEFAULT_TITLE</option>
+      <option value="checkout">COM_MIJOSHOP_CHECKOUT_VIEW_DEFAULT_TITLE</option>
+      <option value="compare">COM_MIJOSHOP_COMPARE_VIEW_DEFAULT_TITLE</option>
+      <option value="contact">COM_MIJOSHOP_CONTACT_VIEW_DEFAULT_TITLE</option>
+      <option value="downloads">COM_MIJOSHOP_DOWNLOADS_VIEW_DEFAULT_TITLE</option>
+      <option value="home">COM_MIJOSHOP_HOME_VIEW_DEFAULT_TITLE</option>
+      <option value="information">COM_MIJOSHOP_INFORMATION_VIEW_DEFAULT_TITLE</option>
+      <option value="latest">COM_MIJOSHOP_LATEST_VIEW_DEFAULT_TITLE</option>
+      <option value="login">COM_MIJOSHOP_LOGIN_VIEW_DEFAULT_TITLE</option>
+      <option value="manufacturer">COM_MIJOSHOP_MANUFACTURER_VIEW_DEFAULT_TITLE</option>
+      <option value="manufacturers">COM_MIJOSHOP_MANUFACTURERS_VIEW_DEFAULT_TITLE</option>
+      <option value="newsletter">COM_MIJOSHOP_NEWSLETTER_VIEW_DEFAULT_TITLE</option>
+      <option value="orders">COM_MIJOSHOP_ORDERS_VIEW_DEFAULT_TITLE</option>
+      <option value="popular">COM_MIJOSHOP_POPULAR_VIEW_DEFAULT_TITLE</option>
+      <option value="product">COM_MIJOSHOP_PRODUCT_VIEW_DEFAULT_TITLE</option>
+      <option value="registration">COM_MIJOSHOP_REGISTRATION_VIEW_DEFAULT_TITLE</option>
+      <option value="returns">COM_MIJOSHOP_RETURNS_VIEW_DEFAULT_TITLE</option>
+      <option value="search">COM_MIJOSHOP_SEARCH_VIEW_DEFAULT_TITLE</option>
+      <option value="sitemap">COM_MIJOSHOP_SITEMAP_VIEW_DEFAULT_TITLE</option>
+      <option value="specials">COM_MIJOSHOP_SPECIALS_VIEW_DEFAULT_TITLE</option>
+      <option value="voucher">COM_MIJOSHOP_VOUCHER_VIEW_DEFAULT_TITLE</option>
+      <option value="wishlist">COM_MIJOSHOP_WISHLIST_VIEW_DEFAULT_TITLE</option>
+    </field>
+    <field name="@assignto_mijoshoppagetypes" type="rl_conditionselection"/>
+    <field name="assignto_mijoshopcats" type="rl_conditionselection" label="RL_CATEGORIES"/>
+    <field name="assignto_mijoshopcats_selection" type="rl_mijoshop" group="categories" multiple="true" default="" label="RL_SELECTION" description="RL_CATEGORIES_DESC"/>
+    <field name="assignto_mijoshopcats_inc_children" type="radio" class="btn-group btn-group-yesno" default="0" label="RL_ALSO_ON_CHILD_ITEMS" description="RL_ALSO_ON_CHILD_ITEMS_DESC">
+      <option value="0">JNO</option>
+      <option value="1">JYES</option>
+      <option value="2">RL_ONLY</option>
+    </field>
+    <field name="assignto_mijoshopcats_inc" type="rl_checkbox" default="inc_cats,inc_items" label="RL_PAGE_TYPES" description="RL_PAGE_TYPES_DESC">
+      <option value="inc_cats">RL_CATEGORIES</option>
+      <option value="inc_items">RL_PRODUCTS</option>
+    </field>
+    <field name="@assignto_mijoshopcats" type="rl_conditionselection"/>
+    <field name="assignto_mijoshopproducts" type="rl_conditionselection" label="RL_PRODUCTS"/>
+    <field name="assignto_mijoshopproducts_selection" type="rl_mijoshop" group="products" multiple="true" default="" label="RL_SELECTION" description="RL_ITEMS_DESC"/>
+    <field name="@assignto_mijoshopproducts" type="rl_conditionselection"/>
+    <field name="@block__mijoshop__b" type="rl_block" end="1"/>
+    <field name="@showon__mijoshop__b" type="rl_showon"/>
+    <field name="@showon__has_mijoshop__b" type="rl_showon"/>
+    <!-- REDSHOP -->
+    <field name="@showon__has_redshop__a" type="rl_showon" value="has_redshop:1" form="root"/>
+    <field name="@load_language_redshop_sys" type="rl_loadlanguage" extension="com_redshop.sys"/>
+    <field name="@showon__redshop__a" type="rl_showon" value="show_assignments:1[OR]assignto_redshoppagetypes:1,2[OR]assignto_redshopcats:1,2[OR]assignto_redshopproducts:1,2"/>
+    <field name="@block__redshop__a" type="rl_block" start="1" label="COM_REDSHOP"/>
+    <field name="assignto_redshoppagetypes" type="rl_conditionselection" label="RL_PAGE_TYPES"/>
+    <field name="assignto_redshoppagetypes_selection" type="rl_list" multiple="true" default="" label="RL_SELECTION" description="RL_PAGE_TYPES_DESC">
+      <option value="account">COM_REDSHOP_ACCOUNT_LAYOUT</option>
+      <option value="mywishlist">COM_REDSHOP_MYWISHLIST_LAYOUT</option>
+      <option value="cart">COM_REDSHOP_CART_LAYOUT</option>
+      <option value="catalog">COM_REDSHOP_CATALOG_LAYOUT</option>
+      <option value="catalog_sample">COM_REDSHOP_SAMPLE_LAYOUT</option>
+      <option value="category_categoryproduct">COM_REDSHOP_STANDARD_CATEGORY_LAYOUT_TO_SHOW_ALL_CATEGORY_PRODUCT</option>
+      <option value="category">COM_REDSHOP_STANDARD_CATEGORY_LAYOUT</option>
+      <option value="category_detail">COM_REDSHOP_STANDARD_CATEGORY_DETAIL_LAYOUT</option>
+      <option value="checkout">COM_REDSHOP_STANDARD_CHECKOUT_LAYOUT</option>
+      <option value="giftcard">COM_REDSHOP_STANDARD_GIFTCARD_LIST</option>
+      <option value="login">COM_REDSHOP_STANDARD_LOGIN_LAYOUT</option>
+      <option value="login_logout">COM_REDSHOP_STANDARD_LOGOUT_LAYOUT</option>
+      <option value="login_portal">COM_REDSHOP_STANDARD_PORTAL_LAYOUT</option>
+      <option value="login_portals">COM_REDSHOP_STANDARD_PORTAL_DETAIL_LAYOUT</option>
+      <option value="manufacturer">COM_REDSHOP_STANDARD_MANUFACTURERS_LAYOUT</option>
+      <option value="manufacturer_detail">COM_REDSHOP_STANDARD_MANUFACTURER_DETAIL_LAYOUT</option>
+      <option value="manufacturer_product">COM_REDSHOP_STANDARD_MANUFACTURER_PRODUCT_LAYOUT</option>
+      <option value="newsletter">COM_REDSHOP_STANDARD_NEWSLETTER_LAYOUT</option>
+      <option value="orders">COM_REDSHOP_STANDARD_ORDERS_LAYOUT</option>
+      <option value="ordertracker">COM_REDSHOP_STANDARD_ORDERS_TRACKER_LAYOUT</option>
+      <option value="password">COM_REDSHOP_STANDARD_PASSWORD_LAYOUT</option>
+      <option value="password_setpassword">COM_REDSHOP_STANDARD_SETPASSWORD_LAYOUT</option>
+      <option value="password_token">COM_REDSHOP_STANDARD_TOKEN_LAYOUT</option>
+      <option value="product">COM_REDSHOP_STANDARD_PRODUCT_LAYOUT</option>
+      <option value="product_downloadproduct">COM_REDSHOP_STANDARD_PRODUCT_DOWNLOAD_LAYOUT</option>
+      <option value="product_rating">COM_REDSHOP_STANDARD_PRODUCT_RATING_LAYOUT</option>
+      <option value="quotation">COM_REDSHOP_STANDARD_QUOTATION_LAYOUT</option>
+      <option value="registration">COM_REDSHOP_STANDARD_REGISTRATION_LAYOUT</option>
+      <option value="search">COM_REDSHOP_STANDARD_SEARCH_LAYOUT</option>
+      <option value="search_newproduct">COM_REDSHOP_STANDARD_NEWEST_PRODUCT_SEARCH_LAYOUT</option>
+      <option value="search_productonsale">COM_REDSHOP_STANDARD_PRODUCT_ON_SALE_LAYOUT</option>
+      <option value="search_redfilter">COM_REDSHOP_STANDARD_RED_FILTER_LAYOUT</option>
+      <option value="wishlist">COM_REDSHOP_MYWISHLIST_LAYOUT</option>
+      <option value="wishlist_viewwishlist">COM_REDSHOP_ALL_WISH_LISTS</option>
+    </field>
+    <field name="@assignto_redshoppagetypes" type="rl_conditionselection"/>
+    <field name="assignto_redshopcats" type="rl_conditionselection" label="RL_CATEGORIES"/>
+    <field name="assignto_redshopcats_selection" type="rl_redshop" group="categories" multiple="true" default="" label="RL_SELECTION" description="RL_CATEGORIES_DESC"/>
+    <field name="assignto_redshopcats_inc_children" type="radio" class="btn-group btn-group-yesno" default="0" label="RL_ALSO_ON_CHILD_ITEMS" description="RL_ALSO_ON_CHILD_ITEMS_DESC">
+      <option value="0">JNO</option>
+      <option value="1">JYES</option>
+      <option value="2">RL_ONLY</option>
+    </field>
+    <field name="assignto_redshopcats_inc" type="rl_checkbox" default="inc_cats,inc_items" label="RL_PAGE_TYPES" description="RL_PAGE_TYPES_DESC">
+      <option value="inc_cats">RL_CATEGORIES</option>
+      <option value="inc_items">RL_PRODUCTS</option>
+    </field>
+    <field name="@assignto_redshopcats" type="rl_conditionselection"/>
+    <field name="assignto_redshopproducts" type="rl_conditionselection" label="RL_PRODUCTS"/>
+    <field name="assignto_redshopproducts_selection" type="rl_redshop" group="products" multiple="true" default="" label="RL_SELECTION" description="RL_ITEMS_DESC"/>
+    <field name="@assignto_redshopproducts" type="rl_conditionselection"/>
+    <field name="@block__redshop__b" type="rl_block" end="1"/>
+    <field name="@showon__redshop__b" type="rl_showon"/>
+    <field name="@showon__has_redshop__b" type="rl_showon"/>
+    <!-- VIRTUEMART -->
+    <field name="@showon__has_virtuemart__a" type="rl_showon" value="has_virtuemart:1" form="root"/>
+    <field name="@load_language_virtuemart_sys" type="rl_loadlanguage" extension="com_virtuemart.sys"/>
+    <field name="@showon__virtuemart__a" type="rl_showon" value="show_assignments:1[OR]assignto_virtuemartpagetypes:1,2[OR]assignto_virtuemartcats:1,2[OR]assignto_virtuemartproducts:1,2"/>
+    <field name="@block__virtuemart__a" type="rl_block" start="1" label="COM_VIRTUEMART"/>
+    <field name="assignto_virtuemartpagetypes" type="rl_conditionselection" label="RL_PAGE_TYPES"/>
+    <field name="assignto_virtuemartpagetypes_selection" type="rl_list" multiple="true" default="" label="RL_SELECTION" description="RL_PAGE_TYPES_DESC">
+      <option value="cart">COM_VIRTUEMART_CART_VIEW_DEFAULT_TITLE</option>
+      <option value="categories">COM_VIRTUEMART_CATEGORIES_VIEW_DEFAULT_TITLE</option>
+      <option value="category">COM_VIRTUEMART_CATEGORY_VIEW_DEFAULT_TITLE</option>
+      <option value="manufacturer">COM_VIRTUEMART_MANUFACTURER_VIEW_DEFAULT_TITLE</option>
+      <option value="manufacturer_details">COM_VIRTUEMART_MANUFACTURER_VIEW_DETAILS_TITLE</option>
+      <option value="orders">COM_VIRTUEMART_ORDERS_VIEW_DEFAULT_TITLE</option>
+      <option value="productdetails">COM_VIRTUEMART_PRODUCTDETAILS_VIEW_DEFAULT_TITLE</option>
+      <option value="user_edit">COM_VIRTUEMART_USER_VIEW_DEFAULT_TITLE</option>
+      <option value="user_editaddress">COM_VIRTUEMART_USER_EDITADDRESS_VIEW_DEFAULT_TITLE</option>
+      <option value="vendor_contact">COM_VIRTUEMART_VENDOR_VIEW_CONTACT_TITLE</option>
+      <option value="vendor">COM_VIRTUEMART_VENDOR_VIEW_DEFAULT_TITLE</option>
+      <option value="vendor_details">COM_VIRTUEMART_VENDOR_VIEW_DETAILS_TITLE</option>
+      <option value="vendor_tos">COM_VIRTUEMART_VENDOR_VIEW_TOS_TITLE</option>
+      <option value="virtuemart">COM_VIRTUEMART_VIRTUEMART_VIEW_DEFAULT_TITLE</option>
+    </field>
+    <field name="@assignto_virtuemartpagetypes" type="rl_conditionselection"/>
+    <field name="assignto_virtuemartcats" type="rl_conditionselection" label="RL_CATEGORIES"/>
+    <field name="assignto_virtuemartcats_selection" type="rl_virtuemart" group="categories" multiple="true" default="" label="RL_SELECTION" description="RL_CATEGORIES_DESC"/>
+    <field name="assignto_virtuemartcats_inc_children" type="radio" class="btn-group btn-group-yesno" default="0" label="RL_ALSO_ON_CHILD_ITEMS" description="RL_ALSO_ON_CHILD_ITEMS_DESC">
+      <option value="0">JNO</option>
+      <option value="1">JYES</option>
+      <option value="2">RL_ONLY</option>
+    </field>
+    <field name="assignto_virtuemartcats_inc" type="rl_checkbox" default="inc_cats,inc_items" label="RL_PAGE_TYPES" description="RL_PAGE_TYPES_DESC">
+      <option value="inc_cats">RL_CATEGORIES</option>
+      <option value="inc_items">RL_PRODUCTS</option>
+    </field>
+    <field name="@assignto_virtuemartcats" type="rl_conditionselection"/>
+    <field name="assignto_virtuemartproducts" type="rl_conditionselection" label="RL_PRODUCTS"/>
+    <field name="assignto_virtuemartproducts_selection" type="rl_virtuemart" group="products" multiple="true" default="" label="RL_SELECTION" description="RL_ITEMS_DESC"/>
+    <field name="@assignto_virtuemartproducts" type="rl_conditionselection"/>
+    <field name="@block__virtuemart__b" type="rl_block" end="1"/>
+    <field name="@showon__virtuemart__b" type="rl_showon"/>
+    <field name="@showon__has_virtuemart__b" type="rl_showon"/>
+    <!-- COOKIECONFIRM -->
+    <field name="@showon__has_cookieconfirm__a" type="rl_showon" value="has_cookieconfirm:1" form="root"/>
+    <field name="@load_language_cookieconfirm_sys" type="rl_loadlanguage" extension="com_cookieconfirm.sys"/>
+    <field name="@showon__cookieconfirm__a" type="rl_showon" value="show_assignments:1[OR]assignto_cookieconfirm:1,2"/>
+    <field name="@block__cookieconfirm__a" type="rl_block" start="1" label="COM_COOKIECONFIRM"/>
+    <field name="assignto_cookieconfirm" type="rl_conditionselection" label="RL_COOKIECONFIRM_COOKIES"/>
+    <field name="@note__cookieconfirm" type="note" description="RL_COOKIECONFIRM_COOKIES_DESC"/>
+    <field name="@assignto_cookieconfirm" type="rl_conditionselection"/>
+    <field name="@block__cookieconfirm__b" type="rl_block" end="1"/>
+    <field name="@showon__cookieconfirm__b" type="rl_showon"/>
+    <field name="@showon__has_cookieconfirm__b" type="rl_showon"/>
+    <!-- PHP -->
+    <field name="assignto_php" type="rl_conditionselection" label="RL_PHP"/>
+    <field name="assignto_php_selection" type="rl_codeeditor" default="" label="RL_PHP" description="RL_PHP_DESC,&lt;pre&gt;return ( $user-&gt;name == 'Peter van Westen' );&lt;/pre&gt;"/>
+    <field name="@note__assignto_php" type="note" class="alert alert-info" description="RL_PHP_DESC,&lt;pre&gt;return ( $user-&gt;name == 'Peter van Westen' );&lt;/pre&gt;"/>
+    <field name="@assignto_php" type="rl_conditionselection"/>
+    <!-- ELSE -->
+    <field name="@block__else__a" type="rl_block" start="1" label="RR_ELSE"/>
+    <field name="other_doreplace" type="radio" class="btn-group" default="0" label="RR_ELSE" description="RR_ELSE_DESC">
+      <option value="0">RR_DO_NOTHING</option>
+      <option value="1">RR_REPLACE_WITH_SOMETHING_ELSE</option>
+    </field>
+    <field name="other_replace" type="rl_codeeditor" height="120" default="" label="RR_REPLACE" description="RR_REPLACE_DESC" showon="other_doreplace:1"/>
+    <field name="@block__else__b" type="rl_block" end="1"/>
+  </fieldset>
+</config>
